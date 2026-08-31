@@ -7,3 +7,7 @@ img/사이트 시안1.png
 img/사이트 시안2.png
 img/적용예시.png
 img/제목 없음.png
+img/Screen Shot*.png
+
+# 디자인 캔버스 작업 파일 (별도 Artifact로 발행, 배포 사이트와는 분리)
+design/
