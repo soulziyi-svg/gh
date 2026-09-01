@@ -62,6 +62,9 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-auth]').forEach((button) => {
     button.addEventListener('click', () => {
       setAuthMode(button.dataset.auth);
+      if (button.dataset.entry === 'mypage') {
+        kicker.textContent = '마이페이지는 로그인 후 이용할 수 있습니다';
+      }
       panel?.setAttribute('hidden', '');
       toggleBtn?.setAttribute('aria-expanded', 'false');
       dialog.showModal();
