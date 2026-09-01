@@ -8,9 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isOpen) {
         panel.setAttribute('hidden', '');
         toggleBtn.setAttribute('aria-expanded', 'false');
+        toggleBtn.setAttribute('aria-label', '전체 메뉴 열기');
       } else {
         panel.removeAttribute('hidden');
         toggleBtn.setAttribute('aria-expanded', 'true');
+        toggleBtn.setAttribute('aria-label', '전체 메뉴 닫기');
       }
     });
 
@@ -18,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
       link.addEventListener('click', () => {
         panel.setAttribute('hidden', '');
         toggleBtn.setAttribute('aria-expanded', 'false');
+        toggleBtn.setAttribute('aria-label', '전체 메뉴 열기');
       });
     });
 
@@ -25,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (event.key === 'Escape') {
         panel.setAttribute('hidden', '');
         toggleBtn.setAttribute('aria-expanded', 'false');
+        toggleBtn.setAttribute('aria-label', '전체 메뉴 열기');
       }
     });
   }
