@@ -10,4 +10,13 @@ img/제목 없음.png
 img/Screen Shot*.png
 
 # 디자인 캔버스 작업 파일 (별도 Artifact로 발행, 배포 사이트와는 분리)
-design/
+# 운영 기준 문서(.md)는 사이트와 함께 버전 관리합니다.
+design/*
+!design/*.md
+
+# 산출물 검증용 미리보기와 검사 로그
+outputs/**/검증-*
+outputs/**/*.inspect.ndjson
+
+# 웹 최적화 전 생성 원본 (사이트는 WebP 사용)
+img/space-*-v2.png
