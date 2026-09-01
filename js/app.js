@@ -45,6 +45,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const agree = document.getElementById('authAgree');
   let authMode = 'login';
 
+  const updateAccountView = (loggedIn) => {
+    document.querySelectorAll('[data-auth]').forEach((button) => { button.hidden = loggedIn; });
+    document.querySelectorAll('[data-mypage]').forEach((button) => { button.hidden = !loggedIn; });
+  };
+
+  updateAccountView(sessionStorage.getItem('spaceHanjjokLoggedIn') === 'true');
+
   const setAuthMode = (mode) => {
     authMode = mode;
     const signup = mode === 'signup';
@@ -62,9 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-auth]').forEach((button) => {
     button.addEventListener('click', () => {
       setAuthMode(button.dataset.auth);
-      if (button.dataset.entry === 'mypage') {
-        kicker.textContent = '마이페이지는 로그인 후 이용할 수 있습니다';
-      }
       panel?.setAttribute('hidden', '');
       toggleBtn?.setAttribute('aria-expanded', 'false');
       dialog.showModal();
@@ -76,6 +80,13 @@ document.addEventListener('DOMContentLoaded', () => {
   form?.addEventListener('submit', (event) => {
     event.preventDefault();
     if (!form.reportValidity()) return;
-    status.textContent = authMode === 'signup' ? '회원가입 화면이 준비되었습니다. 인증 서버 연결 후 실제 가입이 가능합니다.' : '로그인 화면이 준비되었습니다. 인증 서버 연결 후 실제 로그인이 가능합니다.';
+    if (authMode === 'signup') {
+      status.textContent = '회원가입 화면이 준비되었습니다. 인증 서버 연결 후 실제 가입이 가능합니다.';
+      return;
+    }
+    sessionStorage.setItem('spaceHanjjokLoggedIn', 'true');
+    updateAccountView(true);
+    status.textContent = '로그인되었습니다. 이제 마이페이지를 이용할 수 있습니다.';
+    window.setTimeout(() => dialog.close(), 700);
   });
 });
