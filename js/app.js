@@ -90,6 +90,52 @@ document.addEventListener('DOMContentLoaded', () => {
     window.setTimeout(() => dialog.close(), 700);
   });
 
+  document.querySelectorAll('[data-dropzone]').forEach((zone) => {
+    const input = zone.querySelector('.dropzone__input');
+    const filesLabel = zone.querySelector('[data-dropzone-files]');
+    if (!input || !filesLabel) return;
+
+    const updateFilesLabel = () => {
+      const files = input.files;
+      if (!files || files.length === 0) {
+        filesLabel.textContent = '선택된 파일 없음';
+      } else if (files.length === 1) {
+        filesLabel.textContent = files[0].name;
+      } else {
+        filesLabel.textContent = `${files.length}개 파일 선택됨`;
+      }
+    };
+
+    input.addEventListener('change', updateFilesLabel);
+
+    ['dragenter', 'dragover'].forEach((eventName) => {
+      zone.addEventListener(eventName, (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        zone.classList.add('is-dragover');
+      });
+    });
+
+    ['dragleave', 'dragend'].forEach((eventName) => {
+      zone.addEventListener(eventName, (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        zone.classList.remove('is-dragover');
+      });
+    });
+
+    zone.addEventListener('drop', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      zone.classList.remove('is-dragover');
+      const droppedFiles = event.dataTransfer?.files;
+      if (droppedFiles && droppedFiles.length > 0) {
+        input.files = droppedFiles;
+        updateFilesLabel();
+      }
+    });
+  });
+
   const startForm = document.getElementById('startForm');
   const startStatus = document.getElementById('startStatus');
   startForm?.addEventListener('submit', (event) => {
