@@ -20,3 +20,11 @@ outputs/**/*.inspect.ndjson
 
 # 웹 최적화 전 생성 원본 (사이트는 WebP 사용)
 img/space-*-v2.png
+
+# 참고용 시안 스크린샷 (배포 대상 아님)
+img/사이트 메인페이지-손그림.png
+img/사이트 메인페이지-스케치업-무채색.png
+img/사이트 메인페이지-스케치업.png
+img/사이트 메인페이지-실사강화.png
+img/사이트 메인페이지2.png
+img/현관-이미지-시안1.png

@@ -89,4 +89,12 @@ document.addEventListener('DOMContentLoaded', () => {
     status.textContent = '로그인되었습니다. 이제 마이페이지를 이용할 수 있습니다.';
     window.setTimeout(() => dialog.close(), 700);
   });
+
+  const startForm = document.getElementById('startForm');
+  const startStatus = document.getElementById('startStatus');
+  startForm?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!startForm.reportValidity()) return;
+    startStatus.textContent = '접수 내용이 준비되었습니다. 실제 접수와 진단 결과 발송은 서버 연결 후 제공됩니다.';
+  });
 });
