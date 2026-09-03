@@ -93,16 +93,51 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-dropzone]').forEach((zone) => {
     const input = zone.querySelector('.dropzone__input');
     const filesLabel = zone.querySelector('[data-dropzone-files]');
+    const preview = zone.querySelector('[data-dropzone-preview]');
+    const promptIcon = zone.querySelector('.dropzone__label > svg');
+    const promptTitle = zone.querySelector('.dropzone__label > b');
+    let previewUrls = [];
     if (!input || !filesLabel) return;
 
     const updateFilesLabel = () => {
       const files = input.files;
+      previewUrls.forEach((url) => URL.revokeObjectURL(url));
+      previewUrls = [];
+      if (preview) preview.replaceChildren();
       if (!files || files.length === 0) {
         filesLabel.textContent = '선택된 파일 없음';
+        filesLabel.hidden = false;
+        if (promptIcon) promptIcon.hidden = false;
+        if (promptTitle) promptTitle.hidden = false;
+        if (preview) preview.hidden = true;
       } else if (files.length === 1) {
         filesLabel.textContent = files[0].name;
       } else {
         filesLabel.textContent = `${files.length}개 파일 선택됨`;
+      }
+
+      if (files && files.length > 0 && preview) {
+        [...files].forEach((file, index) => {
+          if (!file.type.startsWith('image/')) return;
+          const url = URL.createObjectURL(file);
+          previewUrls.push(url);
+          const figure = document.createElement('figure');
+          const image = document.createElement('img');
+          image.src = url;
+          image.alt = `${file.name} 미리보기`;
+          const caption = document.createElement('figcaption');
+          caption.textContent = file.name;
+          figure.append(image, caption);
+          preview.append(figure);
+          if (index === 0) image.fetchPriority = 'high';
+        });
+        promptIcon.hidden = true;
+        promptTitle.hidden = true;
+        filesLabel.hidden = true;
+        preview.hidden = false;
+        zone.classList.add('has-preview');
+      } else {
+        zone.classList.remove('has-preview');
       }
     };
 
@@ -158,7 +193,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!response.ok) throw new Error('mail service error');
       startStatus.textContent = '접수가 완료되었습니다. 확인 후 안내드리겠습니다.';
       startForm.reset();
-      document.querySelectorAll('[data-dropzone-files]').forEach((label) => { label.textContent = '선택된 파일 없음'; });
+      startForm.querySelectorAll('.dropzone__input').forEach((input) => {
+        input.dispatchEvent(new Event('change'));
+      });
     } catch (error) {
       startStatus.textContent = '전송하지 못했습니다. 잠시 후 다시 시도하거나 soulziyi@gmail.com으로 보내주세요.';
     } finally {

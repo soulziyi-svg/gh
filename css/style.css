@@ -1455,6 +1455,13 @@ footer {
 .dropzone__label svg { color: #2563eb; stroke: #2563eb; }
 .dropzone__label b { color: #174da7; font-size: 14px; }
 .dropzone__label span { color: #56677d; font-size: 12px; }
+.dropzone.has-preview .dropzone__label { padding: 8px; background:#fff; border-style:solid; }
+.dropzone__preview { display:grid; width:100%; grid-template-columns:repeat(3,minmax(0,1fr)); gap:7px; }
+.dropzone__preview[hidden] { display:none; }
+.dropzone__preview figure { position:relative; min-width:0; height:150px; margin:0; overflow:hidden; background:#edf2f7; }
+.dropzone__preview img { width:100%; height:100%; object-fit:cover; }
+.dropzone__preview figcaption { position:absolute; left:6px; right:6px; bottom:6px; overflow:hidden; padding:6px 8px; background:rgba(10,28,53,.78); color:#fff; font-size:10px; line-height:1.2; text-overflow:ellipsis; white-space:nowrap; }
+.dropzone__preview figure:only-child { grid-column:1/-1; height:220px; }
 .start-form__group > b { color: #1d4f9c; font-size: 16px; }
 .start-form__agree { display: inline-flex; align-items: center; gap: 9px; }
 .start-form__agree input {
@@ -1534,6 +1541,9 @@ body { background: #fff; letter-spacing: -.008em; }
   .section { padding: 82px 0; }
   .start-panel { padding: 78px 0; }
   .start-form { padding: 24px 20px; }
+  .dropzone__preview { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .dropzone__preview figure { height:120px; }
+  .dropzone__preview figure:only-child { height:190px; }
 }
 
 /* DESIGN 02 · Editorial interior magazine */
