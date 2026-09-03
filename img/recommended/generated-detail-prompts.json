@@ -1,0 +1,148 @@
+{
+  "created": "2026-09-04",
+  "records": [
+    {
+      "id": "01",
+      "file": "C:\\ai_web\\lecture1\\인테리어사이트\\img\\recommended\\generated-01-door-clearance.png",
+      "labels": [
+        "문을 닫았을 때",
+        "90도로 열었을 때",
+        "문 뒤 수납장 간섭",
+        "통과 공간 확보"
+      ],
+      "prompt": "Use case: photorealistic-natural. Asset type: website educational interior detail photo contact sheet. Create ONE 2-by-2 contact sheet with exactly four equal rectangular photo panels, no gutters, no borders, canvas 4:3. Each quadrant a distinct closeup/view described in reading order. Same modest Korean apartment entry door in all four views. TL closed single hinged door with complete jamb visible. TR same door open 90 degrees looking through clear doorway. BL oblique close shot of open door narrowly approaching a shoe cabinet, showing spatial interference without interpenetration. BR same entry with cabinet set further back and generous clear opening, no markings. Style: photorealistic construction detail editorial photography, natural neutral daylight, tactile realistic finishes, modest Korean residential scale. NOT a luxury room overview. Critical subject fills each quadrant and is recognizable at thumbnail size. NO text, letters, numbers, labels, arrows, logos, watermark. These are illustrative generated visuals, not certified engineering details. Keep all four panels sharply separated at exact horizontal/vertical midlines.",
+      "mode": "built-in image_gen",
+      "type": "AI-generated educational illustration, not a real site or product photo"
+    },
+    {
+      "id": "02",
+      "file": "C:\\ai_web\\lecture1\\인테리어사이트\\img\\recommended\\generated-02-door-pivot.png",
+      "labels": [
+        "측면 힌지",
+        "바닥 회전축",
+        "축 위치와 열림",
+        "하부 틈 확인"
+      ],
+      "prompt": "Use case: photorealistic-natural. Asset type: website educational interior detail photo contact sheet. Create ONE 2-by-2 contact sheet with exactly four equal rectangular photo panels, no gutters, no borders, canvas 4:3. Each quadrant a distinct closeup/view described in reading order. Architectural door hardware closeups. TL conventional side butt hinge joining wooden door edge to jamb, door partly open. TR floor pivot assembly beneath a partly open thick timber door with small metal pivot plate visible. BL overhead oblique view of off-center pivot door open, clearly showing short tail and long leaf. BR low angle of pivot door bottom and floor clearance. Plausible hardware, no exploded diagram. Style: photorealistic construction detail editorial photography, natural neutral daylight, tactile realistic finishes, modest Korean residential scale. NOT a luxury room overview. Critical subject fills each quadrant and is recognizable at thumbnail size. NO text, letters, numbers, labels, arrows, logos, watermark. These are illustrative generated visuals, not certified engineering details. Keep all four panels sharply separated at exact horizontal/vertical midlines.",
+      "mode": "built-in image_gen",
+      "type": "AI-generated educational illustration, not a real site or product photo"
+    },
+    {
+      "id": "03",
+      "file": "C:\\ai_web\\lecture1\\인테리어사이트\\img\\recommended\\generated-03-floor-height.png",
+      "labels": [
+        "타일·마루 접합부",
+        "높이 차이가 난 경계",
+        "바탕·접착층 검토",
+        "같은 높이로 마감"
+      ],
+      "prompt": "Use case: photorealistic-natural. Asset type: website educational interior detail photo contact sheet. Create ONE 2-by-2 contact sheet with exactly four equal rectangular photo panels, no gutters, no borders, canvas 4:3. Each quadrant a distinct closeup/view described in reading order. Tile and engineered oak floor transition in Korean apartment. TL closeup equal finished surface beige tile to oak with narrow transition joint. TR low side angle visible small step between higher tile and lower wood as comparison. BL realistic construction mockup cut edge of floor sample on workbench showing layers of substrate, tile adhesive and tile versus wood layer. BR completed flush junction viewed at grazing low angle. No claim specific branded products. Style: photorealistic construction detail editorial photography, natural neutral daylight, tactile realistic finishes, modest Korean residential scale. NOT a luxury room overview. Critical subject fills each quadrant and is recognizable at thumbnail size. NO text, letters, numbers, labels, arrows, logos, watermark. These are illustrative generated visuals, not certified engineering details. Keep all four panels sharply separated at exact horizontal/vertical midlines.",
+      "mode": "built-in image_gen",
+      "type": "AI-generated educational illustration, not a real site or product photo"
+    },
+    {
+      "id": "04",
+      "file": "C:\\ai_web\\lecture1\\인테리어사이트\\img\\recommended\\generated-04-tile-corner.png",
+      "labels": [
+        "졸리컷 모서리",
+        "보호 프로파일",
+        "니치 테두리",
+        "모서리 근접 비교"
+      ],
+      "prompt": "Use case: photorealistic-natural. Asset type: website educational interior detail photo contact sheet. Create ONE 2-by-2 contact sheet with exactly four equal rectangular photo panels, no gutters, no borders, canvas 4:3. Each quadrant a distinct closeup/view described in reading order. Four crisp close-up photographs of beige porcelain tile external corners. TL mitred 45degree outside corner with thin grout seam at meeting edges. TR square brushed metal edge protection trim joining two tiled planes. BL tiled shower niche edge with metal protective trim visible. BR macro mitred tile edge and fine seam, realistic granular porcelain and no razor thin impossible joins. Style: photorealistic construction detail editorial photography, natural neutral daylight, tactile realistic finishes, modest Korean residential scale. NOT a luxury room overview. Critical subject fills each quadrant and is recognizable at thumbnail size. NO text, letters, numbers, labels, arrows, logos, watermark. These are illustrative generated visuals, not certified engineering details. Keep all four panels sharply separated at exact horizontal/vertical midlines.",
+      "mode": "built-in image_gen",
+      "type": "AI-generated educational illustration, not a real site or product photo"
+    },
+    {
+      "id": "05",
+      "file": "C:\\ai_web\\lecture1\\인테리어사이트\\img\\recommended\\generated-05-wall-alignment.png",
+      "labels": [
+        "수평 기준선",
+        "가구와 천장 틈",
+        "문선의 수직",
+        "간접등과 평활도"
+      ],
+      "prompt": "Use case: photorealistic-natural. Asset type: website educational interior detail photo contact sheet. Create ONE 2-by-2 contact sheet with exactly four equal rectangular photo panels, no gutters, no borders, canvas 4:3. Each quadrant a distinct closeup/view described in reading order. Korean apartment finishing details. TL straight tiled wall with horizontal green laser level reference line and consistent grout. TR closeup top of built-in cabinet with uniform narrow ceiling gap. BL vertically aligned plain door jamb meeting straight wall reveal. BR grazing indirect light on subtly textured plaster wall showing slight real surface irregularities. Focus lines and substrate, not decor. Style: photorealistic construction detail editorial photography, natural neutral daylight, tactile realistic finishes, modest Korean residential scale. NOT a luxury room overview. Critical subject fills each quadrant and is recognizable at thumbnail size. NO text, letters, numbers, labels, arrows, logos, watermark. These are illustrative generated visuals, not certified engineering details. Keep all four panels sharply separated at exact horizontal/vertical midlines.",
+      "mode": "built-in image_gen",
+      "type": "AI-generated educational illustration, not a real site or product photo"
+    },
+    {
+      "id": "06",
+      "file": "C:\\ai_web\\lecture1\\인테리어사이트\\img\\recommended\\generated-06-j-handle.png",
+      "labels": [
+        "상단 J홈",
+        "하단 손잡이 홈",
+        "손가락 여유",
+        "도어 열림 방향"
+      ],
+      "prompt": "Use case: photorealistic-natural. Asset type: website educational interior detail photo contact sheet. Create ONE 2-by-2 contact sheet with exactly four equal rectangular photo panels, no gutters, no borders, canvas 4:3. Each quadrant a distinct closeup/view described in reading order. Closeup J-pull handleless cabinet door construction. TL white cabinet door upper edge with smoothly machined concave J finger groove in door itself. TR wall cabinet underside finger groove from low angle. BL side closeup one adult hand naturally gripping smooth J groove with visible finger clearance, correct anatomy. BR two adjacent cabinet doors one slightly open, show its grooved edge and opening direction through pose, no arrows. Style: photorealistic construction detail editorial photography, natural neutral daylight, tactile realistic finishes, modest Korean residential scale. NOT a luxury room overview. Critical subject fills each quadrant and is recognizable at thumbnail size. NO text, letters, numbers, labels, arrows, logos, watermark. These are illustrative generated visuals, not certified engineering details. Keep all four panels sharply separated at exact horizontal/vertical midlines.",
+      "mode": "built-in image_gen",
+      "type": "AI-generated educational illustration, not a real site or product photo"
+    },
+    {
+      "id": "07",
+      "file": "C:\\ai_web\\lecture1\\인테리어사이트\\img\\recommended\\generated-07-shoe-shelf.png",
+      "labels": [
+        "낮은 고정 선반",
+        "롱부츠 전용 칸",
+        "선반 높이 조절",
+        "꺼낼 공간 확인"
+      ],
+      "prompt": "Use case: photorealistic-natural. Asset type: website educational interior detail photo contact sheet. Create ONE 2-by-2 contact sheet with exactly four equal rectangular photo panels, no gutters, no borders, canvas 4:3. Each quadrant a distinct closeup/view described in reading order. Same realistic white Korean apartment shoe cabinet open. TL rows of closely spaced fixed shelves holding low shoes, one tall boot standing outside cabinet because too tall. TR modified cabinet with one high lower compartment holding upright knee-high boots and low shoes on separate shelves. BL macro side panel orderly pin holes and metal shelf peg supporting shelf. BR open cabinet with boots comfortably upright and extra free height above, front oblique view. Style: photorealistic construction detail editorial photography, natural neutral daylight, tactile realistic finishes, modest Korean residential scale. NOT a luxury room overview. Critical subject fills each quadrant and is recognizable at thumbnail size. NO text, letters, numbers, labels, arrows, logos, watermark. These are illustrative generated visuals, not certified engineering details. Keep all four panels sharply separated at exact horizontal/vertical midlines.",
+      "mode": "built-in image_gen",
+      "type": "AI-generated educational illustration, not a real site or product photo"
+    },
+    {
+      "id": "08",
+      "file": "C:\\ai_web\\lecture1\\인테리어사이트\\img\\recommended\\generated-08-jamb-seam.png",
+      "labels": [
+        "문틀·벽 경계",
+        "일정한 리빌",
+        "하부 접합부",
+        "상부 마감선"
+      ],
+      "prompt": "Use case: photorealistic-natural. Asset type: website educational interior detail photo contact sheet. Create ONE 2-by-2 contact sheet with exactly four equal rectangular photo panels, no gutters, no borders, canvas 4:3. Each quadrant a distinct closeup/view described in reading order. Four architectural macro photographs same oak interior door frame and offwhite painted wall. TL side oblique joint of door jamb and wall. TR closeup thin straight uniform recessed shadow reveal between frame and wall, no impossible floating wall. BL lower jamb meeting skirting with neatly resolved junction. BR top corner where horizontal head frame joins vertical jamb and ceiling wall. Sharp relevant details. Style: photorealistic construction detail editorial photography, natural neutral daylight, tactile realistic finishes, modest Korean residential scale. NOT a luxury room overview. Critical subject fills each quadrant and is recognizable at thumbnail size. NO text, letters, numbers, labels, arrows, logos, watermark. These are illustrative generated visuals, not certified engineering details. Keep all four panels sharply separated at exact horizontal/vertical midlines.",
+      "mode": "built-in image_gen",
+      "type": "AI-generated educational illustration, not a real site or product photo"
+    },
+    {
+      "id": "09",
+      "file": "C:\\ai_web\\lecture1\\인테리어사이트\\img\\recommended\\generated-09-mirror-position.png",
+      "labels": [
+        "거울 하단 위치",
+        "전신이 보이는 범위",
+        "서 있는 거리",
+        "가족 시야 확인"
+      ],
+      "prompt": "Use case: photorealistic-natural. Asset type: website educational interior detail photo contact sheet. Create ONE 2-by-2 contact sheet with exactly four equal rectangular photo panels, no gutters, no borders, canvas 4:3. Each quadrant a distinct closeup/view described in reading order. Same modest apartment entry full-length mirror, visually educational photography. TL low-angle detail mirror lower edge above skirting. TR full height mirror reflecting complete adult naturally, correct reflection geometry camera not visible. BL wider oblique shot adult facing mirror with clear standing distance and complete figure/reflection. BR adult and school-age child standing side by side facing tall mirror, correct matching reflection, everyday fully clothed, no furniture shopping mood. Style: photorealistic construction detail editorial photography, natural neutral daylight, tactile realistic finishes, modest Korean residential scale. NOT a luxury room overview. Critical subject fills each quadrant and is recognizable at thumbnail size. NO text, letters, numbers, labels, arrows, logos, watermark. These are illustrative generated visuals, not certified engineering details. Keep all four panels sharply separated at exact horizontal/vertical midlines.",
+      "mode": "built-in image_gen",
+      "type": "AI-generated educational illustration, not a real site or product photo"
+    },
+    {
+      "id": "10",
+      "file": "C:\\ai_web\\lecture1\\인테리어사이트\\img\\recommended\\generated-10-mirror-recess.png",
+      "labels": [
+        "돌출 부착형",
+        "벽면 일체형",
+        "옆면 높이 비교",
+        "매립 전 바탕"
+      ],
+      "prompt": "Use case: photorealistic-natural. Asset type: website educational interior detail photo contact sheet. Create ONE 2-by-2 contact sheet with exactly four equal rectangular photo panels, no gutters, no borders, canvas 4:3. Each quadrant a distinct closeup/view described in reading order. Four closeup photographs on offwhite wall showing mirror flushness. TL frameless surface mounted mirror viewed obliquely clearly projecting slightly and casting fine shadow. TR recessed mirror flush with surrounding wall, crisp narrow perimeter joint, reflections physically plausible. BL grazing side macro flush mirror-to-painted-wall seam. BR unfinished rectangular wall recess prepared with continuous backer board for mirror, no exposed wires, enough depth, uninstalled. Style: photorealistic construction detail editorial photography, natural neutral daylight, tactile realistic finishes, modest Korean residential scale. NOT a luxury room overview. Critical subject fills each quadrant and is recognizable at thumbnail size. NO text, letters, numbers, labels, arrows, logos, watermark. These are illustrative generated visuals, not certified engineering details. Keep all four panels sharply separated at exact horizontal/vertical midlines.",
+      "mode": "built-in image_gen",
+      "type": "AI-generated educational illustration, not a real site or product photo"
+    },
+    {
+      "id": "11",
+      "file": "C:\\ai_web\\lecture1\\인테리어사이트\\img\\recommended\\generated-11-tile-layout.png",
+      "labels": [
+        "줄눈 시작점",
+        "좁은 끝 조각",
+        "균형 잡힌 재단",
+        "문틀 주변 재단"
+      ],
+      "prompt": "Use case: photorealistic-natural. Asset type: website educational interior detail photo contact sheet. Create ONE 2-by-2 contact sheet with exactly four equal rectangular photo panels, no gutters, no borders, canvas 4:3. Each quadrant a distinct closeup/view described in reading order. Same small rectangular apartment tiled entry. TL overhead oblique dry layout beige large square tiles with spacers, straight grout lines, no glue. TR closeup very narrow tile offcut strip against side wall resulting from poor starting point. BL comparable entry with balanced wider edge cuts and centered grout arrangement. BR close shot tile cut neatly around door jamb with expansion gap, no tools in use. Geometrically consistent square tile grid. Style: photorealistic construction detail editorial photography, natural neutral daylight, tactile realistic finishes, modest Korean residential scale. NOT a luxury room overview. Critical subject fills each quadrant and is recognizable at thumbnail size. NO text, letters, numbers, labels, arrows, logos, watermark. These are illustrative generated visuals, not certified engineering details. Keep all four panels sharply separated at exact horizontal/vertical midlines.",
+      "mode": "built-in image_gen",
+      "type": "AI-generated educational illustration, not a real site or product photo"
+    }
+  ]
+}
