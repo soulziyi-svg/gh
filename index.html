@@ -8,7 +8,14 @@
       name="description"
       content="사진과 실측으로 공간을 분석하고 설계, 마감재, 셀프 시공법, 상세 견적과 검수까지 연결합니다."
     />
-    <link rel="stylesheet" href="css/style.css?v=8" />
+    <script>
+      (() => {
+        const themes = { 1: 'theme-studio', 2: 'theme-magazine', 3: 'theme-gallery', 4: 'theme-architect' };
+        const selected = new URLSearchParams(location.search).get('theme') || '1';
+        document.documentElement.classList.add(themes[selected] || themes[1]);
+      })();
+    </script>
+    <link rel="stylesheet" href="css/style.css?v=9" />
   </head>
   <body>
     <header class="header">
@@ -39,8 +46,6 @@
         <a href="#process">진행 과정</a><a href="#guide">선택 가이드</a
         ><a href="#material-guides">자재 가이드</a
         ><a href="#diy-guide">셀프 시공</a><a href="#proposal">제안서</a
-        ><button type="button" data-auth="login">로그인</button
-        ><button type="button" data-auth="signup">회원가입</button
         ><button type="button" data-mypage hidden>마이페이지</button>
       </div>
     </header>
@@ -90,12 +95,12 @@
               안내해드립니다.
             </p>
             <div class="start-journey" aria-label="공간한쪽 제안 진행 순서">
-              <article><img src="img/회사 입구.png" alt="공간 사진 촬영 예시" /><div><span>STEP 01</span><b>현재 공간을 촬영합니다</b><p>전체가 보이는 정면·좌측·우측·문제 부위를 밝게 촬영해주세요.</p></div></article>
-              <article><img src="img/guide1-wallpaper-video.jpg" alt="선호 인테리어 참고 이미지 예시" /><div><span>STEP 02</span><b>원하는 분위기를 알려주세요</b><p>마음에 드는 공간, 컬러, 벽지나 몰딩 사진을 함께 올려주세요.</p></div></article>
-              <article><img src="img/인테리어-변화과정.gif" alt="공간 진단에서 디자인 제안으로 이어지는 과정" /><div><span>STEP 03</span><b>진단 후 디자인과 견적으로 이어집니다</b><p>사진 진단을 먼저 받고, 결제 후 컨셉 디자인과 시공 방식별 상세 견적을 비교합니다.</p></div></article>
+              <article><img src="img/start-step-measure-v1.webp" alt="레이저 거리 측정기와 줄자로 공간을 실측하는 모습" /><div><span>STEP 01</span><b>현재 공간을 촬영합니다</b><p>전체가 보이는 정면·좌측·우측 사진을 찍고, 간단한 가로·세로·높이 사이즈를 입력해주세요.</p></div></article>
+              <article><img src="img/start-step-reference-v1.webp" alt="인테리어 사진과 컬러 및 벽지 샘플을 고르는 모습" /><div><span>STEP 02</span><b>원하는 분위기를 알려주세요</b><p>마음에 드는 공간, 컬러, 벽지 등의 사진을 함께 올려주세요.</p></div></article>
+              <article><img src="img/start-step-proposal-v1.webp" alt="인테리어 디자인 시안과 마감재 및 견적서를 검토하는 모습" /><div><span>STEP 03</span><b>디자인과 견적을 비교합니다</b><p>사전 디자인을 먼저 받고, 결제 후 컨셉 디자인과 시공 방식별 상세 견적을 비교합니다.</p></div></article>
             </div>
             <div class="deliverable-flow">
-              <div><small>먼저 제공</small><strong>사전 공간한쪽 제안서</strong><span>사진 기반 현장 진단 · 변경 우선순위 · 디자인 방향</span></div>
+              <div><small>사전 제공</small><strong>사전 공간한쪽 제안서</strong><span>사진 기반 현장 진단 · 변경 우선순위 · 디자인 방향</span></div>
               <i aria-hidden="true">→</i>
               <div><small>결제 후 제공</small><strong>컨셉 디자인 제안서 + 상세 견적서</strong><span>셀프 · 반셀프 · 업체 시공별 범위와 비용 비교</span></div>
             </div>

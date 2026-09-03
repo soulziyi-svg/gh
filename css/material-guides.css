@@ -61,6 +61,11 @@
 .material-card__visual--plaster {
   background: linear-gradient(rgba(11,29,57,.15),rgba(11,29,57,.62)), url('../img/material-wallpaper-v1.png') center/cover;
 }
+.material-card { border-radius: 5px; background: #fff; box-shadow: 0 14px 34px rgba(18,35,61,.06); }
+.material-card__visual { min-height: 235px; }
+.material-card__body { padding: 30px 28px; }
+.material-card__body h3 { color:#142944; font-size:23px; line-height:1.45; }
+.material-card__actions a { border-radius:3px; padding:13px 10px; }
 .material-card__visual--silk {
   background: linear-gradient(rgba(11,29,57,.12),rgba(11,29,57,.68)), url('../img/wallpaper-eight-samples-v1.png') center/cover;
 }
