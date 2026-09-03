@@ -8,7 +8,7 @@
       name="description"
       content="사진과 실측으로 공간을 분석하고 설계, 마감재, 셀프 시공법, 상세 견적과 검수까지 연결합니다."
     />
-    <link rel="stylesheet" href="css/style.css?v=7" />
+    <link rel="stylesheet" href="css/style.css?v=8" />
   </head>
   <body>
     <header class="header">
@@ -39,7 +39,6 @@
         <a href="#process">진행 과정</a><a href="#guide">선택 가이드</a
         ><a href="#material-guides">자재 가이드</a
         ><a href="#diy-guide">셀프 시공</a><a href="#proposal">제안서</a
-        ><a href="#estimate">견적 기준</a
         ><button type="button" data-auth="login">로그인</button
         ><button type="button" data-auth="signup">회원가입</button
         ><button type="button" data-mypage hidden>마이페이지</button>
@@ -90,6 +89,16 @@
               아래 다섯 가지만 남겨주시면, 사진을 분석해 진단 결과와 다음 단계를
               안내해드립니다.
             </p>
+            <div class="start-journey" aria-label="공간한쪽 제안 진행 순서">
+              <article><img src="img/회사 입구.png" alt="공간 사진 촬영 예시" /><div><span>STEP 01</span><b>현재 공간을 촬영합니다</b><p>전체가 보이는 정면·좌측·우측·문제 부위를 밝게 촬영해주세요.</p></div></article>
+              <article><img src="img/guide1-wallpaper-video.jpg" alt="선호 인테리어 참고 이미지 예시" /><div><span>STEP 02</span><b>원하는 분위기를 알려주세요</b><p>마음에 드는 공간, 컬러, 벽지나 몰딩 사진을 함께 올려주세요.</p></div></article>
+              <article><img src="img/인테리어-변화과정.gif" alt="공간 진단에서 디자인 제안으로 이어지는 과정" /><div><span>STEP 03</span><b>진단 후 디자인과 견적으로 이어집니다</b><p>사진 진단을 먼저 받고, 결제 후 컨셉 디자인과 시공 방식별 상세 견적을 비교합니다.</p></div></article>
+            </div>
+            <div class="deliverable-flow">
+              <div><small>먼저 제공</small><strong>사전 공간한쪽 제안서</strong><span>사진 기반 현장 진단 · 변경 우선순위 · 디자인 방향</span></div>
+              <i aria-hidden="true">→</i>
+              <div><small>결제 후 제공</small><strong>컨셉 디자인 제안서 + 상세 견적서</strong><span>셀프 · 반셀프 · 업체 시공별 범위와 비용 비교</span></div>
+            </div>
           </div>
           <form class="start-form" id="startForm" novalidate>
             <div class="start-form__row">
@@ -142,7 +151,7 @@
               <p>전체 네 방향과 문제 부분을 찍어주세요.</p>
             </div>
             <div class="start-form__group">
-              <span>02</span><b>인테리어 참고해주세요</b>
+              <span>02</span><b>인테리어 참고 사진</b>
               <div class="dropzone" data-dropzone>
                 <input
                   id="startReferencePhoto"
@@ -624,7 +633,7 @@
       </section>
     <section class="section material-guides" id="material-guides">
       <div class="wrap">
-        <div class="section-head section-head--left"><p class="eyebrow">TOTAL INTERIOR · MATERIAL GUIDE</p><h2>자재를 고르기 전에,<br />생활 기준부터 비교하세요.</h2><p>유튜브에서 확인한 핵심을 제품, 시공, 관리 기준으로 다시 정리했습니다. 상세 가이드는 새 탭에서 열립니다.</p></div>
+        <div class="section-head section-head--left"><p class="eyebrow">MATERIAL GUIDE</p><h2>자재를 고르기 전에,<br />생활 기준부터 비교하세요.</h2><p>제품의 특징, 시공 조건과 관리 기준을 전문적으로 정리했습니다. 상세 가이드는 새 탭에서 열립니다.</p></div>
         <div class="material-guide-grid">
           <article class="material-card"><div class="material-card__visual material-card__visual--plaster"><span>GUIDE 01</span><b>WALLPAPER</b></div><div class="material-card__body"><small>2026 WALL TREND</small><h3>2026 벽지·도배 가이드</h3><p>합지와 실크, 질감 트렌드, 무몰딩과 시공 전 체크리스트를 한 번에 살펴봅니다.</p><div class="material-card__actions"><a href="wallpaper-guide.html" target="_blank" rel="noopener">상세 가이드</a><a href="wallpaper-guide-v2.html" target="_blank" rel="noopener">인터랙티브</a><a href="downloads/material-guide-01.pdf" download>PDF 다운로드</a></div></div></article>
           <article class="material-card"><div class="material-card__visual material-card__visual--silk"><span>GUIDE 02</span><b>8 PRODUCTS</b></div><div class="material-card__body"><small>BASIC · PREMIUM · FUNCTION</small><h3>실크벽지 8종 비교</h3><p>가격, 질감, 관리성과 내구성을 기준으로 8개 제품군을 생활 방식에 맞게 비교합니다.</p><div class="material-card__actions"><a href="wallpaper-compare.html" target="_blank" rel="noopener">상세 가이드</a><a href="downloads/material-guide-02.pdf" download>PDF 다운로드</a></div></div></article>
@@ -647,8 +656,8 @@
               />
               <div>
                 <span>욕실</span>
-                <h3>방수·배수·미끄럼부터</h3>
-                <p>점검 가능한 설비와 관리하기 쉬운 바닥</p>
+                <h3>타일 시공보다는 도장으로</h3>
+                <p>기존 타일의 들뜸과 방수 상태가 양호하다면 전면 철거 대신 욕실용 도장으로 분위기를 바꿉니다. 다만 물이 직접 닿는 바닥·샤워부는 방수와 미끄럼 조건을 먼저 확인합니다.</p>
               </div>
             </article>
             <article>
@@ -659,8 +668,8 @@
               />
               <div>
                 <span>주방</span>
-                <h3>화구와 밝기부터</h3>
-                <p>작업등 위치와 청소하기 쉬운 마감재</p>
+                <h3>전체 교체보다는 필름 + 부분 보수</h3>
+                <p>문짝과 몸통 상태가 양호하면 철거를 줄이고 인테리어필름, 손잡이, 실리콘과 상판 일부를 보수합니다. 습기로 부푼 MDF와 뒤틀린 도어는 교체 범위를 따로 구분합니다.</p>
               </div>
             </article>
             <article>
@@ -671,8 +680,8 @@
               />
               <div>
                 <span>거실</span>
-                <h3>채광과 소음부터</h3>
-                <p>휴식과 대화가 편안한 배치</p>
+                <h3>벽지·도장·몰딩·간접등으로 변화</h3>
+                <p>큰 구조 변경 없이 벽 마감과 몰딩 비례를 정리하고, 필요한 면에 포인트 컬러와 간접조명을 더합니다. 기존 천장과 전기 배선 상태에 따라 셀프와 전문가 작업을 구분합니다.</p>
               </div>
             </article>
             <article>
@@ -683,8 +692,8 @@
               />
               <div>
                 <span>침실</span>
-                <h3>환기와 채광부터</h3>
-                <p>숙면에 방해되지 않는 소재와 조명</p>
+                <h3>벽지·몰딩·사각등 교체</h3>
+                <p>침실은 과한 공사보다 차분한 벽지, 간결한 몰딩과 눈부심이 적은 사각등 교체를 우선합니다. 천장 보수와 전기 결선은 현장 상태를 확인한 뒤 작업 범위를 정합니다.</p>
               </div>
             </article>
           </div>
@@ -694,82 +703,40 @@
         <div class="wrap">
           <div class="section-head">
             <p class="eyebrow">공간한쪽 제안서</p>
-            <h2>예쁜 시안에서 끝나지 않는<br />실행 가능한 다섯 가지 결과물</h2>
+            <h2>사진 진단에서 디자인 확정까지,<br />결정하기 쉬운 제안서</h2>
+            <p>처음부터 과한 공사를 권하지 않습니다. 현재 상태를 살리고 싶은 부분과 반드시 손봐야 할 부분을 구분한 뒤, 디자인과 비용을 함께 비교합니다.</p>
           </div>
           <div class="proposal-grid">
             <article>
               <span>01</span>
-              <h3>현장 분석서</h3>
-              <p>생활 문제, 현재 상태, 위험과 추가 확인 항목</p>
-              <b>확인됨 · 추정 · 확인 필요</b>
+              <h3>사전 공간 진단</h3>
+              <p>사진과 실측으로 유지·보수·철거 후보와 추가 확인 항목을 구분합니다.</p>
+              <b>계약 전 먼저 확인</b>
             </article>
             <article>
               <span>02</span>
-              <h3>설계·마감재</h3>
-              <p>동선 시안, 규격, 관리성, 가격과 대체 제품</p>
-              <b>합리형 · 균형형 · 프리미엄형</b>
+              <h3>컨셉별 디자인</h3>
+              <p>현실형, 무몰딩, 클래식과 고강도 컨셉을 전체·정면·좌우 뷰로 비교합니다.</p>
+              <b>디자인 강도 · 셀프 난이도 표시</b>
             </article>
             <article>
               <span>03</span>
-              <h3>셀프 작업 카드</h3>
-              <p>준비물, 순서, 주의점, 중단 기준과 검수</p>
-              <b>셀프 · 부분 외주 · 전문가</b>
+              <h3>마감재 선택표</h3>
+              <p>벽지·도장·필름·몰딩·조명의 장단점과 현장 적용 조건을 비교합니다.</p>
+              <b>실제품 · 시공법 · 관리 기준</b>
             </article>
             <article>
               <span>04</span>
-              <h3>물량·상세 견적</h3>
-              <p>산출식, 손실률, 발주량, 숨은 비용과 예비비</p>
-              <b>초기 예상 · 가견적 · 확정</b>
+              <h3>시공 방식별 견적</h3>
+              <p>동일한 디자인을 기준으로 자재비, 부분 외주와 업체 시공 비용을 나눕니다.</p>
+              <b>셀프 · 반셀프 · 업체 시공</b>
             </article>
             <article>
               <span>05</span>
-              <h3>공정·계약·검수</h3>
-              <p>작업 순서, 변경 승인, 잔금 전 검수와 A/S</p>
-              <b>일정 · 승인 · 검수 · 보증</b>
+              <h3>실행·검수 가이드</h3>
+              <p>준비물, 작업 순서, 실패 위험, 전문가 전환 시점과 완료 검수를 정리합니다.</p>
+              <b>계약 후 상세 제공</b>
             </article>
-          </div>
-        </div>
-      </section>
-      <section class="section estimate" id="estimate">
-        <div class="wrap estimate__grid">
-          <div class="estimate__intro">
-            <p class="eyebrow">견적과 계약의 원칙</p>
-            <h2>금액보다 먼저,<br />그 금액의 근거를 봅니다.</h2>
-            <p>
-              같은 도면·자재·범위로 업체 견적을 다시 정렬하고, 실측과 현장 확인
-              단계에 따라 신뢰도를 구분합니다.
-            </p>
-            <a
-              class="text-link"
-              href="outputs/공간한쪽-견적서-템플릿/공간한쪽_셀프인테리어_상세견적서_템플릿.xlsx"
-              >표준 견적서 내려받기 <span>↓</span></a
-            >
-          </div>
-          <div class="estimate__checks">
-            <div>
-              <span>01</span><b>산출 근거</b>
-              <p>면적·개수·손실률·포장 단위와 발주량</p>
-            </div>
-            <div>
-              <span>02</span><b>비용 분리</b>
-              <p>자재·노무·장비·운반·폐기물·보양·부가세</p>
-            </div>
-            <div>
-              <span>03</span><b>누락·추가 조건</b>
-              <p>바탕 보수, 양중, 주차, 재배송과 지연</p>
-            </div>
-            <div>
-              <span>04</span><b>제품·구매 정보</b>
-              <p>브랜드·모델·규격·수량·판매처·확인일</p>
-            </div>
-            <div>
-              <span>05</span><b>변경 승인</b>
-              <p>변경 이유, 증감액, 일정 영향과 서면 승인</p>
-            </div>
-            <div>
-              <span>06</span><b>잔금·A/S</b>
-              <p>잔금 전 검수와 보증 범위·기간·접수 방법</p>
-            </div>
           </div>
         </div>
       </section>
@@ -787,8 +754,7 @@
         <div>
           <b>SERVICE</b><a href="#process">진행 과정</a
           ><a href="#guide">선택 가이드</a
-          ><a href="#diy-guide">셀프 시공 가이드</a
-          ><a href="#estimate">견적 기준</a>
+          ><a href="#diy-guide">셀프 시공 가이드</a>
         </div>
         <div>
           <b>STANDARD</b><a href="#proposal">제안서 구성</a
@@ -860,7 +826,7 @@
         후 제공됩니다.
       </p>
     </dialog>
-    <link rel="stylesheet" href="css/material-guides.css?v=1" />
-    <script src="js/app.js?v=5"></script>
+    <link rel="stylesheet" href="css/material-guides.css?v=2" />
+    <script src="js/app.js?v=6"></script>
   </body>
 </html>

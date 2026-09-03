@@ -138,9 +138,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const startForm = document.getElementById('startForm');
   const startStatus = document.getElementById('startStatus');
-  startForm?.addEventListener('submit', (event) => {
+  startForm?.addEventListener('submit', async (event) => {
     event.preventDefault();
     if (!startForm.reportValidity()) return;
-    startStatus.textContent = '접수 내용이 준비되었습니다. 실제 접수와 진단 결과 발송은 서버 연결 후 제공됩니다.';
+    const submitButton = startForm.querySelector('button[type="submit"]');
+    submitButton.disabled = true;
+    startStatus.textContent = '사진과 신청 내용을 안전하게 전송하고 있습니다…';
+    const payload = new FormData(startForm);
+    payload.append('_subject', '[공간한쪽] 새로운 공간 계획 신청');
+    payload.append('_template', 'table');
+    payload.append('_captcha', 'false');
+    payload.append('개인정보동의', '동의함');
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/soulziyi@gmail.com', {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: payload,
+      });
+      if (!response.ok) throw new Error('mail service error');
+      startStatus.textContent = '접수가 완료되었습니다. 확인 후 안내드리겠습니다.';
+      startForm.reset();
+      document.querySelectorAll('[data-dropzone-files]').forEach((label) => { label.textContent = '선택된 파일 없음'; });
+    } catch (error) {
+      startStatus.textContent = '전송하지 못했습니다. 잠시 후 다시 시도하거나 soulziyi@gmail.com으로 보내주세요.';
+    } finally {
+      submitButton.disabled = false;
+    }
   });
 });

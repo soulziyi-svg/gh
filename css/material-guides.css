@@ -59,20 +59,16 @@
   letter-spacing: -0.03em;
 }
 .material-card__visual--plaster {
-  background: linear-gradient(145deg, #f6f4ef, #d8d3c8);
+  background: linear-gradient(rgba(11,29,57,.15),rgba(11,29,57,.62)), url('../img/material-wallpaper-v1.png') center/cover;
 }
 .material-card__visual--silk {
-  background: linear-gradient(145deg, #e6ecfb, #b9c8ea);
+  background: linear-gradient(rgba(11,29,57,.12),rgba(11,29,57,.68)), url('../img/wallpaper-eight-samples-v1.png') center/cover;
 }
 .material-card__visual--compare {
-  background: linear-gradient(
-    135deg,
-    #e8e3d9 0 33%,
-    #ccd6e8 33% 66%,
-    #30343d 66%
-  );
+  background: linear-gradient(rgba(11,29,57,.08),rgba(11,29,57,.7)), url('../img/material-board-v1.png') center/cover;
   color: #fff;
 }
+.material-card__visual--plaster b,.material-card__visual--silk b { color:#fff; text-shadow:0 2px 12px rgba(0,0,0,.35); }
 .material-card__body {
   padding: 26px;
 }
@@ -90,7 +86,7 @@
   min-height: 70px;
   margin: 0;
   color: #696d76;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.75;
 }
 .material-card__actions {
@@ -104,7 +100,7 @@
   border: 1px solid #2563eb;
   border-radius: 8px;
   color: #2563eb;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 800;
   text-align: center;
 }
