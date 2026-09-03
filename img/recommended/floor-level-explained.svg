@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720" role="img" aria-labelledby="title desc">
+<title id="title">타일과 마루의 표면 높이는 모든 층의 합으로 정합니다</title>
+<desc id="desc">위쪽은 같은 마감재 두께라도 접착층과 바탕 차이로 단차가 생기는 예시입니다. 아래쪽은 바탕을 조정해 타일과 마루의 완성면을 같은 기준선에 맞춘 예시입니다.</desc>
+<rect width="1000" height="720" rx="16" fill="#f3f6fa"/>
+<g font-family="Malgun Gothic, sans-serif" fill="#192d43">
+<text x="38" y="48" font-size="24.38" font-weight="700">바닥을 잘라 옆에서 보면, 높이 차이가 보입니다.</text>
+<text x="38" y="82" font-size="16.88">완성 높이 = 바탕 높이 + 접착층 등 하부 구성 + 마감재</text>
+<rect x="28" y="107" width="944" height="230" rx="12" fill="white"/>
+<text x="50" y="145" font-size="21.57" font-weight="700" fill="#98603e">A. 마감재 두께만 맞추면 → 단차가 생길 수 있습니다</text>
+<rect x="65" y="190" width="420" height="30" fill="#c6b69f"/><rect x="65" y="220" width="420" height="40" fill="#e5d5b8"/>
+<rect x="505" y="220" width="420" height="30" fill="#b88a5c"/><rect x="505" y="250" width="420" height="10" fill="#e5d5b8"/>
+<rect x="65" y="260" width="860" height="35" fill="#bbc3ca"/>
+<text x="225" y="212" font-size="16.88">타일</text><text x="665" y="242" font-size="16.88">마루</text>
+<path d="M480 187H525M498 190V220M486 220H525" fill="none" stroke="#bd6443" stroke-width="3"/>
+<text x="535" y="198" font-size="16.88" fill="#a45536">표면 높이 차이</text>
+<text x="65" y="321" font-size="15.95">마감재 두께는 같게 표현했지만, 아래 접착층 두께가 다릅니다.</text>
+<rect x="28" y="353" width="944" height="252" rx="12" fill="white"/>
+<text x="50" y="390" font-size="21.57" font-weight="700" fill="#255a96">B. 전체 구성을 함께 조정하면 → 완성면이 연결됩니다</text>
+<rect x="65" y="439" width="420" height="30" fill="#c6b69f"/><rect x="65" y="469" width="420" height="40" fill="#e5d5b8"/>
+<rect x="505" y="439" width="420" height="30" fill="#b88a5c"/><rect x="505" y="469" width="420" height="10" fill="#e5d5b8"/>
+<rect x="505" y="479" width="420" height="30" fill="#dce3e8"/>
+<rect x="65" y="509" width="860" height="35" fill="#bbc3ca"/>
+<path d="M50 437H940" fill="none" stroke="#255a96" stroke-width="3" stroke-dasharray="9 5"/>
+<text x="640" y="426" font-size="15.95" fill="#255a96">공통 완성면 기준선</text>
+<text x="225" y="462" font-size="16.88">타일</text><text x="665" y="462" font-size="16.88">마루</text>
+<text x="174" y="495" font-size="15.95">접착층 등 하부 구성</text><text x="630" y="502" font-size="15.95">바탕 높이 조정</text>
+<text x="65" y="579" font-size="15.95">중앙 틈은 접합 위치 표시입니다. 접합재·팽창 여유는 제품별로 별도 설계합니다.</text>
+<text x="48" y="646" font-size="17.82" font-weight="700">타일팀과 마루팀이 같은 기준선을 보고 작업하도록 요청하세요.</text>
+<text x="48" y="679" font-size="15" fill="#566675">이해를 위한 비축척 단면 · 실제 두께와 층 구성은 제품·공법에 따라 다릅니다.</text>
+<text x="48" y="702" font-size="15" fill="#566675">높이를 맞추기 위해 접착제를 임의로 두껍게 바르는 방식은 사용하지 않습니다.</text>
+</g></svg>

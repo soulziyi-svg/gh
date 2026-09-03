@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" role="img" aria-labelledby="title desc">
+<title id="title">문을 위에서 보면 회전축의 차이가 보입니다</title>
+<desc id="desc">왼쪽은 문 가장자리 힌지, 오른쪽은 문 안쪽 피벗 축입니다. 안쪽 축은 짧은 꼬리 부분도 반대쪽으로 회전하므로 양쪽의 회전 공간과 실제 통과 폭을 확인합니다.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto-start-reverse"><path d="M0 0L8 4L0 8" fill="none" stroke="#255a96" stroke-width="1.5"/></marker></defs>
+<rect width="1000" height="680" rx="16" fill="#f3f6fa"/>
+<g font-family="Malgun Gothic, sans-serif" fill="#192d43">
+<text x="38" y="48" font-size="24.38" font-weight="700">문을 위에서 내려다본 비교</text>
+<text x="38" y="82" font-size="16.88">실선 = 열린 문　점선 = 닫힌 문　파란 점 = 회전축</text>
+<rect x="28" y="110" width="456" height="425" rx="12" fill="white"/>
+<rect x="516" y="110" width="456" height="425" rx="12" fill="white"/>
+<text x="52" y="150" font-size="22.5" font-weight="700">A. 가장자리 힌지</text>
+<text x="540" y="150" font-size="22.5" font-weight="700">B. 안쪽 피벗 축</text>
+<g fill="#bcc5cd"><rect x="55" y="224" width="62" height="30"/><rect x="397" y="224" width="60" height="30"/><rect x="543" y="224" width="62" height="30"/><rect x="885" y="224" width="60" height="30"/></g>
+<g fill="none" stroke="#9baab8" stroke-width="7" stroke-dasharray="10 7"><path d="M117 239H397"/><path d="M605 239H885"/></g>
+<path d="M397 239A280 280 0 0 1 117 519" fill="none" stroke="#d2dce8" stroke-width="2"/>
+<path d="M885 239A210 210 0 0 1 675 449M605 239A70 70 0 0 1 675 169" fill="none" stroke="#a5bada" stroke-width="2" stroke-dasharray="5 5"/>
+<g stroke="#a47c52" stroke-width="14"><path d="M117 239V519"/><path d="M675 169V449"/></g>
+<g fill="#255a96" stroke="white" stroke-width="3"><circle cx="117" cy="239" r="10"/><circle cx="675" cy="239" r="10"/></g>
+<g stroke="#255a96" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"><path d="M140 340H384"/><path d="M696 340H872"/></g>
+<text x="155" y="326" font-size="17.82" fill="#255a96">실제 통과 공간</text>
+<text x="709" y="326" font-size="17.82" fill="#255a96">통과 공간</text>
+<path d="M725 204L685 190" fill="none" stroke="#b37542" stroke-width="2"/>
+<text x="728" y="205" font-size="16.88" fill="#966035">뒤쪽도 회전</text>
+<text x="151" y="417" font-size="16.88">축이 문 가장자리에</text>
+<text x="711" y="410" font-size="16.88">축 뒤 짧은 부분의</text>
+<text x="711" y="439" font-size="16.88">충돌 공간도 확인</text>
+<text x="48" y="553" font-size="18.75" font-weight="700">같은 문틀 폭이어도 축 위치에 따라 사용 가능한 공간이 달라집니다.</text>
+<text x="48" y="590" font-size="16.88">손잡이를 미는 느낌은 축 위치뿐 아니라 도어클로저의 조정·문 무게에도 영향을 받습니다.</text>
+<text x="48" y="625" font-size="16.88" fill="#566675">모델별 허용 문 무게·문 폭·개폐각을 함께 확인하세요.</text>
+<text x="48" y="657" font-size="14.07" fill="#566675">관계 설명용 개념도 · 축척·치수·실제 힌지 구조를 나타내는 제작도면이 아닙니다.</text>
+</g></svg>
