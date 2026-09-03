@@ -1,0 +1,2 @@
+.plan-grid article{padding:0;overflow:hidden}.plan-grid article>img{height:320px}.plan-grid article>div{padding:36px 40px 40px}
+@media(max-width:600px){.plan-grid article{padding:0}.plan-grid article>img{height:230px}.plan-grid article>div{padding:28px 24px 32px}}

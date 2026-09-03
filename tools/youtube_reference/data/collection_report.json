@@ -1,0 +1,30 @@
+{
+  "collected_at": "2026-09-02T09:36:10.779389+00:00",
+  "channels": [
+    {
+      "name": "인테리어언니 백예진",
+      "channel_key": "UCAvMbWfQGpK05wUDP0dukRw",
+      "source_url": "https://www.youtube.com/@intelliunnie/videos",
+      "videos": 136
+    },
+    {
+      "name": "오늘의집",
+      "channel_key": "UCBKtitA1RwY7F32rCniV1dA",
+      "source_url": "https://www.youtube.com/@OhouseKR/videos",
+      "videos": 462
+    },
+    {
+      "name": "쿤하우스",
+      "channel_key": "UCMJAj4izBY_srYn1Ko-Pvhg",
+      "source_url": "https://www.youtube.com/@Koonhous/videos",
+      "videos": 24
+    },
+    {
+      "name": "아정당 인테리어",
+      "channel_key": "UCzay0uHEiaSsKmuGkCg-mSg",
+      "source_url": "https://www.youtube.com/@아정당인테리어/videos",
+      "videos": 57
+    }
+  ],
+  "total_videos": 679
+}
