@@ -29,6 +29,9 @@
           aria-controls="mobilePanel"
         >
           <span></span><span></span><span></span></button
+        ><nav class="type-toggle" aria-label="공간 유형 선택"
+          ><a href="index.html" class="is-active">아파트</a
+          ><a href="store.html">상가</a></nav
         ><a class="brand" href="#top"
           ><img src="img/logo1.png" alt="공간한쪽"
         /></a>
@@ -44,10 +47,10 @@
         <a class="header__cta" href="#start">내 공간 시작하기</a>
       </div>
       <div id="mobilePanel" class="mobile-panel" hidden>
-        <a href="#process">진행 과정</a><a href="#guide">선택 가이드</a
-        ><a href="#material-guides">자재 가이드</a
-        ><a href="#diy-guide">셀프 시공</a><a href="#proposal">제안서</a
-        ><button type="button" data-mypage hidden>마이페이지</button>
+        <div class="mobile-panel__toggle">
+          <a href="index.html" class="is-active">아파트</a><a href="store.html">상가</a>
+        </div>
+        <a href="#process">진행 과정</a><a href="#guide">선택 가이드</a><a href="#material-guides">자재 가이드</a><a href="#diy-guide">셀프 시공</a><a href="#proposal">제안서</a><button type="button" data-mypage hidden>마이페이지</button>
       </div>
     </header>
     <main id="top">

@@ -119,6 +119,46 @@ button {
   width: 154px;
   height: auto;
 }
+.type-toggle {
+  display: flex;
+  gap: 2px;
+  margin-left: 14px;
+  padding: 3px;
+  border-radius: 999px;
+  background: rgba(23, 25, 29, 0.06);
+}
+.type-toggle a {
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--muted);
+}
+.type-toggle a.is-active {
+  background: var(--ink);
+  color: #fff;
+}
+.type-toggle a:not(.is-active):hover {
+  color: var(--ink);
+}
+.mobile-panel__toggle {
+  display: flex;
+  gap: 8px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+.mobile-panel__toggle a {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  background: #f2f2f2;
+  text-align: center;
+  font-weight: 700;
+}
+.mobile-panel__toggle a.is-active {
+  background: var(--ink);
+  color: #fff;
+}
 .desktop-nav {
   display: flex;
   gap: 32px;
@@ -1386,6 +1426,9 @@ footer {
     left: 50%;
   }
   .header__cta {
+    display: none;
+  }
+  .type-toggle {
     display: none;
   }
 }
