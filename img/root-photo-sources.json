@@ -1,0 +1,22 @@
+{
+  "reviewedAt": "2026-09-04",
+  "scope": "index.html · 주거공간/상업공간 선택 카드 대표 사진",
+  "usage": "Unsplash License / Pexels License 기준 상업적 사용 가능한 무료 스톡사진.",
+  "photos": {
+    "root-residential-v1.webp": {
+      "img": "https://images.unsplash.com/photo-1758448755856-01d3add0177b",
+      "title": "Modern living room with elegant chandeliers and comfortable seating",
+      "source": "https://unsplash.com/photos/modern-living-room-with-elegant-chandeliers-and-comfortable-seating-3tu1nlIg4XM",
+      "author": "Aalo Lens (@aalolens) · Unsplash",
+      "license": "Unsplash License (무료, 상업적 사용 가능)"
+    },
+    "root-commercial-v1.webp": {
+      "img": "https://images.pexels.com/photos/4450335/pexels-photo-4450335.jpeg",
+      "title": "Interior of modern cafe with big window",
+      "source": "https://www.pexels.com/photo/interior-of-modern-cafe-with-big-window-4450335/",
+      "author": "Ksenia Chernaya · Pexels",
+      "license": "Pexels License (무료, 상업적 사용 가능)"
+    }
+  },
+  "note": "루트 페이지 카드용 대표 사진. 실사 촬영 사진(생성/렌더링 아님)이며 특정 시공 사례가 아닌 분위기 예시 사진."
+}
