@@ -1,0 +1,36 @@
+{
+  "reviewedAt": "2026-09-04",
+  "scope": "store.html · 업종별 체크포인트 (CAFE/OFFICE/RETAIL/CLINIC) 대표 사진",
+  "usage": "Unsplash License / Pexels License 기준 상업적 사용 가능한 무료 스톡사진. 특정 시공 사례가 아닌 업종 분위기를 보여주는 예시 사진이며, 페이지에도 '실제 매장 예시 아님'을 표기함.",
+  "photos": {
+    "type-cafe-v1.webp": {
+      "img": "https://images.unsplash.com/photo-1755001437609-bb2abcde9755",
+      "title": "Cozy cafe interior with display shelves and counter",
+      "source": "https://unsplash.com/photos/cozy-cafe-interior-with-display-shelves-and-counter-A43ljffTDVA",
+      "author": "Miruthula Adiyamane (@miruthulaadiyamane) · Unsplash",
+      "license": "Unsplash License (무료, 상업적 사용 가능)"
+    },
+    "type-office-v1.webp": {
+      "img": "https://images.pexels.com/photos/7046168/pexels-photo-7046168.jpeg",
+      "title": "Interior of spacious conference room in modern office",
+      "source": "https://www.pexels.com/photo/interior-of-spacious-conference-room-in-modern-office-7046168/",
+      "author": "Max Vakhtbovych · Pexels",
+      "license": "Pexels License (무료, 상업적 사용 가능)"
+    },
+    "type-retail-v1.webp": {
+      "img": "https://images.pexels.com/photos/6044231/pexels-photo-6044231.jpeg",
+      "title": "Interior of modern clothes shop with counter",
+      "source": "https://www.pexels.com/photo/interior-of-modern-clothes-shop-with-counter-6044231/",
+      "author": "Skylar Kang · Pexels",
+      "license": "Pexels License (무료, 상업적 사용 가능)"
+    },
+    "type-clinic-v1.webp": {
+      "img": "https://images.pexels.com/photos/8459996/pexels-photo-8459996.jpeg",
+      "title": "Waiting room in a hospital",
+      "source": "https://www.pexels.com/photo/waiting-room-in-a-hospital-8459996/",
+      "author": "Los Muertos Crew (Cristian Rojas) · Pexels",
+      "license": "Pexels License (무료, 상업적 사용 가능)"
+    }
+  },
+  "note": "네 장 모두 실사 촬영된 사진(생성/렌더링 아님). CAFE·RETAIL은 Unsplash/Pexels 서로 다른 출처, OFFICE·CLINIC은 Pexels 출처. 배포 전 라이선스 조건에 변동이 없는지 재확인 권장."
+}

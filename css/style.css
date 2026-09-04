@@ -220,6 +220,18 @@ button {
   width: 26px;
   height: 26px;
 }
+.type-card__visual {
+  display: block;
+  margin: -36px -30px 24px;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 18px 18px 0 0;
+}
+.type-card__visual svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
 .type-card b {
   font: 800 22px var(--display);
 }
