@@ -34,6 +34,27 @@
   });
   window.addEventListener('afterprint', () => { memoDetails.forEach((detail, i) => { detail.open = printState[i] || false; }); });
   document.getElementById('print').addEventListener('click', () => window.print());
+  const visualRanges = [
+    { from: 12, to: 15, file: 'check-detail-12-15.png' },
+    { from: 16, to: 19, file: 'check-detail-16-19.png' },
+    { from: 20, to: 23, file: 'check-detail-20-23.png' },
+    { from: 24, to: 27, file: 'check-detail-24-27.png' },
+    { from: 28, to: 31, file: 'check-detail-28-31.png' },
+    { from: 32, to: 35, file: 'check-detail-32-35.png' },
+    { from: 36, to: 37, file: 'check-detail-36-37.png' }
+  ];
+  document.querySelectorAll('.point').forEach(point => {
+    const number = Number(point.id.replace('point-', ''));
+    if (number < 12) return;
+    const range = visualRanges.find(item => number >= item.from && number <= item.to);
+    if (!range) return;
+    const quadrant = range.from === 36 ? (number === 36 ? 0 : 2) : number - range.from;
+    const title = point.querySelector('.point-heading h3')?.textContent.trim() || `체크 ${number}`;
+    const figure = document.createElement('figure');
+    figure.className = 'point-generated';
+    figure.innerHTML = `<a href="img/recommended/${range.file}" target="_blank" rel="noopener" aria-label="${title} 생성 이미지 크게 보기"><span class="point-generated__image q${quadrant}" style="background-image:url('img/recommended/${range.file}')" role="img" aria-label="${title} 설명용 생성 이미지"></span><i>크게 보기 ↗</i></a><figcaption>${title}<small>해당 점검 항목을 이해하기 위한 룸픽 생성 이미지</small></figcaption>`;
+    point.querySelector('.lead')?.insertAdjacentElement('afterend', figure);
+  });
   const dialog = document.getElementById('photo-dialog');
   const photo = document.getElementById('large-photo');
   let opener;
