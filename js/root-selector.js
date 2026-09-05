@@ -7,7 +7,7 @@ spaceSliders.forEach((slider, sliderIndex) => {
   const name = slider.querySelector('[data-slide-name]');
   const names = sliderIndex === 0
     ? ['거실', '욕실', '주방', '침실']
-    : ['카페', '클리닉', '오피스', '리테일'];
+    : ['카페', '오피스', '리테일', '레스토랑'];
   let current = 0;
 
   const showSlide = (next) => {

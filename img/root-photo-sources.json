@@ -1,5 +1,5 @@
 {
-  "reviewedAt": "2026-09-04",
+  "reviewedAt": "2026-09-05",
   "scope": "index.html · 주거공간/상업공간 선택 카드 대표 사진",
   "usage": "Unsplash License / Pexels License 기준 상업적 사용 가능한 무료 스톡사진.",
   "photos": {
@@ -10,12 +10,33 @@
       "author": "Aalo Lens (@aalolens) · Unsplash",
       "license": "Unsplash License (무료, 상업적 사용 가능)"
     },
-    "root-commercial-v1.webp": {
-      "img": "https://images.pexels.com/photos/4450335/pexels-photo-4450335.jpeg",
-      "title": "Interior of modern cafe with big window",
-      "source": "https://www.pexels.com/photo/interior-of-modern-cafe-with-big-window-4450335/",
-      "author": "Ksenia Chernaya · Pexels",
+    "root-commercial-cafe-v2.jpg": {
+      "img": "https://images.unsplash.com/photo-1746105757281-29ab510ff740",
+      "title": "Modern café in a grand atrium",
+      "source": "https://unsplash.com/photos/a-modern-cafe-is-situated-inside-a-large-structure-BNaJbRIV1pU",
+      "author": "Matthew Stephenson · Unsplash",
+      "license": "Unsplash License (무료, 상업적 사용 가능)"
+    },
+    "root-commercial-office-v2.jpg": {
+      "img": "https://images.pexels.com/photos/33342712/pexels-photo-33342712.jpeg",
+      "title": "Elegant modern office interior design with glass walls",
+      "source": "https://www.pexels.com/photo/elegant-modern-office-interior-design-with-glass-walls-33342712/",
+      "author": "Pexels contributor",
       "license": "Pexels License (무료, 상업적 사용 가능)"
+    },
+    "root-commercial-retail-v2.jpg": {
+      "img": "https://images.pexels.com/photos/39004038/pexels-photo-39004038.jpeg",
+      "title": "Modern luxury beauty store interior design",
+      "source": "https://www.pexels.com/photo/modern-luxury-beauty-store-interior-design-39004038/",
+      "author": "Ela De Pure · Pexels",
+      "license": "Pexels License (무료, 상업적 사용 가능)"
+    },
+    "root-commercial-restaurant-v2.jpg": {
+      "img": "https://images.unsplash.com/photo-1677129663887-2df082f88475",
+      "title": "A restaurant with large windows and lots of seating",
+      "source": "https://unsplash.com/photos/a-restaurant-with-large-windows-and-lots-of-seating-jbyYtutfIyU",
+      "author": "Quang Nguyen Vinh · Unsplash",
+      "license": "Unsplash License (무료, 상업적 사용 가능)"
     }
   },
   "note": "루트 페이지 카드용 대표 사진. 실사 촬영 사진(생성/렌더링 아님)이며 특정 시공 사례가 아닌 분위기 예시 사진."
