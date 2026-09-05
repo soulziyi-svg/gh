@@ -176,6 +176,7 @@ button {
   font: 900 clamp(32px, 4vw, 48px) / 1.3 var(--display);
   letter-spacing: -0.03em;
 }
+@media (min-width: 641px) { .type-select h1 { white-space: nowrap; } }
 .type-select__sub {
   margin: 14px auto 0;
   max-width: 760px;
@@ -186,29 +187,27 @@ button {
 }
 .root-journey {
   margin-top: 24px;
-  padding: 16px 22px;
-  border: 1px solid rgba(8, 35, 67, .12);
-  border-radius: 6px;
-  background: rgba(255, 255, 255, .82);
-  box-shadow: 0 20px 52px rgba(12, 29, 52, .07);
+  padding: 12px 0 4px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
   text-align: left;
   backdrop-filter: blur(12px);
 }
 .root-journey__heading {
-  display: grid;
-  grid-template-columns: 165px 1fr;
-  gap: 18px;
+  display: flex;
   align-items: center;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--line);
+  justify-content: center;
+  padding-bottom: 10px;
+  border-bottom: 0;
+  text-align: center;
 }
 .root-journey__heading > span {
-  grid-row: auto;
-  align-self: center;
   color: var(--blue);
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: .18em;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .2em;
 }
 .root-journey__heading h2 {
   margin: 0;
@@ -225,36 +224,37 @@ button {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 0;
-  margin: 12px 0 0;
+  margin: 8px 0 0;
   padding: 0;
   list-style: none;
 }
 .root-journey__steps li {
   position: relative;
   display: grid;
-  grid-template-columns: 26px 1fr;
+  grid-template-columns: 52px 1fr;
   gap: 8px;
   align-items: center;
   min-width: 0;
-  padding: 0 14px;
+  padding: 8px 30px 8px 12px;
 }
 .root-journey__steps li:first-child { padding-left: 0; }
 .root-journey__steps li:last-child { padding-right: 0; }
-.root-journey__steps li + li { border-left: 1px solid var(--line); }
+.root-journey__steps li + li { border-left: 0; }
+.root-journey__steps li:not(:last-child)::after { content:'›'; position:absolute; right:7px; top:50%; transform:translateY(-50%); color:#8fa1b5; font-size:24px; font-weight:400; }
 .root-journey__number {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
+  width: 48px;
   height: 24px;
   margin-bottom: 0;
-  border-radius: 50%;
+  border-radius: 14px;
   background: var(--blue-soft);
   color: var(--blue);
-  font: 800 10px var(--display);
+  font: 800 8px var(--display);
   letter-spacing: .04em;
 }
-.root-journey__steps li:first-child { grid-template-columns: 40px 1fr; }
+.root-journey__steps li:first-child { grid-template-columns: 52px 1fr; }
 .root-journey__number--start {
   width: 38px;
   border-radius: 14px;
@@ -425,14 +425,26 @@ button {
   line-height: 1.7;
 }
 .type-card__cta {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 8px;
-  margin-top: 4px;
-  color: var(--blue);
-  font-weight: 700;
-  font-size: 14px;
+  justify-content: space-between;
+  grid-column: 2;
+  width: 100%;
+  min-height: 52px;
+  margin-top: 10px;
+  padding: 0 18px;
+  border-radius: 3px;
+  background: #1764d8;
+  color: #fff;
+  box-shadow: 0 10px 22px rgba(23,100,216,.22);
+  font-weight: 800;
+  font-size: 15px;
+  transition: background .25s ease, box-shadow .25s ease;
 }
+.type-card:nth-child(2) .type-card__cta { background:#102d55; box-shadow:0 10px 22px rgba(16,45,85,.24); }
+.type-card:hover .type-card__cta { background:#0b4eae; box-shadow:0 14px 28px rgba(23,100,216,.3); }
+.type-card:nth-child(2):hover .type-card__cta { background:#081f3d; }
+.type-card__cta i { font-size:20px; font-style:normal; }
 @media (min-width: 641px) and (max-width: 900px) {
   .root-journey__heading { grid-template-columns: 1fr; }
   .root-journey__heading > span { grid-row: auto; }
@@ -463,14 +475,14 @@ button {
   .root-journey__steps li:first-child,
   .root-journey__steps li:last-child {
     display: grid;
-    grid-template-columns: 32px 1fr;
+    grid-template-columns: 54px 1fr;
     gap: 4px 12px;
     padding: 14px 0;
     border-left: 0;
     border-bottom: 1px solid var(--line);
   }
   .root-journey__steps li:last-child { border-bottom: 0; padding-bottom: 0; }
-  .root-journey__steps li:first-child { grid-template-columns: 40px 1fr; }
+  .root-journey__steps li:first-child { grid-template-columns: 54px 1fr; }
   .root-journey__number { grid-row: span 2; margin: 1px 0 0; }
   .root-journey__steps strong { min-height: 0; }
   .root-journey__steps strong { white-space: normal; }
@@ -486,6 +498,7 @@ button {
   .type-card__body > span:first-child {
     grid-row: auto;
   }
+  .type-card__cta { grid-column: 1; }
   .type-card__visual-info {
     left: 18px;
     bottom: 17px;
@@ -2151,3 +2164,14 @@ body { background: #fff; letter-spacing: -.008em; }
 }
 @media(max-width:640px){.theme-magazine .example-grid{grid-template-columns:1fr}.theme-magazine .section,.theme-gallery .section{padding-top:84px;padding-bottom:84px}}
 .type-photo-credit { margin: 14px 2px 0; color: var(--muted); font-size: 11.5px; text-align: right; }
+
+/* ROOM PICK process + generated concept library */
+.start-journey__generated{width:132px;height:100%;min-height:112px;background:url('../img/start-step-review-final.png') center/200% 100% no-repeat}
+.start-journey__generated--review{background-position:left center}.start-journey__generated--final{background-position:right center}
+.space-concept-thumb{display:block;width:100%;aspect-ratio:4/3;background-size:500% 200%;background-position:0 0;transition:transform .45s ease}
+.space-concept-thumb--bathroom{background-image:url('../img/space-concepts-bathroom.png')}.space-concept-thumb--kitchen{background-image:url('../img/space-concepts-kitchen.png')}.space-concept-thumb--living{background-image:url('../img/space-concepts-living.png')}.space-concept-thumb--bedroom{background-image:url('../img/space-concepts-bedroom.png')}
+.example-card--linked{overflow:hidden}.example-card--linked:hover .space-concept-thumb{transform:scale(1.035)}
+.space-concept-link{display:inline-block;margin-top:18px;color:#174f91;font-weight:800;font-size:13px;border-bottom:1px solid #174f91;padding-bottom:5px}
+.material-guides{border-top:1px solid #dfe4ea}.material-guides:last-child{background:#f5f7fa}
+@media(max-width:640px){.start-journey__generated{width:96px;min-height:104px}}
+.commercial-checklist-promo{background:#eef3f8}.commercial-checklist-card{display:grid;grid-template-columns:1.2fr .8fr;min-height:420px;background:#102d55;color:#fff;text-decoration:none;overflow:hidden}.commercial-checklist-card>div{background:url('../img/commercial-checklist-board.png') left top/400% 200%;transition:transform .45s}.commercial-checklist-card:hover>div{transform:scale(1.025)}.commercial-checklist-card>span{padding:55px;display:flex;flex-direction:column;justify-content:center}.commercial-checklist-card small{color:#8dbbf4;font-weight:800;letter-spacing:.12em}.commercial-checklist-card b{font-size:34px;line-height:1.35;margin:18px 0}.commercial-checklist-card em{font-style:normal;font-weight:700;color:#fff}@media(max-width:720px){.commercial-checklist-card{grid-template-columns:1fr}.commercial-checklist-card>div{min-height:300px}.commercial-checklist-card>span{padding:35px 26px}}

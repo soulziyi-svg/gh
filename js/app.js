@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const materialGuide = document.querySelector('.material-guides');
+  const pageMain = document.querySelector('main');
+  if (materialGuide && pageMain) pageMain.appendChild(materialGuide);
+
   const toggleBtn = document.getElementById('mobileToggle');
   const panel = document.getElementById('mobilePanel');
 
