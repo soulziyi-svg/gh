@@ -50,14 +50,14 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('[data-mypage]').forEach((button) => { button.hidden = !loggedIn; });
   };
 
-  updateAccountView(sessionStorage.getItem('spaceHanjjokLoggedIn') === 'true');
+  updateAccountView(sessionStorage.getItem('roomPickLoggedIn') === 'true');
 
   const setAuthMode = (mode) => {
     authMode = mode;
     const signup = mode === 'signup';
     document.querySelectorAll('.signup-only').forEach((element) => { element.hidden = !signup; });
     title.textContent = signup ? '회원가입' : '로그인';
-    kicker.textContent = signup ? '내 공간 계획을 안전하게 보관하세요' : '공간한쪽에 다시 오신 것을 환영합니다';
+    kicker.textContent = signup ? '내 공간 계획을 안전하게 보관하세요' : '룸픽에 다시 오신 것을 환영합니다';
     submit.textContent = signup ? '회원가입' : '로그인';
     switchText.textContent = signup ? '이미 회원이신가요?' : '아직 회원이 아니신가요?';
     switchBtn.textContent = signup ? '로그인' : '회원가입';
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
       status.textContent = '회원가입 화면이 준비되었습니다. 인증 서버 연결 후 실제 가입이 가능합니다.';
       return;
     }
-    sessionStorage.setItem('spaceHanjjokLoggedIn', 'true');
+    sessionStorage.setItem('roomPickLoggedIn', 'true');
     updateAccountView(true);
     status.textContent = '로그인되었습니다. 이제 마이페이지를 이용할 수 있습니다.';
     window.setTimeout(() => dialog.close(), 700);
@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
     submitButton.disabled = true;
     startStatus.textContent = '사진과 신청 내용을 안전하게 전송하고 있습니다…';
     const payload = new FormData(startForm);
-    payload.append('_subject', '[공간한쪽] 새로운 공간 계획 신청');
+    payload.append('_subject', '[룸픽] 새로운 공간 계획 신청');
     payload.append('_template', 'table');
     payload.append('_captcha', 'false');
     payload.append('개인정보동의', '동의함');

@@ -3,40 +3,58 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>공간한쪽 | 주거공간·상업공간 인테리어 설계·시공·견적 가이드</title>
+<title>룸픽 | 주거공간·상업공간 인테리어 설계·시공·견적 가이드</title>
 <meta name="description" content="사진 한 장과 간단한 실측으로 시작하는 인테리어 설계·시공·견적 가이드. 주거공간과 상업공간, 원하는 공간을 선택해주세요." />
-<link rel="stylesheet" href="css/style.css?v=12" />
+<link rel="stylesheet" href="css/style.css?v=13" />
 </head>
 <body>
 <header class="header">
   <div class="wrap header__inner">
-    <a class="brand" href="index.html" style="position:static;transform:none;margin:0 auto"><img src="img/logo1.png" alt="공간한쪽" /></a>
+    <a class="brand" href="index.html" style="position:static;transform:none;margin:0 auto"><img src="img/room-pick-logo.png" alt="룸픽" /></a>
   </div>
 </header>
 
 <main>
   <section class="type-select">
     <div class="wrap type-select__wrap">
-      <p class="eyebrow">공간한쪽에 오신 것을 환영합니다</p>
+      <p class="eyebrow">룸픽에 오신 것을 환영합니다</p>
       <h1>어떤 공간을<br />바꾸고 싶으신가요?</h1>
       <p class="type-select__sub">사진 한 장과 간단한 실측이면 충분해요. 공간 유형을 선택하면 딱 맞는 진행 방식으로 안내해드릴게요.</p>
 
       <div class="type-select__grid">
         <a class="type-card" href="apartment.html">
-          <span class="type-card__visual">
-            <img src="img/root-residential-v1.webp" alt="따뜻한 자연광이 들어오는 주거공간 거실" loading="lazy" />
+          <span class="type-card__visual" data-space-slider>
+            <span class="type-card__slides">
+              <img class="is-active" src="img/space-living-v2.webp" alt="자연광이 들어오는 정돈된 거실" />
+              <img src="img/space-bathroom-v2.webp" alt="차분한 마감의 주거공간 욕실" loading="lazy" />
+              <img src="img/space-kitchen-v2.webp" alt="생활 동선을 고려한 주거공간 주방" loading="lazy" />
+              <img src="img/space-bedroom-storage-v2.webp" alt="수납과 휴식을 함께 고려한 침실" loading="lazy" />
+            </span>
+            <span class="type-card__visual-info"><em>RESIDENTIAL</em><strong data-slide-name>거실</strong></span>
+            <span class="type-card__progress" aria-hidden="true"><i class="is-active"></i><i></i><i></i><i></i></span>
           </span>
-          <b>주거공간</b>
-          <span class="type-card__desc">생활 문제 진단부터 셀프 시공 가이드, 상세 견적까지</span>
-          <span class="type-card__cta">주거공간으로 시작하기 <i>→</i></span>
+          <span class="type-card__body">
+            <span><small>HOME DESIGN</small><b>주거공간</b></span>
+            <span class="type-card__desc">거실·욕실·주방·침실의 생활 문제 진단부터 셀프 시공 가이드와 상세 견적까지</span>
+            <span class="type-card__cta">주거공간으로 시작하기 <i>→</i></span>
+          </span>
         </a>
         <a class="type-card" href="store.html">
-          <span class="type-card__visual">
-            <img src="img/root-commercial-v1.webp" alt="큰 창과 초록 식물이 있는 세련된 상업공간 카페 인테리어" loading="lazy" />
+          <span class="type-card__visual" data-space-slider>
+            <span class="type-card__slides">
+              <img class="is-active" src="img/type-cafe-v1.webp" alt="브랜드 경험을 담은 상업공간 카페" />
+              <img src="img/type-clinic-v1.webp" alt="편안하고 신뢰감 있는 클리닉 인테리어" loading="lazy" />
+              <img src="img/type-office-v1.webp" alt="업무 집중과 협업을 고려한 오피스" loading="lazy" />
+              <img src="img/type-retail-v1.webp" alt="상품과 동선을 돋보이게 하는 리테일 공간" loading="lazy" />
+            </span>
+            <span class="type-card__visual-info"><em>COMMERCIAL</em><strong data-slide-name>카페</strong></span>
+            <span class="type-card__progress" aria-hidden="true"><i class="is-active"></i><i></i><i></i><i></i></span>
           </span>
-          <b>상업공간</b>
-          <span class="type-card__desc">손님 동선과 인허가 기준부터 시공 일정, 상세 견적까지</span>
-          <span class="type-card__cta">상업공간으로 시작하기 <i>→</i></span>
+          <span class="type-card__body">
+            <span><small>BUSINESS DESIGN</small><b>상업공간</b></span>
+            <span class="type-card__desc">카페·클리닉·오피스·리테일의 고객 동선과 브랜드 경험부터 시공 일정과 상세 견적까지</span>
+            <span class="type-card__cta">상업공간으로 시작하기 <i>→</i></span>
+          </span>
         </a>
       </div>
       <p class="type-photo-credit">사진: Unsplash · Pexels (무료 라이선스)</p>
@@ -45,7 +63,8 @@
 </main>
 
 <footer>
-  <div class="wrap footer__bottom">© 공간한쪽. 주거공간·상업공간 인테리어 설계 가이드 · 현재 화면은 서비스 프로토타입입니다.</div>
+  <div class="wrap footer__bottom">© 룸픽. 주거공간·상업공간 인테리어 설계 가이드 · 현재 화면은 서비스 프로토타입입니다.</div>
 </footer>
+<script src="js/root-selector.js"></script>
 </body>
 </html>
