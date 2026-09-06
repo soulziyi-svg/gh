@@ -2242,3 +2242,13 @@ body img{object-fit:cover!important;object-position:center}
 @media(max-width:900px){.root-journey__steps{grid-template-columns:1fr 1fr}.root-journey__steps li:not(:last-child)::after{display:none}}
 @media(max-width:640px){.root-journey{padding:0}.root-journey__steps{grid-template-columns:1fr}.root-journey__steps li,.root-journey__steps li:first-child,.root-journey__steps li:last-child{min-height:0;padding:16px 18px}.root-journey__number{margin:0}.root-journey__steps strong{min-height:0}.process-grid{grid-template-columns:1fr}.process-grid li{grid-template-columns:52px 1fr;padding:21px 18px}.process-grid li>span{width:42px;height:42px}}
 .top-button{position:fixed;right:24px;bottom:24px;z-index:50;display:grid;width:44px;height:44px;place-items:center;border:0;background:transparent;color:#102d55!important;font:800 30px/1 var(--display);text-decoration:none;text-shadow:0 2px 8px rgba(255,255,255,.9);transition:transform .25s ease,color .25s ease}.top-button:hover{transform:translateY(-4px);color:#1764d8!important}@media(max-width:640px){.top-button{right:14px;bottom:14px;width:40px;height:40px}}
+
+/* 비교 원문을 반영한 상세 안내 */
+.method-guide__compare p{min-height:144px;line-height:1.72}
+.method-guide__practical{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.method-guide__practical section{padding:22px;border:1px solid #dfe5ec;border-radius:6px;background:#f8fafc}
+.method-guide__practical span{color:#1764d8;font-size:11px;font-weight:900;letter-spacing:.12em}
+.method-guide__practical h3{margin:7px 0 12px;color:#102d55;font-size:18px}
+.method-guide__practical ol{display:grid;gap:9px;margin:0;padding-left:21px;color:#617084;font-size:13px;line-height:1.72}
+.method-guide__practical strong{color:#102d55}
+@media(max-width:720px){.method-guide__compare p{min-height:0}.method-guide__practical{grid-template-columns:1fr}.method-guide__practical section{padding:20px}.method-guide__practical h3{font-size:17px}}
