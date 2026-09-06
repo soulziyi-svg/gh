@@ -8,7 +8,8 @@
   </head>
   <body>
     <header>
-      <a href="apartment.html#examples"
+      <a class="back-link" href="apartment.html#examples" aria-label="주거공간 적용 예시로 돌아가기">‹ 뒤로가기</a>
+      <a class="concept-logo" href="apartment.html#examples"
         ><img src="img/room-pick-logo.png" alt="ROOM PICK" /></a
       ><a href="apartment.html#start">내 공간 신청하기</a>
     </header>
@@ -116,8 +117,46 @@
             "벽지·조명 리프레시",
           ],
         },
+        entrance: {
+          title: "현관 디자인 10안",
+          intro:
+            "신발 수납과 벤치, 중문, 조명을 조합해 첫인상과 집 안 동선을 함께 정돈하는 열 가지 방향입니다.",
+          img: "entrance",
+          names: [
+            "밝은 오크 수납형",
+            "슬림 중문형",
+            "벤치 결합형",
+            "간접조명형",
+            "유리 파티션형",
+            "웜그레이 미니멀",
+            "소형 현관 확장형",
+            "가족 수납 집중형",
+            "무문선 연결형",
+            "플랜테리어 포인트",
+          ],
+        },
+        balcony: {
+          title: "베란다 디자인 10안",
+          intro:
+            "단열과 결로, 세탁과 수납을 먼저 확인하고 채광과 휴식 기능을 더한 열 가지 베란다 활용안입니다.",
+          img: "balcony",
+          names: [
+            "라이트 가든",
+            "세탁 수납형",
+            "창가 티 라운지",
+            "부분 평상형",
+            "홈카페형",
+            "반려식물형",
+            "팬트리 결합형",
+            "작업실 연결형",
+            "비확장 실용형",
+            "미니멀 확장형",
+          ],
+        },
       };
-      const key = new URLSearchParams(location.search).get("space") || "living",
+      const requestedSpace = new URLSearchParams(location.search).get("space");
+      const hashSpace = location.hash.slice(1);
+      const key = requestedSpace || (data[hashSpace] ? hashSpace : "living"),
         d = data[key] || data.living;
       title.textContent = d.title;
       intro.textContent = d.intro;

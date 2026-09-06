@@ -23,3 +23,33 @@ spaceSliders.forEach((slider, sliderIndex) => {
     window.setInterval(() => showSlide((current + 1) % slides.length), 2000);
   }
 });
+
+const methodGuide = document.querySelector('[data-method-guide]');
+
+if (methodGuide) {
+  const badge = methodGuide.querySelector('.method-guide__badge');
+  const popup = methodGuide.querySelector('.method-guide__popup');
+  const close = methodGuide.querySelector('.method-guide__close');
+
+  const openGuide = () => {
+    popup.hidden = false;
+    badge.setAttribute('aria-expanded', 'true');
+  };
+
+  const closeGuide = () => {
+    popup.hidden = true;
+    badge.setAttribute('aria-expanded', 'false');
+  };
+
+  badge.addEventListener('click', openGuide);
+  close.addEventListener('click', closeGuide);
+  document.addEventListener('click', (event) => {
+    if (!methodGuide.contains(event.target)) closeGuide();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !popup.hidden) {
+      closeGuide();
+      badge.focus();
+    }
+  });
+}

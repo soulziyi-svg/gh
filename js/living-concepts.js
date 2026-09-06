@@ -1,6 +1,7 @@
 (() => {
   const params = new URLSearchParams(window.location.search);
-  if ((params.get('space') || 'living') !== 'living') return;
+  const requestedSpace = params.get('space') || window.location.hash.slice(1) || 'living';
+  if (requestedSpace !== 'living') return;
 
   const concepts = [
     ['living-08-long-datum-v4.png', '39평 베이윈도형 · 긴 수평선', '창가 벤치와 TV 수납 높이를 맞추고 작은 석재 니치와 부분 살창으로 긴 벽의 리듬을 만들었습니다.'],

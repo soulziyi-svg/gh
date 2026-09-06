@@ -16,6 +16,7 @@ header {
   justify-content: space-between;
   background: #fff;
   border-bottom: 1px solid #dde3ea;
+  position: relative;
 }
 header img {
   width: 190px;
@@ -28,6 +29,20 @@ header > a:last-child {
   text-decoration: none;
   font-size: 13px;
   font-weight: 700;
+}
+.concept-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.back-link {
+  color: #12233d;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+.back-link:hover {
+  color: #1764d8;
 }
 .hero {
   max-width: 1240px;
@@ -81,6 +96,16 @@ article small,
 }
 .shot--bedroom {
   background-image: url("../img/space-concepts-bedroom.png");
+}
+.shot--entrance {
+  background-image: url("../img/guide4/entrance-33.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.shot--balcony {
+  background-image: url("../img/space-living-v2.webp");
+  background-size: cover;
+  background-position: center;
 }
 .grid article > div:last-child {
   padding: 26px 28px 32px;
@@ -181,6 +206,9 @@ article small,
   background: #1764d8;
 }
 @media (max-width: 640px) {
+  .concept-logo {
+    display: none;
+  }
   .top-button {
     right: 16px;
     bottom: 16px;
