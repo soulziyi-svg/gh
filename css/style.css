@@ -2252,3 +2252,22 @@ body img{object-fit:cover!important;object-position:center}
 .method-guide__practical ol{display:grid;gap:9px;margin:0;padding-left:21px;color:#617084;font-size:13px;line-height:1.72}
 .method-guide__practical strong{color:#102d55}
 @media(max-width:720px){.method-guide__compare p{min-height:0}.method-guide__practical{grid-template-columns:1fr}.method-guide__practical section{padding:20px}.method-guide__practical h3{font-size:17px}}
+
+/* 주거공간: 루트 진행 단계·신청 폼·공간별 대표 카드 통일 */
+.start-journey article{grid-template-columns:118px 1fr;min-height:112px}
+.start-journey img,.start-journey__generated{width:118px;height:112px;min-height:112px;align-self:stretch;object-fit:cover}
+.start-journey b small{font-size:.78em;font-weight:700}
+.start-form__email label{display:block;margin-bottom:6px;color:#536176;font-size:12px;font-weight:700}
+.start-form__email p{margin:7px 0 0;color:#647084;font-size:12.5px;line-height:1.55}
+.start-form__agree{align-items:center;gap:7px}
+.start-form__agree input{flex:0 0 14px;width:14px;height:14px;margin:0}
+.start-form__agree span{font-size:13px;line-height:1.35}
+.space-example-card__name{display:none}
+.space-example-card__overlay strong{color:#f04438;font-size:19px;font-weight:900;letter-spacing:-.01em}
+.space-example-card--living{background-image:url('../img/recommended/case02-living.png');background-size:cover;background-position:center}
+.space-example-card--kitchen{background-image:url('../img/recommended/nordic-kitchen-v2.png');background-size:cover;background-position:center}
+.space-example-card--bedroom{background-image:url('../img/recommended/case02-bedroom.png');background-size:cover;background-position:center}
+.space-example-card--bathroom{background-image:url('../img/recommended/nordic-bathroom-v2.png');background-size:cover;background-position:center}
+.space-example-card--entrance{background-image:url('../img/recommended/nordic-entry-v2.png');background-size:cover;background-position:center}
+.space-example-card--balcony{background-image:url('../img/space-living-v2.webp');background-size:cover;background-position:center}
+@media(max-width:640px){.start-journey article{grid-template-columns:96px 1fr}.start-journey img,.start-journey__generated{width:96px;height:104px;min-height:104px}.space-example-card__overlay strong{font-size:18px}}
