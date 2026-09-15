@@ -2191,7 +2191,7 @@ body { background: #fff; letter-spacing: -.008em; }
 .space-example-card{position:relative;display:block;min-height:360px;overflow:hidden;border-radius:5px;background-color:#d9dee4;background-position:center;background-size:cover;color:#fff;text-decoration:none;isolation:isolate}
 .space-example-card::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(5,15,27,.06) 35%,rgba(5,15,27,.72) 100%);transition:background .35s ease,transform .45s ease}
 .space-example-card::after{content:"";position:absolute;inset:0;z-index:-2;background:inherit;transition:transform .5s ease}
-.space-example-card:hover::after,.space-example-card:focus-visible::after{transform:scale(1.045)}
+.space-example-card:hover::after,.space-example-card:focus-visible::after{transform:none}
 .space-example-card:hover::before,.space-example-card:focus-visible::before{background:linear-gradient(180deg,rgba(8,24,43,.24),rgba(8,24,43,.88))}
 .space-example-card__name{position:absolute;left:28px;top:24px;padding:8px 12px;background:rgba(255,255,255,.92);color:#102d55;font-size:15px;font-weight:800;letter-spacing:.03em}
 .space-example-card__overlay{position:absolute;left:28px;right:28px;bottom:25px;display:flex;flex-direction:column;gap:8px;transform:translateY(44px);transition:transform .35s ease}
@@ -2263,9 +2263,10 @@ body img{object-fit:cover!important;object-position:center}
 .start-form__agree input{flex:0 0 14px;width:14px;height:14px;margin:0}
 .start-form__agree span{font-size:13px;line-height:1.35}
 .space-example-card__name{display:none}
-.space-example-card__overlay strong{color:#f04438;font-size:19px;font-weight:900;letter-spacing:-.01em}
+.space-example-card__overlay strong{color:#f04438;font-size:19px;font-weight:900;letter-spacing:-.01em;opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease}
+.space-example-card:hover .space-example-card__overlay strong,.space-example-card:focus-visible .space-example-card__overlay strong{opacity:1;visibility:visible}
 .space-example-card--living{background-image:url('../img/recommended/case02-living.png');background-size:cover;background-position:center}
-.space-example-card--kitchen{background-image:url('../img/recommended/nordic-kitchen-v2.png');background-size:cover;background-position:center}
+.space-example-card--kitchen{background-image:url('../img/kitchen-concepts/kitchen-02-v1.png');background-size:cover;background-position:center}
 .space-example-card--bedroom{background-image:url('../img/recommended/case02-bedroom.png');background-size:cover;background-position:center}
 .space-example-card--bathroom{background-image:url('../img/recommended/nordic-bathroom-v2.png');background-size:cover;background-position:center}
 .space-example-card--entrance{background-image:url('../img/recommended/nordic-entry-v2.png');background-size:cover;background-position:center}

@@ -31,7 +31,7 @@
   document.getElementById('intro').textContent = '확인하신 현실성 범위 안에서 공간의 역할과 동선, 수납, 재료 전략이 서로 다른 거실 디자인 20안을 비교합니다.';
   document.title = '거실 인테리어 컨셉 시안 20가지 | ROOM PICK';
   document.getElementById('conceptGrid').innerHTML = concepts.map(([file, name, description], index) => `
-    <article>
+    <article id="living-${String(index + 1).padStart(2, '0')}">
       <figure class="living-shot"><img src="img/living-concepts/${file}" alt="${name} 거실 인테리어 컨셉 시안" loading="lazy"></figure>
       <div><small>CONCEPT ${String(index + 1).padStart(2, '0')}</small><h2>${name}</h2><p>${description}</p></div>
     </article>
