@@ -2267,8 +2267,8 @@ body img{object-fit:cover!important;object-position:center}
 .space-example-card:hover .space-example-card__overlay strong,.space-example-card:focus-visible .space-example-card__overlay strong{opacity:1;visibility:visible}
 .space-example-card--living{background-image:url('../img/recommended/case02-living.png');background-size:cover;background-position:center}
 .space-example-card--kitchen{background-image:url('../img/kitchen-concepts/kitchen-02-v1.png');background-size:cover;background-position:center}
-.space-example-card--bedroom{background-image:url('../img/recommended/case02-bedroom.png');background-size:cover;background-position:center}
-.space-example-card--bathroom{background-image:url('../img/recommended/nordic-bathroom-v2.png');background-size:cover;background-position:center}
-.space-example-card--entrance{background-image:url('../img/recommended/nordic-entry-v2.png');background-size:cover;background-position:center}
-.space-example-card--balcony{background-image:url('../img/space-living-v2.webp');background-size:cover;background-position:center}
+.space-example-card--bedroom{background-image:url('../img/bedroom-concepts/bedroom-01-v1.png');background-size:cover;background-position:center}
+.space-example-card--bathroom{background-image:url('../img/bathroom-concepts/bathroom-01-v1.png');background-size:cover;background-position:center}
+.space-example-card--entrance{background-image:url('../img/entrance-concepts/entrance-01-v1.png');background-size:cover;background-position:center}
+.space-example-card--balcony{background-image:url('../img/balcony-concepts/balcony-01-v1.png');background-size:cover;background-position:center}
 @media(max-width:640px){.start-journey article{grid-template-columns:96px 1fr}.start-journey img,.start-journey__generated{width:96px;height:104px;min-height:104px}.space-example-card__overlay strong{font-size:18px}}

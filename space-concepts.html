@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>공간별 디자인 10안 | ROOM PICK</title>
-    <link rel="stylesheet" href="css/space-concepts.css?v=3" />
+    <link rel="stylesheet" href="css/space-concepts.css?v=7" />
   </head>
   <body>
     <header>
@@ -161,7 +161,7 @@
       title.textContent = d.title;
       intro.textContent = d.intro;
       document.title = d.title + " | ROOM PICK";
-      conceptGrid.innerHTML = key === 'kitchen' ? '' : d.names
+      conceptGrid.innerHTML = ['kitchen', 'bedroom', 'bathroom', 'entrance', 'balcony'].includes(key) ? '' : d.names
         .map(
           (n, i) =>
             `<article><div class="shot shot--${d.img}" style="--x:${i % 5};--y:${Math.floor(i / 5)}" role="img" aria-label="${n} 디자인"></div><div><small>CONCEPT ${String(i + 1).padStart(2, "0")}</small><h2>${n}</h2><p>${i < 3 ? "현재 구조를 최대한 살려 마감과 조명 중심으로 변화합니다." : i < 7 ? "생활 동선과 수납을 보완하며 필요한 공정을 선별합니다." : "구조와 설비 조건을 확인해 디자인 완성도를 높이는 안입니다."}</p></div></article>`,
@@ -170,6 +170,10 @@
     </script>
     <script src="js/living-concepts.js?v=8"></script>
     <script src="js/kitchen-concepts.js?v=1"></script>
+    <script src="js/bedroom-concepts.js?v=1"></script>
+    <script src="js/bathroom-concepts.js?v=1"></script>
+    <script src="js/entrance-concepts.js?v=1"></script>
+    <script src="js/balcony-concepts.js?v=1"></script>
     <a class="top-button" href="#top" aria-label="페이지 맨 위로 이동">TOP ↑</a>
   </body>
 </html>
