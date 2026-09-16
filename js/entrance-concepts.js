@@ -79,20 +79,20 @@
     "description": "테라코타 톤 바닥과 월넛 수납으로 따뜻한 인상을 만들었습니다."
   },
   {
-    "name": "화이트 실용형",
-    "description": "기본 신발장과 작은 선반으로 시공 요소를 간결하게 잡았습니다."
+    "name": "북유럽 그린 벤치 현관",
+    "description": "STYLE CASE 01의 그린 타일과 아이보리·오크를 직사각형 현관에 적용했습니다. 벤치 니치를 품은 키큰장 하부를 띄워 따뜻한 간접조명을 넣고, 중문 없이 열린 진입 공간과 오크 톤 우드 필름 방화문으로 정리했습니다. 실제 필름 적용 가능 여부는 해당 방화문 제조사에 확인해야 합니다.",
+    "image": "entrance-20-nordic-v4.png"
   }
 ];
   document.querySelector('.hero > p').textContent = 'ROOM PICK · 20 CONCEPTS';
   document.getElementById('title').textContent = '현관 인테리어 컨셉 시안 20가지';
   document.title = '현관 인테리어 컨셉 시안 20가지 | ROOM PICK';
   document.getElementById('intro').textContent = '수납·중문·벤치·조명과 진입 동선을 다르게 구성한 20안입니다. AI 디자인 시안이며 이미지는 늘림이나 잘라내기 없이 원본 비율로 표시합니다. 실제 적용 전 현장 치수와 문 열림, 통행 폭 및 수납 깊이를 확인해야 합니다.';
-  document.getElementById('conceptGrid').innerHTML = concepts.map(({name,description},i) => {
+  document.getElementById('conceptGrid').innerHTML = concepts.map(({name,description,image},i) => {
     const number = String(i + 1).padStart(2,'0');
     return `<article id="entrance-${number}">
-      <figure class="entrance-shot"><img src="img/entrance-concepts/entrance-${number}-v1.png" alt="${name} 현관 AI 디자인 시안" loading="lazy" decoding="async" width="1536" height="1024"></figure>
+      <figure class="entrance-shot"><img src="img/entrance-concepts/${image || `entrance-${number}-v1.png`}" alt="${name} 현관 AI 디자인 시안" loading="lazy" decoding="async" width="1536" height="1024"></figure>
       <div><small>CONCEPT ${number}</small><h2>${name}</h2><p>${description}</p></div>
     </article>`;
   }).join('');
 })();
-

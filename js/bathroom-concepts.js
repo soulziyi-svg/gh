@@ -79,20 +79,20 @@
     "description": "세면 벽의 가로 타일과 월넛 느낌 수납으로 리듬을 만들었습니다."
   },
   {
-    "name": "패밀리 실용형",
-    "description": "넓은 세면 상판과 닫힌 수납, 기본 욕조를 중심으로 가족 욕실을 구성했습니다."
+    "name": "북유럽 클린 샤워룸",
+    "description": "STYLE CASE 01의 차분한 포세린 타일과 오크 톤 세면 수납을 적용했습니다. 타일·유리 파티션으로 샤워 공간을 나누고 작은 바닥 타일과 니켈 수전으로 관리하기 쉬운 욕실을 제안합니다.",
+    "image": "bathroom-20-nordic-v2.png"
   }
 ];
   document.querySelector('.hero > p').textContent = 'ROOM PICK · 20 CONCEPTS';
   document.getElementById('title').textContent = '욕실 인테리어 컨셉 시안 20가지';
   document.getElementById('intro').textContent = '욕조·샤워·세면 동선과 수납, 타일·조명을 다르게 구성한 20안입니다. AI 디자인 시안이며 이미지는 늘림이나 잘라내기 없이 원본 비율로 표시합니다. 실제 적용 전 현장 치수와 배수·방수·환기 조건을 확인해야 합니다.';
   document.title = '욕실 인테리어 컨셉 시안 20가지 | ROOM PICK';
-  document.getElementById('conceptGrid').innerHTML = concepts.map(({name,description},i) => {
+  document.getElementById('conceptGrid').innerHTML = concepts.map(({name,description,image},i) => {
     const number = String(i + 1).padStart(2,'0');
     return `<article id="bathroom-${number}">
-      <figure class="bathroom-shot"><img src="img/bathroom-concepts/bathroom-${number}-v1.png" alt="${name} 욕실 AI 디자인 시안" loading="lazy" decoding="async" width="1536" height="1024"></figure>
+      <figure class="bathroom-shot"><img src="img/bathroom-concepts/${image || `bathroom-${number}-v1.png`}" alt="${name} 욕실 AI 디자인 시안" loading="lazy" decoding="async" width="1536" height="1024"></figure>
       <div><small>CONCEPT ${number}</small><h2>${name}</h2><p>${description}</p></div>
     </article>`;
   }).join('');
 })();
-

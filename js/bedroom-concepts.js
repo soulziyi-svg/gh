@@ -11,8 +11,9 @@
     "description": "월넛 헤드월과 양쪽 협탁을 통합하고 옷장은 측면에 모았습니다."
   },
   {
-    "name": "빛과 수납",
-    "description": "유리블록으로 드레스 코너의 빛을 나누고 닫힌 수납으로 침대 주변을 정돈했습니다."
+    "name": "북유럽 오크 레스트",
+    "description": "STYLE CASE 01의 오크와 아이보리를 낮은 침대와 닫힌 붙박이장에 이어갔습니다. 그린 패브릭만 작게 더하고 린넨 커튼과 독서등으로 차분한 수면 공간을 만들었습니다.",
+    "image": "bedroom-03-nordic-v2.png"
   },
   {
     "name": "절제된 재팬디",
@@ -87,12 +88,11 @@
   document.getElementById('title').textContent = '침실 인테리어 컨셉 시안 20가지';
   document.getElementById('intro').textContent = '현실적인 아파트 비례 안에서 수면·수납·독서·업무 동선과 소재를 다르게 구성한 20안입니다. AI 디자인 시안이며 이미지는 늘림이나 잘라내기 없이 원본 비율로 표시합니다.';
   document.title = '침실 인테리어 컨셉 시안 20가지 | ROOM PICK';
-  document.getElementById('conceptGrid').innerHTML = concepts.map(({name,description},i) => {
+  document.getElementById('conceptGrid').innerHTML = concepts.map(({name,description,image},i) => {
     const number = String(i + 1).padStart(2,'0');
     return `<article id="bedroom-${number}">
-      <figure class="bedroom-shot"><img src="img/bedroom-concepts/bedroom-${number}-v1.png" alt="${name} 침실 AI 디자인 시안" loading="lazy" decoding="async" width="1536" height="1024"></figure>
+      <figure class="bedroom-shot"><img src="img/bedroom-concepts/${image || `bedroom-${number}-v1.png`}" alt="${name} 침실 AI 디자인 시안" loading="lazy" decoding="async" width="1536" height="1024"></figure>
       <div><small>CONCEPT ${number}</small><h2>${name}</h2><p>${description}</p></div>
     </article>`;
   }).join('');
 })();
-

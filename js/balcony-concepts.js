@@ -31,8 +31,9 @@
     "description": "끝벽에 수납을 집중하고 창가와 동선을 열어둔 구성입니다."
   },
   {
-    "name": "컴팩트 홈오피스",
-    "description": "끝벽의 작은 책상으로 창가 통로를 유지했습니다."
+    "name": "북유럽 윈도 벤치",
+    "description": "STYLE CASE 01의 그린을 끝벽의 차분한 세이지 그린 무광 도장으로 이어갔습니다. 오크 벤치와 창가 수납, 밝은 천장을 유지하고 중앙 통로와 바닥 배수 위치를 비워둡니다. 실제 도장 전 결로·누수와 바탕면 상태를 확인해야 합니다.",
+    "image": "balcony-08-nordic-v3.png"
   },
   {
     "name": "독서 벤치",
@@ -87,12 +88,11 @@
   document.getElementById('title').textContent = '베란다 인테리어 컨셉 시안 20가지';
   document.title = '베란다 인테리어 컨셉 시안 20가지 | ROOM PICK';
   document.getElementById('intro').textContent = '휴식·세탁·수납·식물·작업 공간으로 쓰임새와 구성을 달리한 20안입니다. AI 디자인 시안이며 이미지는 늘림이나 잘라내기 없이 원본 비율로 표시합니다. 실제 적용 전 단열·결로·배수·전기와 피난 동선, 창호 개폐 및 현장 치수를 확인해야 합니다.';
-  document.getElementById('conceptGrid').innerHTML = concepts.map(({name,description},i) => {
+  document.getElementById('conceptGrid').innerHTML = concepts.map(({name,description,image},i) => {
     const number = String(i + 1).padStart(2,'0');
     return `<article id="balcony-${number}">
-      <figure class="balcony-shot"><img src="img/balcony-concepts/balcony-${number}-v1.png" alt="${name} 베란다 AI 디자인 시안" loading="lazy" decoding="async" width="1536" height="1024"></figure>
+      <figure class="balcony-shot"><img src="img/balcony-concepts/${image || `balcony-${number}-v1.png`}" alt="${name} 베란다 AI 디자인 시안" loading="lazy" decoding="async" width="1536" height="1024"></figure>
       <div><small>CONCEPT ${number}</small><h2>${name}</h2><p>${description}</p></div>
     </article>`;
   }).join('');
 })();
-

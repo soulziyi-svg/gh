@@ -71,8 +71,10 @@
     "description": "청소하기 쉬운 닫힌 하부장과 바닥을 사용하고, 조리 구역 바깥에 반려동물 용품 자리를 마련합니다."
   },
   {
-    "name": "창가 브렉퍼스트",
-    "description": "창가 벤치와 식탁을 식사 공간으로 활용하고 주방 작업대와 나누어, 거실의 창가 평상 컨셉과 연결합니다."
+    "name": "북유럽 그린 오픈 키친",
+    "description": "STYLE CASE 01의 그린 하부장과 질감 있는 아이보리 타일, 오크 아일랜드를 적용했습니다. 상부장을 덜어내고 냉장고·세척·조리 사이의 작업 통로를 확보했습니다.",
+    "image": "kitchen-18-nordic-v2.png",
+    "livingPair": "10"
   },
   {
     "name": "아트월 다이닝",
@@ -87,12 +89,11 @@
   document.getElementById('title').textContent = '주방 인테리어 컨셉 시안 20가지';
   document.getElementById('intro').textContent = '거실 20안과 소재·분위기를 연결하고, 조리 동선과 수납 방식은 각각 다르게 계획했습니다. 이미지는 AI 디자인 시안이며 원본 비율로 표시합니다.';
   document.title = '주방 인테리어 컨셉 시안 20가지 | ROOM PICK';
-  document.getElementById('conceptGrid').innerHTML = concepts.map(({name,description},i) => {
+  document.getElementById('conceptGrid').innerHTML = concepts.map(({name,description,image,livingPair},i) => {
     const number = String(i + 1).padStart(2,'0');
     return `<article id="kitchen-${number}">
-      <figure class="kitchen-shot"><img src="img/kitchen-concepts/kitchen-${number}-v1.png" alt="${name} 주방 AI 디자인 시안" loading="lazy" decoding="async" width="1536" height="1024"></figure>
-      <div><small>CONCEPT ${number}</small><h2>${name}</h2><p>${description}</p><a class="concept-pair" href="space-concepts.html?space=living#living-${number}">어울리는 거실 ${number}안 →</a></div>
+      <figure class="kitchen-shot"><img src="img/kitchen-concepts/${image || `kitchen-${number}-v1.png`}" alt="${name} 주방 AI 디자인 시안" loading="lazy" decoding="async" width="1536" height="1024"></figure>
+      <div><small>CONCEPT ${number}</small><h2>${name}</h2><p>${description}</p><a class="concept-pair" href="space-concepts.html?space=living#living-${livingPair || number}">어울리는 거실 ${livingPair || number}안 →</a></div>
     </article>`;
   }).join('');
 })();
-
