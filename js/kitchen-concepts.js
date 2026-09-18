@@ -87,13 +87,17 @@
 ];
   document.querySelector('.hero > p').textContent = 'ROOM PICK · 20 CONCEPTS';
   document.getElementById('title').textContent = '주방 인테리어 컨셉 시안 20가지';
-  document.getElementById('intro').textContent = '거실 20안과 소재·분위기를 연결하고, 조리 동선과 수납 방식은 각각 다르게 계획했습니다. 이미지는 AI 디자인 시안이며 원본 비율로 표시합니다.';
+  document.getElementById('intro').textContent = '거실 디자인과 소재·분위기를 연결하고, 조리 동선과 수납 방식은 각각 다르게 계획했습니다. 이미지는 AI 디자인 시안이며 원본 비율로 표시합니다.';
   document.title = '주방 인테리어 컨셉 시안 20가지 | ROOM PICK';
   document.getElementById('conceptGrid').innerHTML = concepts.map(({name,description,image,livingPair},i) => {
     const number = String(i + 1).padStart(2,'0');
+    const pair = livingPair || number;
+    const pairLink = ['01','02','04','05','06','08','10','11','12'].includes(pair)
+      ? `<a class="concept-pair" href="space-concepts.html?space=living#living-${pair}">어울리는 거실 ${pair}안 →</a>`
+      : '';
     return `<article id="kitchen-${number}">
       <figure class="kitchen-shot"><img src="img/kitchen-concepts/${image || `kitchen-${number}-v1.png`}" alt="${name} 주방 AI 디자인 시안" loading="lazy" decoding="async" width="1536" height="1024"></figure>
-      <div><small>CONCEPT ${number}</small><h2>${name}</h2><p>${description}</p><a class="concept-pair" href="space-concepts.html?space=living#living-${livingPair || number}">어울리는 거실 ${livingPair || number}안 →</a></div>
+      <div><small>CONCEPT ${number}</small><h2>${name}</h2><p>${description}</p>${pairLink}</div>
     </article>`;
   }).join('');
 })();
