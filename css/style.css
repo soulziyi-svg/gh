@@ -135,7 +135,7 @@ button {
   color: var(--muted);
 }
 .type-toggle a.is-active {
-  background: var(--ink);
+  background: #2563eb;
   color: #fff;
 }
 .type-toggle a:not(.is-active):hover {
@@ -156,7 +156,7 @@ button {
   font-weight: 700;
 }
 .mobile-panel__toggle a.is-active {
-  background: var(--ink);
+  background: #2563eb;
   color: #fff;
 }
 .type-select {
@@ -534,6 +534,7 @@ button {
   color: var(--blue);
 }
 .header__cta {
+  margin-left: auto;
   padding: 11px 17px;
   border-radius: 7px;
   background: var(--ink);
@@ -1912,7 +1913,7 @@ footer {
   margin-left: auto;
 }
 .header__cta {
-  margin-left: 0;
+  margin-left: auto;
   background: var(--blue);
   box-shadow: 0 7px 18px rgba(52, 87, 201, 0.2);
 }
@@ -2261,6 +2262,29 @@ body img{object-fit:cover!important;object-position:center}
 .start-journey p{line-height:1.4}
 .start-journey img,.start-journey__generated{width:118px;height:118px;min-height:0;align-self:center;object-fit:contain!important}
 .start-journey b small{font-size:.78em;font-weight:700}
+/* Residential application: scoped so commercial forms retain their layout. */
+.residential-page .hero__copy h1{color:#17191d;font-size:clamp(28px,3.1vw,48px);line-height:1.35}
+.residential-page .hero__copy h1 em{color:#2563eb;font-style:normal}
+.residential-page .start-form .dropzone__label{display:flex;flex-direction:column;align-items:center;gap:8px;background:#e4eeff;border:2px dashed #3974dc}
+.residential-page .dropzone__label > svg{flex-shrink:0}
+.residential-page .dropzone__label > b:not([hidden]),.residential-page .dropzone__label > span:not([hidden]){display:block;width:100%;text-align:center}
+.residential-page .start-form__group > span{font-size:20px;font-weight:800;line-height:1.3}
+.residential-page .dropzone.is-dragover .dropzone__label{background:#cedfff}
+.residential-page .dropzone__input:focus-visible + .dropzone__label{outline:3px solid #2563eb;outline-offset:3px}
+.residential-page .measurement-dropzone{margin-top:12px}
+.residential-page .floor-plan-help{margin-top:12px;padding:14px;background:#f2f6fd;border-radius:6px;color:#536176;font-size:12px;line-height:1.7}
+.residential-page .floor-plan-help p{margin:0 0 8px}
+.residential-page .floor-plan-help p:last-child{margin:6px 0 0}
+.residential-page .floor-plan-help a{color:#1d56bd;text-decoration:underline}
+.residential-page textarea[name="lifestyle"]{min-height:124px}
+.residential-page .scope-options{display:flex;flex-wrap:wrap;gap:9px 12px;min-width:0;margin:0;padding:0;border:0}
+.residential-page .scope-options legend{font-size:12px;color:#536176;margin-bottom:8px}
+.residential-page .scope-options label{display:flex;align-items:center;gap:7px;margin:0;color:#34465e;white-space:nowrap;font-size:16px}
+.residential-page .start-form__agree span{font-size:16px;line-height:1.5}
+.residential-page .start-form__agree input{width:18px;height:18px;flex-basis:18px;accent-color:#2563eb}
+.residential-page .start-form button[type="submit"]:disabled{background:#a9b3c3;color:#fff;cursor:not-allowed;box-shadow:none;opacity:.7}
+.residential-page .scope-options input[type="radio"]{width:16px;height:16px;margin:0;padding:0;accent-color:#2563eb;flex:none}
+.residential-page .scope-options input[type="text"]{width:100%;min-width:0}
 .start-form__email label{display:block;margin-bottom:6px;color:#536176;font-size:12px;font-weight:700}
 .start-form__email p{margin:7px 0 0;color:#647084;font-size:12.5px;line-height:1.55}
 .start-form__agree{align-items:center;gap:7px}

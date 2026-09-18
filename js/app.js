@@ -37,63 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const dialog = document.getElementById('authDialog');
-  const form = document.getElementById('authForm');
-  const title = document.getElementById('authTitle');
-  const kicker = document.getElementById('authKicker');
-  const submit = form?.querySelector('.auth-submit');
-  const status = document.getElementById('authStatus');
-  const switchBtn = document.getElementById('authSwitch');
-  const switchText = document.getElementById('authSwitchText');
-  const password = document.getElementById('authPassword');
-  const agree = document.getElementById('authAgree');
-  let authMode = 'login';
-
-  const updateAccountView = (loggedIn) => {
-    document.querySelectorAll('[data-auth]').forEach((button) => { button.hidden = loggedIn; });
-    document.querySelectorAll('[data-mypage]').forEach((button) => { button.hidden = !loggedIn; });
-  };
-
-  updateAccountView(sessionStorage.getItem('roomPickLoggedIn') === 'true');
-
-  const setAuthMode = (mode) => {
-    authMode = mode;
-    const signup = mode === 'signup';
-    document.querySelectorAll('.signup-only').forEach((element) => { element.hidden = !signup; });
-    title.textContent = signup ? '회원가입' : '로그인';
-    kicker.textContent = signup ? '내 공간 계획을 안전하게 보관하세요' : '룸픽에 다시 오신 것을 환영합니다';
-    submit.textContent = signup ? '회원가입' : '로그인';
-    switchText.textContent = signup ? '이미 회원이신가요?' : '아직 회원이 아니신가요?';
-    switchBtn.textContent = signup ? '로그인' : '회원가입';
-    password.autocomplete = signup ? 'new-password' : 'current-password';
-    agree.required = signup;
-    status.textContent = '';
-  };
-
-  document.querySelectorAll('[data-auth]').forEach((button) => {
-    button.addEventListener('click', () => {
-      setAuthMode(button.dataset.auth);
-      panel?.setAttribute('hidden', '');
-      toggleBtn?.setAttribute('aria-expanded', 'false');
-      dialog.showModal();
-    });
-  });
-  dialog?.querySelector('.auth-dialog__close')?.addEventListener('click', () => dialog.close());
-  dialog?.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
-  switchBtn?.addEventListener('click', () => setAuthMode(authMode === 'login' ? 'signup' : 'login'));
-  form?.addEventListener('submit', (event) => {
-    event.preventDefault();
-    if (!form.reportValidity()) return;
-    if (authMode === 'signup') {
-      status.textContent = '회원가입 화면이 준비되었습니다. 인증 서버 연결 후 실제 가입이 가능합니다.';
-      return;
-    }
-    sessionStorage.setItem('roomPickLoggedIn', 'true');
-    updateAccountView(true);
-    status.textContent = '로그인되었습니다. 이제 마이페이지를 이용할 수 있습니다.';
-    window.setTimeout(() => dialog.close(), 700);
-  });
-
   document.querySelectorAll('[data-dropzone]').forEach((zone) => {
     const input = zone.querySelector('.dropzone__input');
     const filesLabel = zone.querySelector('[data-dropzone-files]');
@@ -177,13 +120,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const startForm = document.getElementById('startForm');
   const startStatus = document.getElementById('startStatus');
+  const consentCheckbox = startForm?.querySelector('#startAgree');
+  const planSubmitButton = startForm?.querySelector('button[type="submit"]');
+  const consentRequired = document.body.classList.contains('residential-page');
+  let isSubmitting = false;
+  const updatePlanButton = () => {
+    if (planSubmitButton) planSubmitButton.disabled = isSubmitting || (consentRequired && !consentCheckbox?.checked);
+  };
+  consentCheckbox?.addEventListener('change', updatePlanButton);
+  startForm?.addEventListener('reset', () => queueMicrotask(updatePlanButton));
+  window.addEventListener('pageshow', updatePlanButton);
+  updatePlanButton();
+  const otherScope = startForm?.querySelector('input[name="scopeOther"]');
+  otherScope?.addEventListener('input', () => {
+    if (otherScope.value.trim()) {
+      startForm.querySelector('input[name="scope"][value="기타"]').checked = true;
+    }
+  });
   startForm?.addEventListener('submit', async (event) => {
     event.preventDefault();
+    if (isSubmitting || (consentRequired && !consentCheckbox?.checked)) return;
     if (!startForm.reportValidity()) return;
-    const submitButton = startForm.querySelector('button[type="submit"]');
-    submitButton.disabled = true;
+    const files = [...startForm.querySelectorAll('input[type="file"]')].flatMap(input => [...input.files]);
+    if (files.reduce((total, file) => total + file.size, 0) > 10 * 1024 * 1024) {
+      startStatus.textContent = '첨부 사진의 총 용량을 10MB 이하로 줄여주세요. 입력 내용은 유지됩니다.';
+      return;
+    }
+    isSubmitting = true;
+    updatePlanButton();
     startStatus.textContent = '사진과 신청 내용을 안전하게 전송하고 있습니다…';
     const payload = new FormData(startForm);
+    if (payload.get('scope') !== '기타') payload.delete('scopeOther');
+    payload.append('신청페이지', location.href);
+    startForm.querySelectorAll('input[type="file"]').forEach(input => {
+      payload.delete(input.name);
+      [...input.files].forEach((file, index) => payload.append(`attachment_${input.name}_${index + 1}`, file, file.name));
+    });
     payload.append('_subject', '[룸픽] 새로운 공간 계획 신청');
     payload.append('_template', 'table');
     payload.append('_captcha', 'false');
@@ -195,7 +167,9 @@ document.addEventListener('DOMContentLoaded', () => {
         body: payload,
       });
       if (!response.ok) throw new Error('mail service error');
-      startStatus.textContent = '접수가 완료되었습니다. 확인 후 안내드리겠습니다.';
+      const result = await response.json();
+      if (result.success !== true && result.success !== 'true') throw new Error('mail service rejected submission');
+      startStatus.textContent = '이메일 발송 요청이 접수되었습니다. 확인 후 안내드리겠습니다.';
       startForm.reset();
       startForm.querySelectorAll('.dropzone__input').forEach((input) => {
         input.dispatchEvent(new Event('change'));
@@ -203,7 +177,8 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (error) {
       startStatus.textContent = '전송하지 못했습니다. 잠시 후 다시 시도하거나 soulziyi@gmail.com으로 보내주세요.';
     } finally {
-      submitButton.disabled = false;
+      isSubmitting = false;
+      updatePlanButton();
     }
   });
 });
