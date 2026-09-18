@@ -1956,7 +1956,7 @@ footer {
 .start-panel__note { color: #4d5968; }
 .start-journey {
   display: grid;
-  grid-auto-rows: 1fr;
+  grid-auto-rows: auto;
   gap: 14px;
   margin-top: 32px;
 }
@@ -2255,7 +2255,10 @@ body img{object-fit:cover!important;object-position:center}
 @media(max-width:720px){.method-guide__compare p{min-height:0}.method-guide__practical{grid-template-columns:1fr}.method-guide__practical section{padding:20px}.method-guide__practical h3{font-size:17px}}
 
 /* 주거공간: 루트 진행 단계·신청 폼·공간별 대표 카드 통일 */
-.start-journey article{grid-template-columns:118px 1fr;min-height:112px}
+.start-journey article{grid-template-columns:118px minmax(0,1fr);height:120px;min-height:0;gap:14px}
+.start-journey article > div{padding:6px 12px 6px 0}
+.start-journey b{margin:4px 0;line-height:1.25}
+.start-journey p{line-height:1.4}
 .start-journey img,.start-journey__generated{width:118px;height:118px;min-height:0;align-self:center;object-fit:contain!important}
 .start-journey b small{font-size:.78em;font-weight:700}
 .start-form__email label{display:block;margin-bottom:6px;color:#536176;font-size:12px;font-weight:700}
@@ -2272,4 +2275,4 @@ body img{object-fit:cover!important;object-position:center}
 .space-example-card--bathroom{background-image:url('../img/bathroom-concepts/bathroom-01-v1.png');background-size:cover;background-position:center}
 .space-example-card--entrance{background-image:url('../img/entrance-concepts/entrance-01-v1.png');background-size:cover;background-position:center}
 .space-example-card--balcony{background-image:url('../img/balcony-concepts/balcony-01-v1.png');background-size:cover;background-position:center}
-@media(max-width:640px){.start-journey article{grid-template-columns:96px 1fr}.start-journey img,.start-journey__generated{width:96px;height:96px;min-height:0}.space-example-card__overlay strong{font-size:18px}}
+@media(max-width:640px){.start-journey article{grid-template-columns:118px minmax(0,1fr);gap:10px}.start-journey article > div{padding:4px 8px 4px 0}.start-journey b{font-size:14px;margin:3px 0}.start-journey p{font-size:12px;line-height:1.35}.start-journey span{font-size:10px;line-height:1.1}.start-journey img,.start-journey__generated{width:118px;height:118px;min-height:0}.space-example-card__overlay strong{font-size:18px}}
