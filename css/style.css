@@ -1969,7 +1969,7 @@ footer {
   background: rgba(255,255,255,.92);
   box-shadow: 0 12px 30px rgba(30,64,175,.06);
 }
-.start-journey img { width: 118px; height: 100%; min-height: 112px; object-fit: cover; }
+.start-journey img { display: block; width: 118px; height: 118px; min-height: 0; object-fit: contain; object-position: center; }
 .start-journey div { padding: 18px 18px 16px 0; }
 .start-journey span { color: #2563eb; font-size: 11px; font-weight: 900; letter-spacing: .08em; }
 .start-journey b { display: block; margin: 6px 0; color: #173b77; font-size: 16px; }
@@ -2255,7 +2255,7 @@ body img{object-fit:cover!important;object-position:center}
 
 /* 주거공간: 루트 진행 단계·신청 폼·공간별 대표 카드 통일 */
 .start-journey article{grid-template-columns:118px 1fr;min-height:112px}
-.start-journey img,.start-journey__generated{width:118px;height:112px;min-height:112px;align-self:stretch;object-fit:cover}
+.start-journey img,.start-journey__generated{width:118px;height:118px;min-height:0;align-self:center;object-fit:contain!important}
 .start-journey b small{font-size:.78em;font-weight:700}
 .start-form__email label{display:block;margin-bottom:6px;color:#536176;font-size:12px;font-weight:700}
 .start-form__email p{margin:7px 0 0;color:#647084;font-size:12.5px;line-height:1.55}
@@ -2271,4 +2271,4 @@ body img{object-fit:cover!important;object-position:center}
 .space-example-card--bathroom{background-image:url('../img/bathroom-concepts/bathroom-01-v1.png');background-size:cover;background-position:center}
 .space-example-card--entrance{background-image:url('../img/entrance-concepts/entrance-01-v1.png');background-size:cover;background-position:center}
 .space-example-card--balcony{background-image:url('../img/balcony-concepts/balcony-01-v1.png');background-size:cover;background-position:center}
-@media(max-width:640px){.start-journey article{grid-template-columns:96px 1fr}.start-journey img,.start-journey__generated{width:96px;height:104px;min-height:104px}.space-example-card__overlay strong{font-size:18px}}
+@media(max-width:640px){.start-journey article{grid-template-columns:96px 1fr}.start-journey img,.start-journey__generated{width:96px;height:96px;min-height:0}.space-example-card__overlay strong{font-size:18px}}

@@ -185,6 +185,9 @@ article small,
   object-fit: cover;
   object-position: center;
 }
+.living-shot--style-case { aspect-ratio: 3 / 2; }
+/* Reuse the exact living quadrant from the existing STYLE CASE 03 artwork. */
+.living-shot--case03 { aspect-ratio: 1; background: url('../img/recommended/case03-rooms.png') left top / 202% 202% no-repeat; }
 .kitchen-shot { margin:0; background:#f3f1ed; }
 .bedroom-shot { margin:0; background:#f3f1ed; }
 .bathroom-shot { margin:0; background:#f3f1ed; }

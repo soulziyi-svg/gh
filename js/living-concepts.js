@@ -13,16 +13,18 @@
     [7, 'living-10-nordic-v2.png', '북유럽 패밀리 LDK · 오크와 그린', '아이보리 패브릭 소파와 밝은 오크 가구를 중심으로 거실·식당·주방을 연결한 북유럽 스타일입니다. 그린 주방 수납장과 질감 있는 밝은 타일 벽이 차분한 색상 포인트가 됩니다. 둥근 거실 테이블과 원목 식탁으로 휴식과 식사의 자리를 나누고 사이에는 시야를 막는 가벽을 두지 않았습니다. 밝은 커튼과 식물, 직물 러그로 생활 공간에 부드러운 질감을 더했습니다.'],
     [8, 'living-11-library-lounge-v2.png', '라이브러리 라운지 · 책장 속 휴식', '오른쪽 벽을 채운 우드 책장 중앙에 쿠션 벤치를 통합한 독서형 거실입니다. 상부와 양옆에는 책과 소품을, 벤치 아래에는 닫힌 수납을 구성해 앉는 자리와 수납을 한 벽에 모았습니다. 선반 간접조명과 벽등이 벤치 주변을 비추며 맞은편에는 TV와 낮은 우드 장을 배치했습니다. 별도 소파·중앙 테이블·러그 없이 바닥을 넓게 드러내고 창가 채광이 실내로 이어지도록 했습니다.'],
     [9, 'living-12-social-dining-v1.png', '소셜 다이닝 · 식사와 휴식의 연결', '창가 원형 식탁과 안쪽 소파 공간이 이어지는 거실·다이닝 구성입니다. 낮은 오픈 선반을 두 영역 사이에 배치해 시야를 완전히 가리지 않으면서 가구 배치의 경계를 만들었습니다. 식탁 쪽 타일과 거실 쪽 우드 바닥은 재료로 영역을 구분하고 짙은 원목 식탁과 밝은 소파가 대비를 이룹니다. 식탁 펜던트와 거실의 플로어 램프·테이블 조명으로 각 자리에 어울리는 빛을 더했습니다.'],
+    [10, '../recommended/case02-living.png', 'STYLE CASE 02 · 선과 빛의 웜 미니멀', '웜화이트 벽과 밝은 오크 바닥, 우드 도어와 수납장을 같은 색조로 연결한 거실입니다. 천정 가장자리의 간접조명이 벽면을 부드럽게 비추고, 얇은 커튼을 통과한 자연광이 밝은 재료의 질감을 드러냅니다. 낮은 우드 테이블과 베이지 소파, 단정한 직물 러그로 가구 높이와 색 대비를 낮췄습니다. 장식을 늘리기보다 넓은 면과 가지런한 선, 따뜻한 빛으로 편안함을 표현한 STYLE CASE 02의 거실 디자인입니다.', 'style-case-02.html'],
+    [11, '../recommended/case03-rooms.png', 'STYLE CASE 03 · 질감과 깊이의 콰이어트 럭셔리', '샌드 베이지의 곡면 벽과 짙은 월넛 벽면을 대비시켜 재료의 깊이를 표현한 거실입니다. 둥근 패브릭 소파와 낮은 원형 테이블이 벽의 곡선과 이어지고, 우드 벽의 긴 선반은 장식을 절제해 배치했습니다. 천정 가장자리와 곡면을 따라 흐르는 간접조명이 매트한 표면을 강조합니다. 밝은 색으로 통일한 웜 미니멀과 달리, 밝고 어두운 재료의 대비와 촉감으로 차분한 밀도를 만든 STYLE CASE 03의 거실 디자인입니다.', 'style-case-03.html'],
   ];
 
-  document.querySelector('.hero > p').textContent = 'ROOM PICK · 9 CONCEPTS';
-  document.getElementById('title').textContent = '거실 인테리어 컨셉 시안 9가지';
-  document.getElementById('intro').textContent = '소재와 색감, 가구 배치와 조명 구성이 다른 거실 디자인 9안을 비교합니다. 이미지는 AI 디자인 시안이며, 실제 적용 시에는 현장 치수와 설비 조건을 별도로 확인해야 합니다.';
-  document.title = '거실 인테리어 컨셉 시안 9가지 | ROOM PICK';
-  document.getElementById('conceptGrid').innerHTML = concepts.map(([id, file, name, description]) => `
+  document.querySelector('.hero > p').textContent = 'ROOM PICK · 11 CONCEPTS';
+  document.getElementById('title').textContent = '거실 인테리어 컨셉 시안 11가지';
+  document.getElementById('intro').textContent = '소재와 색감, 가구 배치와 조명 구성이 다른 거실 디자인 11안을 비교합니다. 이미지는 AI 디자인 시안이며, 실제 적용 시에는 현장 치수와 설비 조건을 별도로 확인해야 합니다.';
+  document.title = '거실 인테리어 컨셉 시안 11가지 | ROOM PICK';
+  document.getElementById('conceptGrid').innerHTML = concepts.map(([id, file, name, description, caseLink]) => `
     <article id="living-${String(id).padStart(2, '0')}">
-      <figure class="living-shot"><img src="img/living-concepts/${file}" alt="${name} 거실 인테리어 컨셉 시안" loading="lazy"></figure>
-      <div><small>CONCEPT ${String(id).padStart(2, '0')}</small><h2>${name}</h2><p>${description}</p></div>
+      ${id === 11 ? '<figure class="living-shot living-shot--case03" role="img" aria-label="STYLE CASE 03의 곡면 베이지 벽과 월넛 거실 디자인"></figure>' : `<figure class="living-shot${caseLink ? ' living-shot--style-case' : ''}"><img src="img/living-concepts/${file}" alt="${name} 거실 인테리어 컨셉 시안" loading="lazy"></figure>`}
+      <div><small>CONCEPT ${String(id).padStart(2, '0')}</small><h2>${name}</h2><p>${description}</p>${caseLink ? `<a class="concept-pair" href="${caseLink}">STYLE CASE 상세 보기 →</a>` : ''}</div>
     </article>
   `).join('');
 })();
