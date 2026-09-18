@@ -91,8 +91,9 @@
   document.title = '주방 인테리어 컨셉 시안 20가지 | ROOM PICK';
   document.getElementById('conceptGrid').innerHTML = concepts.map(({name,description,image,livingPair},i) => {
     const number = String(i + 1).padStart(2,'0');
-    const pair = livingPair || number;
-    const pairLink = ['01','02','04','05','06','08','10','11','12'].includes(pair)
+    const livingNumbers = { '01':'01', '02':'02', '04':'03', '05':'04', '06':'05', '08':'06', '10':'07', '11':'08', '12':'09' };
+    const pair = livingNumbers[livingPair || number];
+    const pairLink = pair
       ? `<a class="concept-pair" href="space-concepts.html?space=living#living-${pair}">어울리는 거실 ${pair}안 →</a>`
       : '';
     return `<article id="kitchen-${number}">

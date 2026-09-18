@@ -1,0 +1,5 @@
+# 컨셉 02 소품 교체
+내장 image_gen 사용. v10을 편집 대상으로 유리 화병·브론즈 오브제·아이보리 볼로 교체. 결과 living-02-gallery-ldk-v11.png. 기존 버전 보존.
+
+## 프롬프트
+Use case: precise-object-edit. Input is exact approved living room edit target. Change ONLY the three small decorative objects on glass shelves in the narrow stone-backed niche immediately RIGHT of TV (around x1050-1100). Replace existing white loop sculpture, black ring vase and white donut with: upper occupied shelf a small smoky clear glass bud vase with one restrained twig; middle occupied shelf a small brushed bronze abstract solid geometric sculpture without a hole; lower occupied shelf a low ivory ceramic bowl. Similar small sizes, minimal tasteful spacing, no clutter. Keep all glass shelves in exactly same positions. EVERYTHING ELSE must remain unchanged: exact camera/frame, TV size/location, wall panel and recessed stone strip, low white floor-supported ledge without underlight, right ceiling slim cove and jamb/glass-block geometry, fan, triple track lights, windows, floor, left hallway and cabinet. No architectural changes, no new furniture, no text. Photorealistic object substitution only.
