@@ -120,9 +120,16 @@
     if (!revisions[concept.id]) return concept;
     return { ...concept, ...revisions[concept.id], reference: false, image: `bathroom-${String(concept.id).padStart(2, '0')}-edited-20260919.png` };
   });
+  // Reference 25 defines the shared 2:3 portrait frame. Keep its original intact.
+  concepts = concepts.map(concept => concept.id === 25 ? concept : {
+    ...concept,
+    reference: false,
+    image: `bathroom-${String(concept.id).padStart(2, '0')}-portrait-v1.png`,
+    note: [concept.note, '기존 이미지 기반 세로 구도 AI 수정안 · 좌우 진입문과 문틀을 제외한 뷰입니다.'].filter(Boolean).join(' ')
+  });
   document.querySelector('.hero > p').textContent = `ROOM PICK · ${concepts.length} CONCEPTS`;
   document.getElementById('title').textContent = `욕실 인테리어 컨셉 시안 ${concepts.length}가지`;
-  document.getElementById('intro').textContent = 'AI 디자인·수정안 7개와 사용자 제공 참고 컨셉 3개를 소개합니다. 검토 이력을 구분하기 위해 기존 번호를 유지합니다. 참고 사진은 ROOM PICK 제작·시공 사례가 아니며 AI 시안도 실제 시공 사진이 아닙니다. 이미지는 원본 비율로 표시합니다. 실제 적용 전 실측과 배수·방수·환기 조건을 확인해야 합니다.';
+  document.getElementById('intro').textContent = 'AI 디자인·수정안 9개와 사용자 제공 참고 컨셉 1개를 소개합니다. 기존 번호는 유지하며 REFERENCE 25와 같은 2:3 세로 프레임으로 통일했습니다. 참고 사진은 ROOM PICK 제작·시공 사례가 아니며 AI 시안도 실제 시공 사진이 아닙니다. 실제 적용 전 실측과 배수·방수·환기 조건을 확인해야 합니다.';
   document.title = `욕실 인테리어 컨셉 시안 ${concepts.length}가지 | ROOM PICK`;
   document.getElementById('conceptGrid').innerHTML = concepts.map(({id,name,description,image,reference,note}) => {
     const number = String(id).padStart(2,'0');

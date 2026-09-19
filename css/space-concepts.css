@@ -190,12 +190,12 @@ article small,
 .living-shot--case03 { aspect-ratio: 1; background: url('../img/recommended/case03-rooms.png') left top / 202% 202% no-repeat; }
 .kitchen-shot { margin:0; background:#f3f1ed; }
 .bedroom-shot { margin:0; background:#f3f1ed; }
-.bathroom-shot { margin:0; background:#f3f1ed; }
+.bathroom-shot { margin:0; aspect-ratio:2 / 3; overflow:hidden; background:#f3f1ed; }
 .entrance-shot { margin:0; background:#f3f1ed; }
 .balcony-shot { margin:0; background:#f3f1ed; }
 .balcony-shot img { display:block; width:100%; height:auto; object-fit:contain; transform:none; }
 .entrance-shot img { display:block; width:100%; height:auto; object-fit:contain; transform:none; }
-.bathroom-shot img { display:block; width:100%; height:auto; object-fit:contain; transform:none; }
+.bathroom-shot img { display:block; width:100%; height:100%; object-fit:cover; object-position:center; transform:none; }
 .bedroom-shot img { display:block; width:100%; height:auto; object-fit:contain; transform:none; }
 .kitchen-shot img { display:block; width:100%; height:auto; object-fit:contain; transform:none; }
 .concept-pair { display:inline-block; margin-top:12px; color:#465dc5; font-size:13px; }
