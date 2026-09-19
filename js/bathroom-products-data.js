@@ -7,17 +7,53 @@
   const product = (model, brand, price, size, type, point, caution, code, rank, extra = {}) => ({model, brand, price, size, type, point, caution, url: danawa(code), rank, ...extra});
   const categories = {
     tiles: {
-      name: '욕실 타일', english: 'TILE & TEXTURE', subtitle: '바닥과 벽, 같은 색보다 중요한 사용 조건', image: 'img/bathroom-concepts/bathroom-01-v1.png',
-      intro: '600각 포세린부터 300×600 벽타일까지. 소재와 규격을 먼저 구분하고, 젖은 바닥의 미끄럼 성능과 실제 샘플을 확인하세요.',
-      basis: '오늘의집에서 확인한 벽·바닥 타일 후보 5종을 스크랩 수 순서로 정렬했습니다. 스크랩은 관심 지표이며 판매량·구매후기 수가 아닙니다. 동일 판매처의 비교 가능한 규격을 중심으로 선정한 표본으로, 전체 타일 시장 TOP 5는 아닙니다.',
-      rankingUrl: 'https://m.ohou.se/search/index?query=600%EA%B0%81%ED%83%80%EC%9D%BC&search_affect_type=Recommend',
-      checks: ['벽용 도기질 타일을 바닥용으로 임의 전용하지 않기', '무광이라는 이유만으로 논슬립 성능을 단정하지 않기', '박스당 장수·시공 면적·배송비를 확인한 후 수량 산출', '색상·로트·줄눈 폭·배수구 주변 절단 계획을 샘플로 확인'],
+      name: '욕실 타일', english: 'TILE & TEXTURE', subtitle: '바닥과 벽, 같은 색보다 중요한 사용 조건',
+      image: 'img/tile-products/siena-bath.jpg', checkedAt: '2026-09-19',
+      intro: '영상에서 이름이 확인된 타일을 중심으로, 바탕 벽·포인트 벽·바닥의 역할을 나누어 비교합니다. 공식 제품 정보와 판매처 자료를 연결하고, 영상과 동일 제품인지 확인되지 않은 후보는 따로 표시했습니다.',
+      basis: '영림 영상 2편과 아주로 영상 1편을 바탕으로 재선정했습니다. 앞의 4종은 영림 공식 명칭·코드를 대조한 제품, 마지막 1종은 아주로 영상의 66055와 코드가 같은 판매 후보입니다. 번호는 편집 순서이며 시장 인기 TOP 5가 아닙니다.',
+      checks: ['벽·바닥 공용 표기와 젖은 맨발용 미끄럼 성능은 별개입니다. 시험 자료와 현장 적합성을 확인하세요.', '600×1200 등 대형 타일은 배수구 위치·경사·절단선과 벽 줄눈 정렬을 먼저 검토하세요.', '사진은 색상 확정 자료가 아닙니다. 실제 조명 아래 샘플·줄눈색·프린트 반복·로트를 확인하세요.', '타일비, 운반비, 접착제·줄눈, 철거·방수, 시공비와 부가세 포함 여부를 분리해 비교하세요.'],
+      sources: [
+        {label:'영림 · 2025 타일 트렌드', url:'https://www.youtube.com/watch?v=NxaZGjIvCus', note:'욕실의 시에나·파타고니아·라보나, 캐니언 아이보리 조합을 참고했습니다.'},
+        {label:'영림 · 2026 타일 트렌드', url:'https://www.youtube.com/watch?v=fP7EyYSLHRA&t=75s', note:'1:15~1:58의 라보나·시에나 판매 언급은 영림의 자사 설명입니다. 전체 시장 순위로 확대하지 않았습니다.'},
+        {label:'아주로 · 2026 최신 타일 트렌드', url:'https://www.youtube.com/watch?v=jEfSyVUA3dw&t=55s', note:'0:55 화면의 66055를 확인했습니다. 판매처 POR 66055와 동일 공급제품인지는 미확인입니다.'}
+      ],
       products: [
-        product('6M12', '백상타일', 23600, '600 × 600 mm', '무광 포세린', '큰 정방형 모듈로 벽과 바닥의 줄눈선을 맞추는 구성에 검토할 수 있습니다.', '습식 바닥 적용 가능 여부와 미끄럼 시험값은 판매처 확인이 필요합니다.', '', 118, {url: ohou(2417684), use: '벽·바닥 후보 / 바닥 성능 확인', unit: '판매 옵션 표시가'}),
-        product('SB-CW7036', '백상타일', 29400, '300 × 600 mm', '무광 도기질', '직사각형 벽타일로 가로·세로 배치에 따라 줄눈 구성을 다르게 계획할 수 있습니다.', '벽면용으로 검토하세요. 화면만으로 색상과 표면 질감을 확정하지 마세요.', '', 82, {url: ohou(2293838), use: '벽면용', unit: '판매 옵션 표시가'}),
-        product('SB-CW7084M', '백상타일', 24200, '300 × 600 mm', '무광 도기질', '광택을 줄인 벽 마감 후보로, 다른 바닥 타일과 톤을 맞추어 비교하기 좋습니다.', '바닥용 제품이 아닙니다. 수량 주문 전 박스당 면적을 확인하세요.', '', 64, {url: ohou(2293539), use: '벽면용', unit: '판매 옵션 표시가'}),
-        product('SB-CW7009', '백상타일', 23000, '300 × 600 mm', '유광 도기질', '광택 있는 벽면을 원하는 경우 무광 제품과 나란히 샘플 비교할 수 있습니다.', '벽면용입니다. 조명 반사와 물자국이 보이는 정도를 샘플로 확인하세요.', '', 54, {url: ohou(2293833), use: '벽면용', unit: '판매 옵션 표시가'}),
-        product('66312', '백상타일', 27600, '600 × 600 mm', '무광 포세린', '정방형 포세린 마감을 원하는 경우 6M12와 표면·패턴을 함께 비교할 후보입니다.', '배수 경사 시공과 절단 계획, 젖은 바닥용 적합성을 별도로 확인하세요.', '', 37, {url: ohou(2379508), use: '벽·바닥 후보 / 바닥 성능 확인', unit: '판매 옵션 표시가'})
+        {model:'라보나 600', brand:'영림', code:'YBTILE-E650-1', price:null, size:'600 × 600 mm', type:'포세린 · 벽/바닥 공용 · 이탈리아',
+         pack:'3장 / 1.08㎡ / 박스', use:'욕실 바닥 후보 · 차분한 베이지 바탕',
+         point:'공식 제품 이미지의 잔잔한 석재 무늬를 바탕으로 넓은 면을 정돈하는 후보입니다. 영상에서는 시에나 벽과 라보나 바닥의 조합을 제안합니다.',
+         caution:'공용 표기만으로 미끄럼 성능을 보장하지 않습니다. 배수 경사와 절단 계획을 확인하세요. 1200 규격은 별도 코드 YBTILE-E650입니다.',
+         url:'https://yl.co.kr/product/category?pi_categoryCode=020401', priority:'영상 제품명 · 공식 코드 대조',
+         video:'https://www.youtube.com/watch?v=NxaZGjIvCus&t=712s', videoLabel:'11:52 라보나 / 12:25 시에나와 조합',
+         unit:'공식 페이지 가격 미공개 · 박스 견적 문의', photoFile:'rabona-600.jpg', photoNote:'영림 공식 타일 단품 이미지 · 실물 샘플로 색상 확인'},
+        {model:'시에나', brand:'영림', code:'YBTILE-E470', price:null, size:'600 × 1200 mm (공식 카탈로그)', type:'석재 결 디자인 · 공식 욕실 벽/바닥 적용 사례',
+         pack:'1.44㎡ / 박스 (공식 카탈로그)', use:'바탕 벽 · 결 방향으로 정돈하는 욕실',
+         point:'영상의 시에나는 토스카노와 구분되는 제품입니다. 길게 흐르는 결을 가로 또는 세로로 정리하고, 라보나 바닥과 조합하는 방향을 우선 검토합니다.',
+         caution:'사진은 시에나 욕실의 공식 연출 이미지이며 타일 단품 사진이나 시공 보증 사례가 아닙니다. 현행 공급 규격·마감·바닥 성능은 주문 전 재확인하세요.',
+         url:'https://yl.co.kr/product/detail?pi_index=2895', specUrl:'https://s3.ap-northeast-2.amazonaws.com/younglim-bucket/a8f5b540-6884-4b59-9cbc-b72fb4695126.pdf',
+         priority:'영상 제품명 · 공식 코드 대조', video:'https://www.youtube.com/watch?v=NxaZGjIvCus&t=582s', videoLabel:'9:42 욕실 시에나',
+         unit:'공식 페이지 가격 미공개 · 박스 견적 문의', photoFile:'siena-bath.jpg', photoNote:'영림 공식 시에나 욕실 연출 이미지 · 단품 사진 아님'},
+        {model:'파타고니아', brand:'영림', code:'YBTILE-E701', price:null, size:'600 × 1200 mm', type:'포세린 · 벽/바닥 공용 · 중국',
+         pack:'2장 / 1.44㎡ / 박스', use:'세면대 뒤 포인트 벽 후보',
+         point:'큰 돌 조각처럼 대비되는 패턴이 특징입니다. 영상의 포인트 활용을 바탕으로, 한 면에 집중하고 주변 벽과 바닥은 차분하게 정리하는 방향입니다.',
+         caution:'전면 사용 시 무늬가 과해질 수 있어 면적과 프린트 반복을 먼저 비교하세요. 공식 권장 줄눈은 아이보리이며 실제 샘플로 확인해야 합니다.',
+         url:'https://yl.co.kr/product/category?pi_categoryCode=020401', priority:'영상 제품명 · 공식 코드 대조',
+         video:'https://www.youtube.com/watch?v=NxaZGjIvCus&t=624s', videoLabel:'10:24 파타고니아 포인트',
+         unit:'공식 페이지 가격 미공개 · 박스 견적 문의', photoFile:'patagonia.jpg', photoNote:'영림 공식 타일 단품 이미지 · 개별 장의 무늬는 다를 수 있음'},
+        {model:'캐니언 아이보리', brand:'영림', code:'YBTILE-E670', price:null, size:'600 × 1200 mm', type:'포세린 · 벽/바닥 공용 · 스페인',
+         pack:'2장 / 1.44㎡ / 박스', use:'밝은 바탕·바닥 후보',
+         point:'밝은 아이보리 석재 무늬입니다. 영상에서는 파타고니아 벽과 함께 바닥에 사용하는 조합을 소개합니다. 강한 포인트 무늬를 받쳐 주는 역할로 검토합니다.',
+         caution:'공식 권장 줄눈은 밤부입니다. 대형 타일 바닥의 경사·배수구 절단 및 젖은 바닥 적합성을 확인하세요. 영상의 인기 언급을 시장 3위로 표시하지 않습니다.',
+         url:'https://yl.co.kr/product/category?pi_categoryCode=020401', priority:'영상 제품명 · 공식 코드 대조',
+         video:'https://www.youtube.com/watch?v=NxaZGjIvCus&t=818s', videoLabel:'13:38 캐니언 아이보리 조합',
+         unit:'공식 페이지 가격 미공개 · 박스 견적 문의', photoFile:'canyon-ivory.png', photoNote:'영림 공식 타일 단품 이미지 · 실물 샘플로 색상 확인'},
+        {model:'POR 66055', brand:'바스스토리 판매 후보', code:'POR 66055', price:31000, size:'600 × 600 mm', type:'판매처 표기 포세린 · 제조사 미확인',
+         pack:'4장 / 1.44㎡ / 29kg / 박스', use:'밝은 바탕 타일 비교 후보 · 영상 동일품 미확인',
+         point:'아주로 영상 0:55 화면에는 66055가 표시됩니다. 이 판매 후보는 코드가 같지만 공급처·제조사까지 일치하는지는 확인되지 않았습니다.',
+         caution:'사진은 바스스토리 POR 66055입니다. 영상 제품의 확정 구매 링크가 아닙니다. 욕실 사용 가능 여부·마감·미끄럼 성능과 배송비를 판매처에 확인하세요.',
+         url:'https://bath-story.co.kr/product/por-66055-포세린-타일600600매장바닥타일거실식당카페추천타일/3828/',
+         priority:'동일 코드 판매 후보 · 동일품 미확인', video:'https://www.youtube.com/watch?v=jEfSyVUA3dw&t=55s', videoLabel:'0:55 화면의 66055',
+         unit:'2026-09-19 표시가 / 박스 · 약 21,528원/㎡ · 배송·시공 별도, 세금 포함 여부 확인',
+         photoFile:'por-66055.jpg', photoNote:'바스스토리 판매 제품 이미지 · 영상과 동일 제품인지 미확인'}
       ]
     },
     faucets: {
@@ -87,9 +123,6 @@
     product('무광 니켈 수전', '루바인', null, '영상에서 모델·치수 미공개', '브랜드·마감 추천', '영상에서 비반트와 함께 언급한 브랜드입니다. 아나톨레 FA01SH 등 판매 라인을 비교하되 영상 속 모델과 구분하세요.', '브랜드명만으로 재질·인증·치수를 확정할 수 없습니다. 선택한 모델의 도면과 마감 코드를 확인하세요.', '', null, {url:'https://e-nuovo.co.kr/product/list.html?cate_no=765', priority:'영상 브랜드 우선 · 모델 미확인'}),
     ...categories.faucets.products.slice(0,3)
   ];
-  const wallTiles = categories.tiles.products.filter(p => p.size === '300 × 600 mm');
-  wallTiles.forEach(p => p.priority = '영상과 같은 벽 규격 · 동일 제품 아님');
-  categories.tiles.products = [...wallTiles, ...categories.tiles.products.filter(p => p.size !== '300 × 600 mm')];
   const sliding = categories.cabinets.products.find(p => p.brand === '파랑');
   sliding.priority = '영상과 같은 폭·높이 · 동일 제품 아님';
   categories.cabinets.products = [sliding, ...categories.cabinets.products.filter(p => p !== sliding)];
@@ -101,6 +134,7 @@
     cabinets:'영상은 브랜드 없이 1200×800mm 기성 슬라이드장을 제안합니다. 아래 파랑 제품은 같은 폭·높이의 비교 후보이지 영상의 동일 제품으로 확인된 것은 아닙니다.'
   };
   Object.entries(categories).forEach(([key, category]) => {
+    if (key === 'tiles') return;
     category.videoGuide = videoGuides[key];
     category.originalBasis = category.basis;
     category.basis = '사용자가 지정한 영상의 모델·브랜드·규격을 우선 배치하고, 남은 제품은 조사 당시의 관심·인기 노출 지표를 참고해 선정했습니다. 번호는 편집 순서이며 판매량 순위가 아닙니다.';

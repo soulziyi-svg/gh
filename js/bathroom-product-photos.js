@@ -5,15 +5,7 @@
   const data = window.ROOM_PICK_BATHROOM;
   if (!data) return;
   const catalogueImage = (path, version) => `https://img.danuri.io/catalog-image/${path}.jpg?shrink=330:*&_v=${version}`;
-  const tileImage = id => `https://image.ohousecdn.com/i/bucketplace-v2-development/uploads/openapi/17977695/${id}.jpg?w=720&h=480`;
   const photos = {
-    tiles: [
-      [tileImage('1693286844155'), '백상타일 · 오늘의집'],
-      [tileImage('1693285916959'), '백상타일 · 오늘의집'],
-      [tileImage('1693286833654'), '백상타일 · 오늘의집'],
-      [tileImage('1698284756878'), '백상타일 · 오늘의집'],
-      [tileImage('1696906728381'), '백상타일 · 오늘의집']
-    ],
     faucets: [
       ['https://cdn.imweb.me/thumbnail/20240628/15baca214a907.png', '오케이세라믹 · 비반트', '비반트 VAR-340L 무광 니켈 SUS', '영상 언급 브랜드의 비교용 모델 · 영상 동일 모델 미확인'],
       ['https://e-nuovo.co.kr/web/product/medium/202506/1b701aa9310eb56b690da8bb7857fbcd.jpg', '누오보 · 루바인', '루바인 아나톨레 FA01SH 무광 니켈', '영상 언급 브랜드의 비교용 모델 · 영상 동일 모델 미확인', 'https://e-nuovo.co.kr/product/detail.html?product_no=7330&cate_no=765&display_group=1'],
@@ -47,6 +39,16 @@
     const product = data.categories[key].products[i];
     product.photo = {src, credit, label:label || `${product.brand} ${product.model}`, note:note || '제품 페이지 대표 이미지 · 주문 옵션은 원문에서 확인', source:source || product.url, checkedAt:'2026-09-17', permission:'approved', permissionBasis:'사용자가 2026-09-17 대화에서 게시 허락을 받았다고 확인', type:'manufacturer-or-retailer-product-image'};
   }));
+  data.categories.tiles.products.forEach(product => {
+    product.photo = {
+      src: 'img/tile-products/' + product.photoFile,
+      credit: product.model === 'POR 66055' ? '바스스토리' : '영림 공식 제품 자료',
+      label: product.model, note: product.photoNote, source: product.url,
+      checkedAt: '2026-09-19', permission: 'approved',
+      permissionBasis: '사용자가 2026-09-19 새 사진들도 게시 허락을 받았다고 확인',
+      type: product.model === '시에나' ? 'manufacturer-styled-image' : 'manufacturer-or-retailer-product-image'
+    };
+  });
   data.photoPreview = ['localhost', '127.0.0.1', '[::1]'].includes(location.hostname) || location.protocol === 'file:';
   data.canShowPhoto = photo => !!photo && (photo.permission === 'approved' || data.photoPreview);
 })();
