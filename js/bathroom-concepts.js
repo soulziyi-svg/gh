@@ -49,10 +49,16 @@
     "id": 20
   }
 ];
-  document.querySelector('.hero > p').textContent = 'ROOM PICK · 9 CONCEPTS';
-  document.getElementById('title').textContent = '욕실 인테리어 컨셉 시안 9가지';
-  document.getElementById('intro').textContent = '욕조·샤워·세면 동선과 수납, 타일·조명을 다르게 구성한 9안입니다. AI 디자인 시안이며 이미지는 늘림이나 잘라내기 없이 원본 비율로 표시합니다. 실제 적용 전 현장 치수와 배수·방수·환기 조건을 확인해야 합니다.';
-  document.title = '욕실 인테리어 컨셉 시안 9가지 | ROOM PICK';
+  concepts.push(
+    { id: 21, name: '베이지 아키텍처', image: 'bathroom-study-01-20260919-v2.png', description: '욕실 디자인 4가지 검토안 · 베이지 타일을 벽·조적 파티션·수납으로 연결했습니다. 샤워 공간과 세면 공간을 나누고 선반과 거울 하부 조명으로 수평선을 정리했습니다.' },
+    { id: 22, name: '그린 우드 배스', image: 'bathroom-study-02-20260919-v4.png', description: '욕실 디자인 4가지 검토안 · 올리브 타일 욕조 벽과 오크 톤 하부장, 오른쪽 상부장·열린 선반을 조합했습니다. 바닥은 라보나 600 제품 사진을 참고한 600×600 타일 표현입니다. AI 시안의 색상·무늬는 실물과 다를 수 있습니다.' },
+    { id: 23, name: '테라코타 블루', image: 'bathroom-study-03-20260919-v4.png', description: '욕실 디자인 4가지 검토안 · 블루 세면 벽과 테라코타 샤워 벽, 트라버틴 패턴 바닥을 조합했습니다. 오른쪽 벽은 시에나 제품 연출 사진의 밝은 석재 결을 참고했습니다. 왼쪽에만 고정 모루유리 파티션을 두고 오른쪽 샤워 출입부는 열었습니다. AI 시안의 색상·무늬는 실물과 다를 수 있습니다.' },
+    { id: 24, name: '우드 테라조 샤워룸', image: 'bathroom-study-04-20260919-v3.png', description: '욕실 디자인 4가지 검토안 · 우드 느낌 상부와 밝은 테라조 하부를 연결했습니다. 변기와 세면대 사이 벽을 없애고 뒤로 연속 젠다이를 구성했으며 변기 위에 욕실장을 배치했습니다. 세면대 오른쪽의 낮은 벽과 고정 유리로 샤워 영역을 구분했습니다.' }
+  );
+  document.querySelector('.hero > p').textContent = `ROOM PICK · ${concepts.length} CONCEPTS`;
+  document.getElementById('title').textContent = `욕실 인테리어 컨셉 시안 ${concepts.length}가지`;
+  document.getElementById('intro').textContent = '욕조·샤워·세면 동선과 수납, 타일·조명을 다르게 구성한 기존 9안에 새 욕실 디자인 검토안 4가지를 추가했습니다. AI 디자인 시안이며 이미지는 늘림이나 잘라내기 없이 원본 비율로 표시합니다. 실제 적용 전 현장 치수와 배수·방수·환기 조건을 확인해야 합니다.';
+  document.title = `욕실 인테리어 컨셉 시안 ${concepts.length}가지 | ROOM PICK`;
   document.getElementById('conceptGrid').innerHTML = concepts.map(({id,name,description,image}) => {
     const number = String(id).padStart(2,'0');
     return `<article id="bathroom-${number}">
