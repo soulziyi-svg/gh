@@ -1,7 +1,7 @@
 (() => {
   const space = new URLSearchParams(location.search).get('space') || location.hash.slice(1);
   if (space !== 'bathroom') return;
-  const concepts = [
+  let concepts = [
   {
     "name": "웜 스톤 욕조형",
     "description": "베이지 석재 느낌 타일과 일자 선반, 매립 욕조로 차분한 가족 욕실을 구성했습니다.",
@@ -105,15 +105,30 @@
     "note": "사진만으로 타일 규격·수전 모델·금속 마감은 확정하지 않습니다. 목재처럼 보이는 세면장의 내수 사양과 매립 수전 점검 조건을 확인해야 합니다."
   }
 ]);
+  // Preserve original review IDs; remove only the requested cards, not source files.
+  const removedIds = new Set([2, 17, 18, 20, 24, 7, 19, 21, 29]);
+  const revisions = {
+    1: { description: '베이지 석재 느낌 타일과 일자 선반, 매립 욕조를 유지했습니다. 소품과 바닥 러그를 없애 타일 면과 동선을 정돈했습니다.' },
+    3: { description: '유리블록 파티션과 기존 배치를 유지하고 세면대·변기 뒤로 연속 젠다이를 추가했습니다. 타일과 선반의 수평선을 연결한 안입니다.', note: '젠다이 높이·깊이와 수전·거울·변기 점검 간격은 실측 후 조정합니다.' },
+    14: { description: '테라조 하부 벽과 원형 거울을 유지하고 샤워부스의 돌출 바닥 턱을 없앴습니다. 샤워 바닥은 바깥 바닥보다 15mm 낮추는 계획입니다.', note: '−15mm는 요청하신 설계 의도이며 이미지가 정확한 치수나 시공 가능성을 보증하지 않습니다. 배수 경사·방수층·유리 고정 상세는 현장 검토가 필요합니다.' },
+    22: { description: '올리브 욕조 벽과 오크 하부장, 오른쪽 상부장·열린 선반을 유지하면서 좌우 폭을 줄인 컴팩트 안입니다. 라보나 600 제품 사진을 참고했던 기존 바닥 표현을 유지했습니다.', note: '축소 폭은 시각적 검토안입니다. 실제 제품 크기·동선은 실측이 필요하며 AI 이미지의 타일 색·무늬는 실물과 다를 수 있습니다.' },
+    23: { description: '블루 세면 벽과 테라코타 샤워 벽을 유지하며 공간의 좌우 폭을 줄였습니다. 왼쪽 고정 모루유리와 오른쪽 열린 샤워 진입부를 구성했습니다. 오른쪽 벽은 시에나 제품 사진을 참고했던 기존 표현을 유지했습니다.', note: '실제 타일 색·무늬와 설비 간격은 별도 확인이 필요합니다.' },
+    26: { name: '내추럴 리브 · 모루 샤워', description: '베이지 리브와 둥근 우드 세면장의 재료 관계를 참고해 새로 구성한 AI 시안입니다. 왼쪽은 창 대신 타일 마감벽으로 연결하고 오른쪽에 모루유리 파티션과 샤워기를 배치했습니다. 오른쪽 벽까지 보이도록 시점을 확장했습니다.', note: '참고 이미지 표기: STORIES / storiesconcept.com. 원본 사진의 출처 표기는 보존하며, 이 이미지는 새로 생성한 디자인으로 실제 시공 사례가 아닙니다.' },
+    27: { description: '사용자 제공 참고 이미지에서 바닥 러그를 제거한 AI 수정안입니다. 왼쪽 긴 세면 상판·중앙 차폐벽·원형 거울·천장 간접광을 유지하고 밝은 바닥 타일 면을 드러냈습니다.', note: '참고 이미지 기반 AI 수정. 뒤쪽 샤워 설비·배수 상세와 실제 제품 사양은 미확인입니다.' }
+  };
+  concepts = concepts.filter(({id}) => !removedIds.has(id)).map(concept => {
+    if (!revisions[concept.id]) return concept;
+    return { ...concept, ...revisions[concept.id], reference: false, image: `bathroom-${String(concept.id).padStart(2, '0')}-edited-20260919.png` };
+  });
   document.querySelector('.hero > p').textContent = `ROOM PICK · ${concepts.length} CONCEPTS`;
   document.getElementById('title').textContent = `욕실 인테리어 컨셉 시안 ${concepts.length}가지`;
-  document.getElementById('intro').textContent = '기존 컨셉 9안과 AI 검토안 4안, 사용자 제공 참고 컨셉 6안을 함께 소개합니다. 참고 사진은 ROOM PICK 제작·시공 사례가 아니며 실제 촬영 여부와 제품 사양은 별도 확인이 필요합니다. 이미지는 늘림이나 잘라내기 없이 원본 비율로 표시합니다. 실제 적용 전 현장 치수와 배수·방수·환기 조건을 확인해야 합니다.';
+  document.getElementById('intro').textContent = 'AI 디자인·수정안 7개와 사용자 제공 참고 컨셉 3개를 소개합니다. 검토 이력을 구분하기 위해 기존 번호를 유지합니다. 참고 사진은 ROOM PICK 제작·시공 사례가 아니며 AI 시안도 실제 시공 사진이 아닙니다. 이미지는 원본 비율로 표시합니다. 실제 적용 전 실측과 배수·방수·환기 조건을 확인해야 합니다.';
   document.title = `욕실 인테리어 컨셉 시안 ${concepts.length}가지 | ROOM PICK`;
   document.getElementById('conceptGrid').innerHTML = concepts.map(({id,name,description,image,reference,note}) => {
     const number = String(id).padStart(2,'0');
     return `<article id="bathroom-${number}">
-      <figure class="bathroom-shot"><img src="img/bathroom-concepts/${image || `bathroom-${number}-v1.png`}" alt="${name} ${reference ? '사용자 제공 참고 이미지' : '욕실 AI 디자인 시안'}" loading="lazy" decoding="async" ${reference ? '' : 'width="1536" height="1024"'}></figure>
-      <div><small>${reference ? 'REFERENCE' : 'CONCEPT'} ${number}</small><h2>${name}</h2><p>${description}</p>${reference ? `<p class="reference-note">사용자 제공 참고 이미지 · 원본 비율·워터마크 유지<br>${note}</p>` : ''}</div>
+      <figure class="bathroom-shot"><img src="img/bathroom-concepts/${image || `bathroom-${number}-v1.png`}" alt="${name} ${reference ? '사용자 제공 참고 이미지' : '욕실 AI 디자인 시안'}" loading="lazy" decoding="async"></figure>
+      <div><small>${reference ? 'REFERENCE' : 'CONCEPT'} ${number}</small><h2>${name}</h2><p>${description}</p><p class="reference-note">${reference ? '사용자 제공 참고 이미지 · 원본 비율·워터마크 유지' : 'AI 디자인 시안 · 실제 시공 사진 아님'}${note ? `<br>${note}` : ''}</p></div>
     </article>`;
   }).join('');
 })();
