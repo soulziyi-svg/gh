@@ -129,13 +129,13 @@
   });
   document.querySelector('.hero > p').textContent = `ROOM PICK · ${concepts.length} CONCEPTS`;
   document.getElementById('title').textContent = `욕실 인테리어 컨셉 시안 ${concepts.length}가지`;
-  document.getElementById('intro').textContent = 'AI 디자인·수정안 9개와 사용자 제공 참고 컨셉 1개를 소개합니다. 기존 번호는 유지하며 REFERENCE 25와 같은 2:3 세로 프레임으로 통일했습니다. 참고 사진은 ROOM PICK 제작·시공 사례가 아니며 AI 시안도 실제 시공 사진이 아닙니다. 실제 적용 전 실측과 배수·방수·환기 조건을 확인해야 합니다.';
+  document.getElementById('intro').textContent = 'AI 디자인·수정안 9개와 사용자 제공 참고 컨셉 1개를 CONCEPT 1~10으로 소개합니다. 이미지는 같은 2:3 세로 프레임으로 통일했습니다. 참고 사진은 ROOM PICK 제작·시공 사례가 아니며 AI 시안도 실제 시공 사진이 아닙니다. 실제 적용 전 실측과 배수·방수·환기 조건을 확인해야 합니다.';
   document.title = `욕실 인테리어 컨셉 시안 ${concepts.length}가지 | ROOM PICK`;
-  document.getElementById('conceptGrid').innerHTML = concepts.map(({id,name,description,image,reference,note}) => {
+  document.getElementById('conceptGrid').innerHTML = concepts.map(({id,name,description,image,reference,note}, index) => {
     const number = String(id).padStart(2,'0');
     return `<article id="bathroom-${number}">
       <figure class="bathroom-shot"><img src="img/bathroom-concepts/${image || `bathroom-${number}-v1.png`}" alt="${name} ${reference ? '사용자 제공 참고 이미지' : '욕실 AI 디자인 시안'}" loading="lazy" decoding="async"></figure>
-      <div><small>${reference ? 'REFERENCE' : 'CONCEPT'} ${number}</small><h2>${name}</h2><p>${description}</p><p class="reference-note">${reference ? '사용자 제공 참고 이미지 · 원본 비율·워터마크 유지' : 'AI 디자인 시안 · 실제 시공 사진 아님'}${note ? `<br>${note}` : ''}</p></div>
+      <div><small>CONCEPT ${index + 1}</small><h2>${name}</h2><p>${description}</p><p class="reference-note">${reference ? '사용자 제공 참고 이미지 · 원본 비율·워터마크 유지' : 'AI 디자인 시안 · 실제 시공 사진 아님'}${note ? `<br>${note}` : ''}</p></div>
     </article>`;
   }).join('');
 })();
