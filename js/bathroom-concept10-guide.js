@@ -121,8 +121,22 @@
   const range = values => `${format(values[0])}–${format(values[1])}`;
   const escape = value => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
   const link = ([label, url]) => `<a href="${escape(url)}" target="_blank" rel="noopener noreferrer">${escape(label)} ↗</a>`;
+  const views = [
+    {src:'img/bathroom-concepts/bathroom-30-portrait-v2.png', title:'기존 컨셉 시안', label:'기존 시안', note:'아래 제품 구매 후보와 공사 가견적은 이 기존 컨셉을 기준으로 작성했습니다.'},
+    {src:'img/bathroom-concepts/bathroom-30-budget-vanity.png', title:'비용에 맞춘 시안', label:'기성형 세면장 버전', note:'기성형 세면장·일반 크롬 수전 구성의 AI 비교 시안입니다. 특정 제품이나 확정 예산을 재현한 이미지는 아니며, 이 버전의 견적은 별도 산정이 필요합니다.'},
+    {src:'img/bathroom-concepts/bathroom-30-budget-slim.png', title:'비용에 맞춘 시안', label:'슬림 세면대·젠다이 버전', note:'치마형 원피스 변기·슬림 세면대·민트 타일 젠다이·바닥 유가·천장 복합 환기장치를 표현한 AI 시안입니다. 휴젠트의 특정 모델 재현은 아니며, 이 버전의 견적은 별도 산정이 필요합니다.'}
+  ];
   target.insertAdjacentHTML('afterend', `
+    <dialog class="bath10-modal" id="bath10-modal" aria-labelledby="bath10-heading">
+    <div class="bath10-modal-bar"><span>CONCEPT 10 · 제품 &amp; 공사 가견적</span><button type="button" class="bath10-close" aria-label="제품 및 견적 팝업 닫기" autofocus>닫기 ×</button></div>
     <section class="bath10-guide" id="concept10-shopping" aria-labelledby="bath10-heading">
+      <section class="bath10-gallery" aria-label="컨셉 10 시안 비교">
+        <div aria-live="polite"><h2 id="bath10-view-title">${views[0].title}</h2><p id="bath10-view-label">${views[0].label}</p></div>
+        <img class="bath10-preview" src="${views[0].src}" alt="${views[0].label}" width="1024" height="1536">
+        <div class="bath10-thumbnails" aria-label="시안 선택">${views.map((view, i) => `<button type="button" data-view="${i}" aria-pressed="${i === 0}" aria-label="${view.title}: ${view.label}"><img src="${view.src}" alt="" width="1024" height="1536" loading="lazy"><span>${view.label}</span></button>`).join('')}</div>
+        <p id="bath10-view-note">${views[0].note}</p>
+        <p class="bath10-gallery-disclaimer"><strong>아래 제품·견적은 기존 시안 기준입니다.</strong> 비용에 맞춘 시안의 제품 목록·공사비로 적용하지 않습니다.</p>
+      </section>
       <div class="bath10-heading">
         <p class="bath10-eyebrow">CONCEPT 10 · MATERIAL &amp; SHOPPING GUIDE</p>
         <h2 id="bath10-heading">민트 아치 · 브라스 우드<br>이 공간을 구현하는 구매 가이드</h2>
@@ -182,5 +196,65 @@
           <li><strong>공사비:</strong> 사용자 PPT의 공종 구분과 ${link(['얼마드나의 욕실·타일 비용 안내', 'https://ulmadna.com/blog/tile-construction-cost'])}를 비교 참고했습니다. 해당 사이트의 일반 패키지 범위를 이 주문제작 컨셉의 견적으로 복사하지 않고 위 조건의 예산을 별도로 잡았습니다.</li>
         </ul>
       </details>
-    </section>`);
+    </section></dialog>`);
+  const modal = document.getElementById('bath10-modal');
+  modal.querySelectorAll('[data-view]').forEach(button => button.addEventListener('click', () => {
+    const view = views[Number(button.dataset.view)];
+    const preview = modal.querySelector('.bath10-preview');
+    preview.src = view.src;
+    preview.alt = `${view.title} · ${view.label}`;
+    modal.querySelector('#bath10-view-title').textContent = view.title;
+    modal.querySelector('#bath10-view-label').textContent = view.label;
+    modal.querySelector('#bath10-view-note').textContent = view.note;
+    modal.querySelectorAll('[data-view]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+  }));
+  const card = document.getElementById('bathroom-30');
+  const opener = card.querySelector('.concept-pair');
+  opener.removeAttribute('href');
+  opener.setAttribute('role', 'button');
+  opener.setAttribute('tabindex', '0');
+  opener.setAttribute('aria-haspopup', 'dialog');
+  opener.setAttribute('aria-controls', 'bath10-modal');
+  opener.textContent = '제품·규격·공사 가견적 보기 ↗';
+  card.classList.add('bath10-clickable');
+  let returnFocus = opener;
+  let savedOverflow = '';
+  function openModal() {
+    if (modal.open) return;
+    returnFocus = document.activeElement === document.body ? opener : document.activeElement;
+    savedOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    modal.showModal();
+    modal.scrollTop = 0;
+  }
+  card.addEventListener('click', openModal);
+  opener.addEventListener('keydown', event => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      openModal();
+    }
+  });
+  modal.querySelector('.bath10-close').addEventListener('click', () => modal.close());
+  // Only a press AND release on the backdrop closes the popup.
+  let backdropPress = false;
+  const outside = event => {
+    const rect = modal.getBoundingClientRect();
+    return event.target === modal && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom);
+  };
+  modal.addEventListener('pointerdown', event => { backdropPress = outside(event); });
+  modal.addEventListener('click', event => {
+    if (backdropPress && outside(event)) modal.close();
+    backdropPress = false;
+  });
+  modal.addEventListener('close', () => {
+    document.body.style.overflow = savedOverflow;
+    returnFocus?.focus({preventScroll:true});
+  });
+  // Keep section navigation inside the dialog without changing the page hash.
+  modal.querySelectorAll('.bath10-nav a').forEach(anchor => anchor.addEventListener('click', event => {
+    event.preventDefault();
+    const section = modal.querySelector(anchor.getAttribute('href'));
+    if (section.tagName === 'DETAILS') section.open = true;
+    modal.scrollTo({top: modal.scrollTop + section.getBoundingClientRect().top - modal.getBoundingClientRect().top - 80, behavior:'smooth'});
+  }));
 })();

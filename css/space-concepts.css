@@ -200,6 +200,30 @@ article small,
 .kitchen-shot img { display:block; width:100%; height:auto; object-fit:contain; transform:none; }
 .concept-pair { display:inline-block; margin-top:12px; color:#465dc5; font-size:13px; }
 /* CONCEPT 10 shopping guide: isolated from all other space/card styles. */
+.bath10-clickable { cursor:pointer; }
+.bath10-clickable:hover { border-color:#709083; }
+.bath10-modal { width:min(1120px,calc(100% - 40px)); max-width:none; max-height:90dvh; padding:0; border:0; border-radius:16px; background:#f6f7f8; color:#243d38; overscroll-behavior:contain; }
+.bath10-modal::backdrop { background:rgba(12,25,30,.7); }
+.bath10-modal-bar { position:sticky; top:0; z-index:5; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 24px; background:#fff; border-bottom:1px solid #d6dfd8; font-size:14px; font-weight:600; }
+.bath10-close { padding:10px 16px; background:#253f37; color:white; border:0; border-radius:7px; font:inherit; cursor:pointer; white-space:nowrap; }
+.bath10-modal .bath10-guide { margin:0; padding:0 28px 28px; }
+.bath10-modal .bath10-heading { border-top:0; padding-top:28px; }
+@media(max-width:640px) {
+  .bath10-modal { width:calc(100% - 16px); max-height:94dvh; border-radius:12px; }
+  .bath10-modal-bar { padding:12px; font-size:12px; }
+  .bath10-modal .bath10-guide { padding:0 14px 20px; }
+}
+.bath10-gallery { padding-top:24px; }
+.bath10-gallery h2 { margin:0; font-size:24px; }
+.bath10-preview { display:block; width:100%; height:min(60dvh,680px); object-fit:contain; background:#eae7df; border-radius:12px; }
+.bath10-thumbnails { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin-top:14px; }
+.bath10-thumbnails button { min-width:0; padding:6px; border:2px solid transparent; border-radius:10px; background:#fff; color:inherit; cursor:pointer; font:inherit; }
+.bath10-thumbnails button[aria-pressed="true"] { border-color:#237ac4; background:#edf6ff; }
+.bath10-thumbnails button:focus-visible { outline:3px solid #237ac4; outline-offset:3px; }
+.bath10-thumbnails img { display:block; width:100%; height:140px; object-fit:contain; background:#eeece7; border-radius:6px; }
+.bath10-thumbnails span { display:block; padding:8px 2px 2px; font-size:13px; word-break:keep-all; }
+.bath10-gallery-disclaimer { padding:12px 16px; border-left:3px solid #237ac4; background:#edf6ff; font-size:14px; }
+@media(max-width:600px) { .bath10-thumbnails img { height:100px; } .bath10-thumbnails span { font-size:11px; } }
 .bath10-guide { max-width:1240px; margin:0 auto 100px; color:#243d38; scroll-margin-top:24px; }
 .bath10-heading { padding:44px 0 28px; border-top:2px solid #87a89c; }
 .bath10-eyebrow { font-size:12px; font-weight:700; letter-spacing:.12em; }
