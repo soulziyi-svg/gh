@@ -196,11 +196,25 @@ article small,
 .balcony-shot img { display:block; width:100%; height:auto; object-fit:contain; transform:none; }
 .entrance-shot img { display:block; width:100%; height:auto; object-fit:contain; transform:none; }
 .bathroom-shot img { display:block; width:100%; height:100%; object-fit:cover; object-position:center; transform:none; }
+.bath2-slider { position:relative; }
+.bath2-slider .bath2-slide { position:absolute; inset:0; opacity:0; transition:opacity .12s linear; }
+.bath2-slider .bath2-slide.is-active { opacity:1; }
+.bath2-controls { position:absolute; z-index:2; bottom:12px; left:12px; right:12px; padding:10px 12px; border-radius:10px; background:rgba(255,255,255,.94); color:#12233d; }
+.bath2-label { display:block; font-size:12px; margin-bottom:8px; }
+.bath2-buttons { display:flex; gap:6px; }
+.bath2-buttons button { border:1px solid #bccbdb; border-radius:5px; padding:8px 12px; background:#fff; color:#174f91; font:inherit; font-size:12px; cursor:pointer; }
+.bath2-buttons button[aria-pressed="true"] { background:#174f91; color:#fff; }
+.bath2-buttons button:focus-visible { outline:3px solid #237ac4; outline-offset:2px; }
+@media(prefers-reduced-motion:reduce) { .bath2-slider .bath2-slide { transition:none; } }
 .bedroom-shot img { display:block; width:100%; height:auto; object-fit:contain; transform:none; }
 .kitchen-shot img { display:block; width:100%; height:auto; object-fit:contain; transform:none; }
 .concept-pair { display:inline-block; margin-top:12px; color:#465dc5; font-size:13px; }
 /* CONCEPT 10 shopping guide: isolated from all other space/card styles. */
 .bath10-clickable { cursor:pointer; }
+#bathroom-27 .concept-pair { padding:6px 0; border:0; border-bottom:1px solid currentColor; background:transparent; font-family:inherit; text-align:left; cursor:pointer; }
+#bathroom-27 .concept-pair:focus-visible { outline:3px solid #237ac4; outline-offset:5px; }
+#bath8-modal .bath10-preview { height:min(48dvh,540px); }
+@media(max-width:600px) { #bath8-modal .bath10-preview { height:42dvh; } }
 .bath10-clickable:hover { border-color:#709083; }
 .bath10-modal { width:min(1120px,calc(100% - 40px)); max-width:none; max-height:90dvh; padding:0; border:0; border-radius:16px; background:#f6f7f8; color:#243d38; overscroll-behavior:contain; }
 .bath10-modal::backdrop { background:rgba(12,25,30,.7); }
