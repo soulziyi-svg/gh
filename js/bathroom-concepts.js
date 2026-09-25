@@ -145,7 +145,7 @@
   };
   concepts = concepts.map(concept => latestRevisions[concept.id] ? {
     ...concept, ...latestRevisions[concept.id], reference: false,
-    image: `bathroom-${concept.id}-portrait-v${concept.id === 14 ? 3 : 2}.png`
+    image: `bathroom-${concept.id}-portrait-v${concept.id === 14 ? 5 : 2}.png`
   } : concept);
   document.querySelector('.hero > p').textContent = `ROOM PICK · ${concepts.length} CONCEPTS`;
   document.getElementById('title').textContent = `욕실 인테리어 컨셉 시안 ${concepts.length}가지`;

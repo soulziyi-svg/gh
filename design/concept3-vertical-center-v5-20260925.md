@@ -1,0 +1,11 @@
+# 컨셉3 v5 · 2026-09-25
+- 수정: LC 아이솔 베이지 600×1200 세로 시공, 수전 세면볼 뒤 중앙 정면, 휴젠뜨 공용 공간 천장 중앙 쪽 이동, 변기 위 원형등 1개 추가.
+- 입력1 편집 대상: img/bathroom-concepts/bathroom-14-portrait-v4.png
+- 입력2 제품 원본: img/bathroom-products/concept3/isol-beige-600x1200.jpg
+- 직접 열람한 보조 자료: C:/Users/heech/OneDrive/바탕 화면/디자인 참고자료/욕실/1df68ee80bde845c553659b071a13929.jpg (볼/수전 중심과 비례), Z:/STOCK/★사이트에 참고 사진 자료모음/욕실/20260831_180455.jpg (설비 간섭), C:/ai_web/work/design-reference/tips/tile-bath-entry/media/image-15-1.png (바탕/포인트 대조). 보조 자료는 생성 직접 입력 아님. 전체 자료 검토 아님.
+- 제품 출처: https://www.myhwashin.com/front/product/product_view_detail?brand_cd=60&product_cd=91501 (이전 턴 확인, 이번에는 제품 변경/가격 재조사 안 함).
+- 검토: 세로 줄눈, 세면볼 뒤 중앙 수전, 앞으로 이동한 휴젠뜨, 변기 위 원형등 확인. 샤워 안 등1개/하부 테라조/제품배치 보존.
+- 생성 치수는 정확한 전개도 아님. 천장 타공/덕트/전원과 수전 타공은 실측 후 검토. 사용자 결과 승인 전.
+- 최종 img/bathroom-concepts/bathroom-14-portrait-v5.png. 카드/모달 연결. 배포 안 함.
+## built-in imagegen 최종 프롬프트
+Precise interior edit. Image1 edit target bathroom, image2 LC Isol Beige actual 600x1200 tile material reference. Preserve camera, portrait framing, room dimensions, all fixtures and lower gray terrazzo wall/floor. Four changes ONLY: (1) upper beige walls install 600mm WIDTH x1200mm HEIGHT tiles, long edge VERTICAL. Tall vertical rectangular slabs, narrow beige grout, NO intermediate horizontal joints halfway up upper-wall band. Subtle matte ivory beige stone texture from image2. (2) Move existing tall basin faucet from right side to directly BEHIND THE CENTER of the round vessel bowl, aligned with bowl and mirror center axis. Spout faces forward into bowl, no side faucet. Keep bowl and vanity height and shape. (3) Move existing Huezent ceiling panel FORWARD toward CAMERA into central open ceiling area, not above toilet. At approximately image x510 y115, preserve panel shape with oval grille and round black outlet, realistic perspective. Remove old panel over toilet. (4) At vacated ceiling location directly over toilet, about image x530 y230, add ONE small circular recessed lit downlight, same style as existing lights. Keep existing light above vanity and exactly ONE inside shower. Total three physical ceiling downlights plus mirror reflection. No added accessories, no rugs, no labels. Everything else unchanged. Photorealistic 1024x1536.
