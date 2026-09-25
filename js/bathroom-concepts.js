@@ -138,13 +138,14 @@
   concepts = concepts.map((concept, index) => ({ ...concept, displayNumber: index + 1 }))
     .filter(concept => concept.id !== 22);
   const latestRevisions = {
+    14: { description: '제품 사진을 직접 입력해 아이솔 베이지·HS 테라조 그레이·S-1320·FONTANA 샤워·CC738·LED 거울·휴젠뜨2 외형을 반영했습니다. 세면대를 소폭 낮추고 샤워 안 천장등은1개, 소품은 없는 상태로 정리했습니다.', note: '사진 참고 AI 시안이며 정확한 제품 치수·색·설치 가능성을 보증하지 않습니다. 장수전은 모델 미확인, 실제 발주와 공사 견적은 추가 확인이 필요합니다.' },
     25: { description: '청회색 타일·붉은 줄눈과 샤워 프레임은 유지하고 천장 조명을 원형으로 변경했습니다. 소품과 수건을 제거하고 천장에 휴젠트 형태의 복합 환기 장비를 추가한 AI 수정안입니다.', note: '사용자 제공 원본을 바탕으로 수정했습니다. 환기 장비는 참고 PPT의 외형을 반영한 표현이며 정확한 모델·설치 조건은 별도 확인이 필요합니다.' },
     26: { description: '오른쪽 샤워 공간을 넓히고 샤워 수전을 정면 벽으로 옮겼습니다. 긴 유가는 정면 벽 하단 바닥에 배치했습니다. 거울을 젠다이보다 조금 띄우고 하부 벽은 기존 가는 리브 대신 더 큰 베이지 직사각 석재 느낌 타일로 정돈했습니다.', note: '둥근 우드 세면장과 베이지 재료 조합을 유지한 AI 수정안입니다. 타일은 특정 상품이 아닌 디자인 유형이며 샤워 폭·배수 경사·거울 높이는 실측 검토가 필요합니다.' },
     28: { description: '밝은 잔무늬 타일과 올리브 포인트 벽, 니치·세면대·변기는 유지했습니다. 오른쪽 타원 거울과 흰 상부 수납장을 함께 조금 낮춘 AI 수정안입니다.', note: '설치 높이는 시각적 검토안입니다. 실제 사용 높이와 수전·젠다이 간섭은 현장에서 확인합니다.' }
   };
   concepts = concepts.map(concept => latestRevisions[concept.id] ? {
     ...concept, ...latestRevisions[concept.id], reference: false,
-    image: `bathroom-${concept.id}-portrait-v2.png`
+    image: `bathroom-${concept.id}-portrait-v${concept.id === 14 ? 3 : 2}.png`
   } : concept);
   document.querySelector('.hero > p').textContent = `ROOM PICK · ${concepts.length} CONCEPTS`;
   document.getElementById('title').textContent = `욕실 인테리어 컨셉 시안 ${concepts.length}가지`;
