@@ -1,6 +1,7 @@
 (() => {
   const space = new URLSearchParams(location.search).get('space') || location.hash.slice(1);
   if (space !== 'bathroom') return;
+  document.getElementById('conceptGrid').classList.add('grid--bathroom');
   let concepts = [
   {
     "name": "웜 스톤 욕조형",
@@ -133,15 +134,27 @@
     description: '민트 세로 타일·베이지 벽·우드 세면장의 조합을 유지하고 러그와 소품을 제거했습니다. 세면장·세면볼·벽 수전을 함께 소폭 높인 수정안입니다. 왼쪽 샤워와 유리 파티션, 아치 거울의 간접광은 유지했습니다.',
     note: '제품을 그대로 촬영한 이미지가 아닌 AI 시안입니다. 아래 구매 가이드는 같은 분위기를 구현할 후보이며, 이미지 속 실제 모델을 확인한 목록이 아닙니다. 설치 높이는 실측 후 결정합니다.'
   });
+  // Keep established visible numbers so existing concept 8/10 guides stay aligned.
+  concepts = concepts.map((concept, index) => ({ ...concept, displayNumber: index + 1 }))
+    .filter(concept => concept.id !== 22);
+  const latestRevisions = {
+    25: { description: '청회색 타일·붉은 줄눈과 샤워 프레임은 유지하고 천장 조명을 원형으로 변경했습니다. 소품과 수건을 제거하고 천장에 휴젠트 형태의 복합 환기 장비를 추가한 AI 수정안입니다.', note: '사용자 제공 원본을 바탕으로 수정했습니다. 환기 장비는 참고 PPT의 외형을 반영한 표현이며 정확한 모델·설치 조건은 별도 확인이 필요합니다.' },
+    26: { description: '오른쪽 샤워 공간을 넓히고 샤워 수전을 정면 벽으로 옮겼습니다. 긴 유가는 정면 벽 하단 바닥에 배치했습니다. 거울을 젠다이보다 조금 띄우고 하부 벽은 기존 가는 리브 대신 더 큰 베이지 직사각 석재 느낌 타일로 정돈했습니다.', note: '둥근 우드 세면장과 베이지 재료 조합을 유지한 AI 수정안입니다. 타일은 특정 상품이 아닌 디자인 유형이며 샤워 폭·배수 경사·거울 높이는 실측 검토가 필요합니다.' },
+    28: { description: '밝은 잔무늬 타일과 올리브 포인트 벽, 니치·세면대·변기는 유지했습니다. 오른쪽 타원 거울과 흰 상부 수납장을 함께 조금 낮춘 AI 수정안입니다.', note: '설치 높이는 시각적 검토안입니다. 실제 사용 높이와 수전·젠다이 간섭은 현장에서 확인합니다.' }
+  };
+  concepts = concepts.map(concept => latestRevisions[concept.id] ? {
+    ...concept, ...latestRevisions[concept.id], reference: false,
+    image: `bathroom-${concept.id}-portrait-v2.png`
+  } : concept);
   document.querySelector('.hero > p').textContent = `ROOM PICK · ${concepts.length} CONCEPTS`;
   document.getElementById('title').textContent = `욕실 인테리어 컨셉 시안 ${concepts.length}가지`;
-  document.getElementById('intro').textContent = 'AI 디자인·수정안 9개와 사용자 제공 참고 컨셉 1개를 CONCEPT 1~10으로 소개합니다. 이미지는 같은 2:3 세로 프레임으로 통일했습니다. 참고 사진은 ROOM PICK 제작·시공 사례가 아니며 AI 시안도 실제 시공 사진이 아닙니다. 실제 적용 전 실측과 배수·방수·환기 조건을 확인해야 합니다.';
+  document.getElementById('intro').textContent = 'AI 디자인·수정안 9개를 소개합니다. CONCEPT 4는 제외하고 기존 컨셉 번호는 유지했습니다. 이미지는 같은 2:3 세로 프레임이며 실제 시공 사진이 아닙니다. 실제 적용 전 실측과 배수·방수·환기 조건을 확인해야 합니다.';
   document.title = `욕실 인테리어 컨셉 시안 ${concepts.length}가지 | ROOM PICK`;
-  document.getElementById('conceptGrid').innerHTML = concepts.map(({id,name,description,image,reference,note}, index) => {
+  document.getElementById('conceptGrid').innerHTML = concepts.map(({id,name,description,image,reference,note,displayNumber}) => {
     const number = String(id).padStart(2,'0');
     return `<article id="bathroom-${number}">
       <figure class="bathroom-shot"><img src="img/bathroom-concepts/${image || `bathroom-${number}-v1.png`}" alt="${name} ${reference ? '사용자 제공 참고 이미지' : '욕실 AI 디자인 시안'}" loading="lazy" decoding="async"></figure>
-      <div><small>CONCEPT ${index + 1}</small><h2>${name}</h2><p>${description}</p><p class="reference-note">${reference ? '사용자 제공 참고 이미지 · 원본 비율·워터마크 유지' : 'AI 디자인 시안 · 실제 시공 사진 아님'}${note ? `<br>${note}` : ''}</p>${id === 30 ? '<a class="concept-pair" href="#concept10-shopping">제품·규격·공사 가견적 보기 ↓</a>' : ''}</div>
+      <div><small>CONCEPT ${displayNumber}</small><h2>${name}</h2><p>${description}</p><p class="reference-note">${reference ? '사용자 제공 참고 이미지 · 원본 비율·워터마크 유지' : 'AI 디자인 시안 · 실제 시공 사진 아님'}${note ? `<br>${note}` : ''}</p>${id === 30 ? '<a class="concept-pair" href="#concept10-shopping">제품·규격·공사 가견적 보기 ↓</a>' : ''}</div>
     </article>`;
   }).join('');
 })();

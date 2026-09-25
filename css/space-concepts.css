@@ -80,6 +80,13 @@ article small,
   background: #fff;
   border: 1px solid #dce3ea;
 }
+.grid--bathroom {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.grid--bathroom article > div:last-child > p,
+.grid--bathroom .bath2-controls {
+  display: none;
+}
 .shot {
   aspect-ratio: 4/3;
   background-size: 500% 200%;
@@ -160,12 +167,18 @@ article small,
   .grid {
     grid-template-columns: 1fr;
   }
+  .grid--bathroom {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .guide {
     grid-template-columns: 1fr;
   }
   .hero {
     padding-top: 75px;
   }
+}
+@media (max-width: 600px) {
+  .grid--bathroom { grid-template-columns: minmax(0, 1fr); }
 }
 .living-shot {
   position: relative;
@@ -290,6 +303,10 @@ article small,
 .bath10-table-wrap th span { display:block; font-size:12px; font-weight:400; color:#6a756d; margin-top:5px; }
 .bath10-table-wrap thead, .bath10-table-wrap tfoot { background:#f0f4ee; }
 .bath10-table-wrap tfoot tr:last-child { background:#dfeade; font-size:16px; }
+#bath7-modal .bath10-table-wrap table { min-width:0; background:#fff; color:#273e34; table-layout:fixed; }
+#bath7-modal .bath10-table-wrap caption { color:#d0ddd4; }
+#bath7-modal .bath10-table-wrap th, #bath7-modal .bath10-table-wrap td { padding:12px 8px; overflow-wrap:anywhere; }
+#bath7-modal .bath10-table-wrap th:first-child { width:62%; }
 @media (max-width:1300px) { .bath10-guide { margin-left:24px; margin-right:24px; } }
 @media (max-width:640px) {
   .bath10-guide { margin-left:18px; margin-right:18px; }
