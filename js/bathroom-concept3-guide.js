@@ -3,7 +3,7 @@
   const card = document.getElementById('bathroom-14');
   if (!card || document.getElementById('bath3-modal')) return;
   const base = 'img/bathroom-products/concept3/';
-  const conceptImage = 'img/bathroom-concepts/bathroom-14-portrait-v5.png';
+  const conceptImage = 'img/bathroom-concepts/bathroom-14-portrait-v6.png';
   const dim = id => `https://dimhouse.co.kr/product/detail.html?product_no=${id}`;
   const products = [
     {zone:'01 · 상부 벽', name:'LAUCHE · LC 아이솔 베이지 9.8T', image:'isol-beige-600x1200.jpg',
@@ -21,11 +21,11 @@
       note:'사용자가 선택한 대리석타입 서랍식 제품입니다. 공식 대표 사진의 그레이지 2단 서랍·화이트 상판·원형 탑볼을 생성 입력으로 사용했습니다. 기존 시안의 벽걸이 배치를 유지했으며 AI 표현은 정확한 제품 도면이나 실물 색상의 보증이 아닙니다.',
       check:'기본 규격을 벽걸이 변경 후 치수로 확정하지 않습니다. 색상 코드, 탑볼·상판·수전·팝업·트랩 포함 구성, 변경 높이·벽 보강·배수 간섭, 설치·운반·VAT 및 최종 금액은 제조사 또는 판매처 견적서로 확인합니다. 기존 ES600-1001 가격은 적용하지 않습니다.',
       links:[['공식 제품·옵션·문의','https://www.hiddenbath.co.kr/productDetail/1788']],credit:'사진: 히든바스 · S-1320 공식 대표 사진'},
-    {zone:'04 · 세면 수전', name:'S-1320 연출 사진의 탑볼용 장수전 · 모델 미확인', image:'hidden-s1320.webp',
-      size:'정확한 높이·토수 거리·타공 지름 미확인', price:'제조사 구성 문의 · 확정 가격 없음',
-      note:'히든바스 공식 연출 사진에 함께 보이는 높은 수전 형태를 참고하되 세면볼 뒤쪽 중앙에 정면 배치했습니다. 사진 속 수전의 모델명이나 하부장 기본 포함품 여부는 확인되지 않았습니다. 기존 낮은 FONTANA TF-L4011.BN과 154,000원은 이 구성에서 제외했습니다.',
-      check:'탑볼 높이보다 높은 토수구와 볼 안쪽 토수점, 벽·거울 간섭을 확인한 뒤 모델을 확정합니다. 현재 이미지는 형태 검토용으로 발주할 수 있는 제품 명세가 아닙니다.',
-      links:[['하부장·수전 구성 문의','https://www.hiddenbath.co.kr/productDetail/1788']],credit:'사진: 히든바스 · 수전만의 모델은 미확인'},
+    {zone:'04 · 세면 수전', name:'LAUCHE · 코인 1275 니켈무광', image:'tap-lauche-1275n.png',
+      size:'탑볼용 · 높이 288.6mm · 중심거리 165mm · 1홀 대붙이', price:'판매가·설치비 문의 · 기존 FONTANA 가격 적용 안 함',
+      note:'「2026 욕실 인테리어 견적 가이드」15장의 라우체 브랜드 추천과 「후회 없는 욕실 리모델링」4장의 무광 니켈·재질 확인 기준을 바탕으로 선정했습니다. 코인 1275라는 모델명은 PPT에 없으며 공식 제품 페이지에서 별도로 확인한 교체 후보입니다.',
+      check:'공식 안내: 황동, 싱글레버, 냉온수형, 토수각 20°, KS·KC 인증 표기. S-1320 탑볼과 토수 위치·높이·타공·벽 간섭은 발주 전 확인합니다. 현재 전체 AI 시안은 이전 FONTANA 수전 상태이며 이번에는 제품 목록만 교체했습니다.',
+      links:[['공식 제품·사진·도면','https://lauche.co.kr/shop/item.php?ca_id=1010&it_id=1684285675&page=1']],credit:'사진: LAUCHE · 코인 1275 니켈무광 / PPT 추천 브랜드에서 별도 선정'},
     {zone:'05 · 샤워 수전', name:'FONTANA · TF-B5210.BN', image:'shower.jpg',
       size:'상부 암 400mm · 도면 하부 구간 840mm + 조절부 최소 350mm', price:'686,000원 / SET',
       note:'브러쉬드 니켈 2WAY 레인샤워 제품 사진을 직접 입력했습니다. 원형 헤드·핸드샤워·직사각 믹서 형태를 시안에 반영했습니다. 표기 구간 치수는 바닥 기준 설치 높이가 아닙니다.',
@@ -43,7 +43,7 @@
       links:[['규격·옵션·구매',dim(12)]],credit:'사진: 딤하우스 · 제품 연출 사진'},
     {zone:'08 · 천장 환기', name:'힘펠 · 휴젠뜨2 FHD-P150S1', image:'huezent2.jpg',
       size:'천장 매립형 · 타공·설치 깊이·덕트·전원 현장 확인', price:'현재 판매가·설치 포함 견적 재확인 필요',
-      note:'힘펠몰 제품 사진을 직접 입력해 흰 사각 패널·타원 그릴·원형 토출구 외형을 반영했습니다. 기존 일반 환풍기 대신 변기 위에서 공용 공간 중앙 쪽 천장으로 이동한 설치 검토안입니다.',
+      note:'PPT 「후회 없는 욕실 리모델링」3장에서 휴젠트를 복합 환풍기 후보로 확인했습니다. PPT는 세부 모델을 지정하지 않아 기존 휴젠뜨2를 유지합니다. 같은 자료의 대안은 JV21M과 제로크 프라임입니다. 제로크 프라임을 온풍·드라이 대체품으로 안내하지 않습니다. 힘펠몰 제품 사진을 직접 입력해 흰 사각 패널·타원 그릴·원형 토출구 외형을 반영했습니다. 기존 일반 환풍기 대신 변기 위에서 공용 공간 중앙 쪽 천장으로 이동한 설치 검토안입니다.',
       check:'확인 가능한 힘펠몰 dev 페이지의 466,000원은 운영 판매가로 확정하지 않았습니다. 본체·설치·덕트·전기 작업 포함 견적을 별도로 받아야 합니다. 천장 깊이와 설치 가능 위치는 제조사 설명서 및 전문 설치자 확인이 필요합니다.',
       links:[['제조사·설치 문의','https://www.himpel.co.kr/'],['확인한 제품 자료','https://dev.himpelmall.com/mall/product/product_view.php?ps_ctid=16010000&ps_goid=213']],credit:'사진: 힘펠몰 · 휴젠뜨2 제품 자료'}
   ];
@@ -70,26 +70,35 @@
         </section>
         <div class="bath3-info">
           <div class="bath3-heading"><p class="bath3-kicker">TERRAZZO & ROUND</p><h2 id="bath3-title">테라조 라운드</h2><p>잔잔한 베이지 위에, 테라조의 리듬을 더하다.</p><div class="bath3-tags"><span>600×1200 세로 시공</span><span>테라조</span><span>S-1320 서랍 수납</span></div></div>
-          <nav class="bath3-nav" aria-label="상세 정보 선택">${[['design','디자인 설명'],['products','제품·설비 8항목'],['estimate','수정 가견적']].map(([id,t],i)=>`<button type="button" data-bath3-panel="${id}" aria-controls="bath3-${id}" aria-pressed="${i===0}">${t}</button>`).join('')}</nav>
+          <nav class="bath3-nav" aria-label="상세 정보 선택">${[['design','욕실 체크리스트'],['products','제품·설비 8항목'],['estimate','수정 가견적']].map(([id,t],i)=>`<button type="button" data-bath3-panel="${id}" aria-controls="bath3-${id}" aria-pressed="${i===0}">${t}</button>`).join('')}</nav>
           <section id="bath3-design" class="bath3-panel">
-            <p class="bath3-lead">큰 면은 차분하게,<br>시선이 머무는 곳은 섬세하게.</p>
-            <p>안내한 제품 원본 사진을 두 차례로 나누어 직접 입력한 시안에서, 상부 벽을 LC 아이솔 베이지 600×1200 공식 사진으로 추가 수정했습니다. 아이솔 베이지 상부 벽과 HS 테라조 그레이 바닥·하부 벽, S-1320 서랍장·원형 탑볼, FONTANA 샤워수전, 대림 CC-738과 원형 LED 거울의 외형을 반영했습니다. 소품과 수건은 없는 상태를 유지했습니다.</p>
-            <dl class="bath3-design-list"><div><dt>세면 높이·수전 위치</dt><dd>수전은 측면이 아닌 세면볼 뒤쪽 정면 중앙에 맞췄습니다. 하부장·상판·세면볼을 함께 약 30mm 낮추도록 요청한 시각적 검토안입니다. 생성 이미지로 정확한 높이를 측정할 수 없으며 사용자 키·배수·벽 보강을 확인해 설치 높이를 결정합니다.</dd></div><div><dt>타일과 동선</dt><dd>왼쪽 세면·중앙 변기·오른쪽 샤워 배치는 유지했습니다. 상부 벽은 아이솔 베이지 600×1200 세로 배치와 밝은 베이지 줄눈, 하부 벽·바닥은 600×600 타일과 밝은 회색 줄눈을 계획하며 하부 벽·바닥의 회색 테라조를 연결했습니다. 샘플과 실측 전개도에서 색차·배수 경사·절단 크기를 확인합니다.</dd></div><div><dt>조명과 환기</dt><dd>샤워부스 안에는 원형 천장등 1개만 보이도록 수정했습니다. 변기 위 원형 매입등 1개를 추가하고 기존 세면 공간 조명·샤워 조명 1개·원형 LED 거울을 유지했습니다. 휴젠뜨는 변기 위가 아닌 공용 공간 중앙 쪽 천장으로 이동했으며 실제 설치 위치·덕트·전원은 전문 확인이 필요합니다.</dd></div><div><dt>샤워 바닥</dt><dd>외부 바닥보다 15mm 낮추는 기존 검토 방향은 유지합니다. 이미지가 단차·방수 성능을 증명하지 않으며 현장에서 물매·배수구·유리 고정 상세를 검토해야 합니다.</dd></div></dl>
-            <div class="bath3-notice">제품 사진을 직접 참고한 <strong>AI 디자인 시안</strong>입니다. 실제 제품을 촬영하거나 CAD로 정확히 조립한 결과는 아니므로 비례·색·세부 형상은 달라질 수 있습니다. 장수전은 S-1320 연출 사진의 형태만 참고했으며 모델 미확인입니다. 제품 사진을 눌러 시안과 비교할 수 있습니다.</div>
-            <button type="button" class="bath3-cta" data-bath3-go="products">사진으로 제품 살펴보기 →</button>
-            <p class="bath3-source">구성 참고: ${link(['라우체 매거진','https://www.lauche.co.kr/bbs/board.php?bo_table=m05_01&wr_id=107'])}. 매거진의 재료 설명·제품 연결 방식을 참고하고, 좌우 분할 모달은 ROOM PICK용으로 새로 구성했습니다.</p>
+            <h3>욕실 체크리스트</h3>
+            <p>사용자 제공 PPT의 관련 슬라이드를 요약했습니다. 자료의 예시 치수·금액을 확정 시공 기준이나 현재 판매가로 사용하지 않습니다.</p>
+            <dl class="bath3-design-list">
+              <div><dt>01 · 환기 제품과 위치</dt><dd>휴젠트는 복합 기능용, JV21M은 기본 환기용, 제로크 프라임은 환기 대안으로 비교합니다. 드라이 기능을 쓸 경우 세면대 앞 사용 위치를 고려하고 천장 깊이·덕트·전원·점검 공간을 확인합니다. 컨셉3은 휴젠뜨2를 유지하며 모델별 기능은 설명서로 확인합니다.</dd></div>
+              <div><dt>02 · 세면 수전과 탑볼 호환</dt><dd>PPT 추천 브랜드 라우체에서 코인 1275 니켈무광을 별도 선정했습니다. 볼 뒤 정면 중앙을 기준으로 물줄기가 볼 안에 들어오는지, 손 씻는 공간과 레버·벽 간섭을 확인합니다. 재질·인증·A/S도 함께 확인합니다.</dd></div>
+              <div><dt>03 · 세면대·젠다이 높이</dt><dd>상판과 볼 상단 높이를 구분하고 사용자 키에 맞춥니다. 젠다이·거울·수납장과 수전의 간섭을 검토합니다. PPT의 높이 도식은 예시이므로 그대로 시공 치수로 확정하지 않습니다.</dd></div>
+              <div><dt>04 · 타일 규격과 배수</dt><dd>컨셉3의 상부 600×1200 세로 배치, 바닥 600×600 계획을 전개도에서 확인합니다. 큰 타일의 외관보다 배수구 방향·절단선·바닥 물매·미끄럼 성능을 먼저 점검합니다.</dd></div>
+              <div><dt>05 · 샤워 공간 단차</dt><dd>PPT의 15mm 단차는 검토 예시입니다. 단차만으로 물넘침을 막는다고 보장하지 않으며 배수량·경사·파티션·방수 접합을 함께 확인합니다.</dd></div>
+              <div><dt>06 · 줄눈과 마감색</dt><dd>시멘트·폴리우레아·에폭시·P30 등 자료 속 후보를 용도와 청소 조건에 따라 비교합니다. 타일과 줄눈·실리콘 색을 샘플로 맞추고 제품별 시방을 확인합니다. 줄눈은 바탕 방수를 대신하지 않습니다.</dd></div>
+              <div><dt>07 · 수납과 조명</dt><dd>장 문을 열 때 머리·거울·수전에 닿지 않는지 확인합니다. 거울 앞 얼굴 그림자, 수납장 내 습기, 전원과 점검 동선을 함께 검토합니다.</dd></div>
+              <div><dt>08 · 견적의 포함 범위</dt><dd>자료의 부분 견적을 완성 공사 총액으로 보지 않습니다. 철거·폐기물·배관·방수·자재·시공·운반·VAT·별도공사와 A/S 범위를 같은 조건으로 비교합니다.</dd></div>
+            </dl>
+            <details><summary>PPT 출처와 이번 확인 범위</summary><p>「2026 욕실 인테리어 견적 가이드」9·15장 / 「600건 시공 전문가의 10가지 꿀팁」3·4·5·8장 / 「호갱되지 않고 셀프 계산하는 법」12·27장 / 「후회 없는 욕실 리모델링_ 전문가 가이드」3·4·8·10장. 해당 슬라이드 이미지를 직접 열어 확인했으며 모든 PPT 전체를 재검토한 것은 아닙니다.</p></details>
+            <div class="bath3-notice">전체 시안 이미지는 기존 이미지입니다. 새 라우체 수전은 아래 제품 목록에 반영했으며 시안 이미지에는 아직 재생성하지 않았습니다. 제품 사진과 전체 시안을 구분해 확인해주세요.</div>
+            <button type="button" class="bath3-cta" data-bath3-go="products">추천 제품 확인하기 →</button>
           </section>
-          <section id="bath3-products" class="bath3-panel" hidden><h3>시안에 참고한 제품·설비</h3><p class="bath3-muted">2026.09.25 수정 · 사진 직접 입력 항목과 모델 미확인 항목 구분 · 가격·재고는 주문 시 재확인</p>
+          <section id="bath3-products" class="bath3-panel" hidden><h3>시안에 참고한 제품·설비</h3><p class="bath3-muted">2026.09.27 수정 · PPT 추천 브랜드 라우체 수전 후보 · 전체 시안은 교체 전 이미지 · 가격·호환성은 발주 전 확인</p>
             ${products.map((p,i)=>`<section class="bath3-product"><button class="bath3-product-photo" type="button" data-bath3-photo="${i+1}" aria-label="${p.name} 사진 확대"><img src="${base+p.image}" alt="${p.name} 판매처 제품 사진" loading="lazy"><span>사진 크게 보기 ＋</span></button><div><p class="bath3-kicker">${p.zone}</p><h4>${p.name}</h4><p class="bath3-spec">${p.size}</p><strong class="bath3-price">${p.price}</strong></div><div class="bath3-product-copy"><p>${p.note}</p><details><summary>발주 전 확인·시안과의 차이</summary><p>${p.check}</p></details><div class="bath3-links">${p.links.map(link).join('')}</div><small>${p.credit}</small></div></section>`).join('')}
-            <div class="bath3-notice"><strong>발주 전 남은 확인</strong><p>샤워부스는 실측 제작입니다. 장수전·세면볼 단품 모델, 유가와 다운라이트 모델은 미확인입니다. S-1320 벽걸이 변경 규격·포함 구성, 휴젠뜨 천장 매립 조건, 타일의 젖은 바닥 적합성을 확인한 후 발주합니다.</p></div>
+            <div class="bath3-notice"><strong>발주 전 남은 확인</strong><p>샤워부스는 실측 제작입니다. 세면 수전은 PPT 추천 브랜드의 라우체 코인 1275 니켈무광으로 목록을 변경했습니다. 세면볼 단품·유가·다운라이트 모델과 수전/상판 호환성은 미확인입니다. S-1320 벽걸이 변경 규격·포함 구성, 휴젠뜨 천장 매립 조건, 타일의 젖은 바닥 적합성을 확인한 후 발주합니다.</p></div>
           </section>
           <section id="bath3-estimate" class="bath3-panel" hidden><p class="bath3-kicker">PRELIMINARY BUDGET · RP-B03-20260925</p><h3>철거부터 마감까지</h3><div class="bath3-total"><span>실측 전 계획 예산 · VAT 포함</span><strong>${range(total)}<small>만원</small></strong></div>
-            <div class="bath3-notice"><strong>수정 범위를 포함한 가견적 · 업체 견적 아님</strong><p>S-1320·탑볼·장수전·LED 거울과 휴젠뜨2를 위한 예산 여유를 공종별로 배정했습니다. 확정 판매가를 합산한 금액이 아니며 하부장 구성·장수전·환기 설치 견적 수령 후 재산정해야 합니다. 해당 비용을 아래 합계에 다시 더하지 않습니다.</p></div>
+            <div class="bath3-notice"><strong>수정 범위를 포함한 가견적 · 업체 견적 아님</strong><p>S-1320·탑볼·장수전·LED 거울과 휴젠뜨2를 위한 예산 여유를 공종별로 배정했습니다. 확정 판매가를 합산한 금액이 아니며 하부장 구성·라우체 코인 1275·환기 설치 견적 수령 후 재산정해야 합니다. 수전 변경 전 계획 배정액을 유지한 것이며 새 제품 확정 견적이 아닙니다. 해당 비용을 아래 합계에 다시 더하지 않습니다.</p></div>
             <p>욕실 2.0 × 2.2m = 4.4㎡, 높이 2.3m, 벽 약 17㎡ 가정. 전체 철거 후 재방수, 일반 반출, 공용배관·구조 변경 없음. 사진에서 측정한 치수가 아닙니다.</p>
             <table class="bath3-cost"><caption>단위: 만원 · 각 1식 · 재료+노무 합산 배정액 / VAT 별도</caption><thead><tr><th>공종 / 포함 범위</th><th>예상 범위</th></tr></thead><tbody>${costs.map(([name,lo,hi])=>`<tr><th scope="row">${name}</th><td>${lo}–${hi}</td></tr>`).join('')}</tbody><tfoot><tr><th>직접공사비</th><td>${range(direct)}</td></tr><tr><th>현장관리·일반경비</th><td>30–45</td></tr><tr><th>공급가액</th><td>${range(supply)}</td></tr><tr><th>VAT 10%</th><td>${range(supply.map(n=>n*.1))}</td></tr><tr><th>총 계획 예산</th><td>${range(total)}</td></tr></tfoot></table>
             <div class="bath3-notice">업체가 제출한 확정 견적이나 시장 평균이 아닌 <strong>공사 범위별 계획 배정액</strong>입니다. 제품 후보 비용은 공종 예산에 포함한 계획이므로 상품가를 다시 더하지 않습니다. 상부 타일 변경 후 8BOX 권장가는 488,000원입니다. 위 공종 배정액은 기존 계획 범위를 유지한 것이며 600×1200 대형 타일의 절단·시공비와 실제 판매가 확인 후 재산정합니다.</div>
             <details open><summary>포함·제외·일정</summary><p>포함 계획: 위 8개 공종, S-1320 벽걸이 구성·탑볼·장수전·LED 거울·휴젠뜨2와 기본 설치, 세면·변기·샤워 구역 원형 매입등 각 1개(총 3개). 중앙 환기 위치 변경에 필요한 덕트·전원 작업은 현장 확인 후 견적에 반영합니다. 별도: 문·문틀, 공용배관, 구조·전기 증설, 장거리 덕트 이설, 특수 양중·관리사무소 비용, 숨은 누수·바탕 손상 추가 복구. 소품은 계획하지 않습니다.</p><p>예비비 약 10% 별도. 약 7–10작업일+제작 납기 가정. 양생은 시방 우선입니다. 업체 일괄 공급 가정이며 고객 지급 자재는 중복 차감합니다. 현장 주소·반출·천장 조건 미확인, 유효기간·결제·A/S는 업체 견적과 계약에서 확정합니다.</p></details>
-            <details><summary>자료 확인·생성 입력 범위</summary><p>1차 생성에 기존 시안·아이솔 베이지·HS 테라조 그레이·S-1320·휴젠뜨2 사진을 입력하고, 2차 생성에 1차 결과·FONTANA TF-B5210.BN·대림 CC-738·원형 LED 거울 사진을 입력했습니다. 입력 한도 때문에 두 번으로 나눴습니다. 이후 기존 시안과 600×1200 아이솔 베이지 공식 사진을 직접 입력해 상부 타일 세로 시공, 수전 정면 중앙 배치, 휴젠뜨 중앙 이동, 변기 위 원형등 추가를 재생성했습니다. S-1320 사진 속 장수전은 형태만 반영했으며 별도 모델을 확인한 것은 아닙니다.</p><p>욕실 참고 폴더 2곳에서 각 1장과 타일 자료 원본 1장을 다시 열어 서랍·세면볼 중심, 설비 간섭, 바탕과 포인트 관계를 대조했습니다. 이 보조 자료는 이번 생성에 직접 입력하지 않았으며 전체 PPT·영상 재검토도 아닙니다. 결과에서 소품 제거·서랍장·환기 외형·샤워 조명 1개를 확인했습니다. 정확한 치수·성능·실물 일치는 보증하지 않습니다.</p></details>
+            <details><summary>자료 확인·생성 입력 범위</summary><p>1차 생성에 기존 시안·아이솔 베이지·HS 테라조 그레이·S-1320·휴젠뜨2 사진을 입력하고, 2차 생성에 1차 결과·FONTANA TF-B5210.BN·대림 CC-738·원형 LED 거울 사진을 입력했습니다. 입력 한도 때문에 두 번으로 나눴습니다. 이후 기존 시안과 600×1200 아이솔 베이지 공식 사진을 직접 입력해 상부 타일 세로 시공, 수전 정면 중앙 배치, 휴젠뜨 중앙 이동, 변기 위 원형등 추가를 재생성했습니다. 이전 S-1320 사진 속 미확인 수전 대신 TF-L4017H.BN 제품 사진을 직접 입력해 최신 시안의 수전을 교체했습니다.</p><p>욕실 참고 폴더 2곳에서 각 1장과 타일 자료 원본 1장을 다시 열어 서랍·세면볼 중심, 설비 간섭, 바탕과 포인트 관계를 대조했습니다. 이 보조 자료는 이번 생성에 직접 입력하지 않았으며 전체 PPT·영상 재검토도 아닙니다. 결과에서 소품 제거·서랍장·환기 외형·샤워 조명 1개를 확인했습니다. 정확한 치수·성능·실물 일치는 보증하지 않습니다.</p></details>
           </section>
         </div>
       </div>

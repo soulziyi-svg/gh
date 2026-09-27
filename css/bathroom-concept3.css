@@ -55,6 +55,12 @@
 .bath3-total>span { font-size:12px; }
 .bath3-total strong { font-size:36px; letter-spacing:-.035em; }
 .bath3-total small { font-size:16px; margin-left:8px; }
+.bath3-catalog-scroll { overflow-x:auto; margin:20px 0 28px; }
+.bath3-catalog-table { border-collapse:collapse; width:100%; min-width:490px; font-size:12px; }
+.bath3-catalog-table caption { text-align:left; padding:12px 0; color:#68776a; }
+.bath3-catalog-table th,.bath3-catalog-table td { padding:12px 8px; border-bottom:1px solid #dce1d7; text-align:left; }
+.bath3-catalog-table thead { background:#edf1e9; }
+.bath3-catalog-table small { display:block; font-weight:400; color:#68776a; margin-top:4px; }
 .bath3-cost { border-collapse:collapse; width:100%; font-size:12px; table-layout:fixed; }
 .bath3-cost caption { text-align:left; color:#68776a; font-size:11px; line-height:1.7; padding:12px 0; }
 .bath3-cost th,.bath3-cost td { padding:13px 9px; border-bottom:1px solid #dce1d7; }
