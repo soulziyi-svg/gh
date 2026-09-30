@@ -56,6 +56,24 @@
 .bath3-total strong { font-size:36px; letter-spacing:-.035em; }
 .bath3-total small { font-size:16px; margin-left:8px; }
 .bath3-catalog-scroll { overflow-x:auto; margin:20px 0 28px; }
+.bath3-reference-scenes,.bath3-reference-tiles { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px 16px; margin:20px 0 36px; }
+.bath3-reference-scenes article:first-child { grid-column:1/-1; }
+.bath3-reference-scenes h5,.bath3-reference-tiles h5 { font-size:16px; margin:12px 0 6px; }
+.bath3-reference-scenes p,.bath3-reference-tiles p { font-size:12px; line-height:1.75; margin:8px 0; }
+.bath3-reference-scenes small,.bath3-reference-tiles small { color:#667469; font-size:11px; }
+.bath3-reference-photo { display:block; width:100%; border:1px solid #e0e2da; padding:0; background:#f3f2ee; color:#35473c; }
+.bath3-reference-photo img { width:100%; height:240px; object-fit:contain; display:block; }
+.bath3-reference-scenes article:first-child img { height:auto; }
+.bath3-reference-photo span { display:block; padding:8px; font-size:11px; background:#fff; }
+.bath3-reference-tiles article { border:1px solid #e0e2da; padding:12px; border-radius:8px; background:#fff; }
+.bath3-reference-tiles img { height:140px; }
+.bath3-reference-tiles strong { display:block; font-size:13px; margin:6px 0; }
+.bath3-reference-viewer { width:min(1100px,94vw); max-height:94dvh; padding:18px; border:0; border-radius:12px; background:#fff; }
+.bath3-reference-viewer::backdrop { background:rgb(0 0 0 / .82); }
+.bath3-reference-viewer img { display:block; max-width:100%; height:74dvh; object-fit:contain; margin:auto; }
+.bath3-reference-viewer button { display:block; margin:0 0 12px auto; padding:10px 18px; cursor:pointer; }
+.bath3-reference-viewer p { font-size:12px; line-height:1.7; }
+@media(max-width:480px) { .bath3-reference-scenes { grid-template-columns:1fr; } .bath3-reference-tiles { gap:10px; } .bath3-reference-tiles article { padding:8px; } .bath3-reference-tiles h5 { font-size:13px; } }
 .bath3-catalog-table { border-collapse:collapse; width:100%; min-width:490px; font-size:12px; }
 .bath3-catalog-table caption { text-align:left; padding:12px 0; color:#68776a; }
 .bath3-catalog-table th,.bath3-catalog-table td { padding:12px 8px; border-bottom:1px solid #dce1d7; text-align:left; }
@@ -82,3 +100,20 @@
   .bath3-product { grid-template-columns:92px minmax(0,1fr); gap:12px; }
   .bath3-product h4 { font-size:14px; }
 }
+/* Source-backed, locally saved review checklist. */
+.bath3-check-tools{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:20px 0 8px}
+.bath3-check-tools output{font-weight:700;color:#2463a7}
+.bath3-check-tools button{padding:8px 12px;border:1px solid #ddd;border-radius:6px;background:white;cursor:pointer}
+.bath3-check-item{padding:20px 0;border-bottom:1px solid #ddd}
+.bath3-check-photo{display:block;width:100%;padding:0;background:#f5f5f2;border:1px solid #ddd;cursor:zoom-in}
+.bath3-check-photo img{display:block;width:100%;height:auto;object-fit:contain}
+.bath3-check-photo span{display:block;padding:8px;font-size:12px}
+.bath3-check-item fieldset{border:0;padding:0;margin:12px 0}
+.bath3-check-item label{display:flex;gap:10px;padding:10px;background:#f6f7f8;margin:6px 0;font-size:14px;line-height:1.6;cursor:pointer}
+.bath3-check-item input{width:18px;height:18px;flex:0 0 18px;margin-top:3px;accent-color:#2463a7}
+.bath3-sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.bath3-cost th small{display:block;font-weight:400;font-size:11px;line-height:1.5;margin-top:4px}
+.bath3-design-board{margin:0 0 24px}
+.bath3-design-board img{display:block;width:100%;height:auto;border-radius:8px}
+.bath3-design-board a{display:block;cursor:zoom-in}
+.bath3-design-board figcaption{font-size:12px;line-height:1.6;color:#666;margin-top:8px}
