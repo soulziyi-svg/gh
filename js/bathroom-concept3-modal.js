@@ -23,7 +23,7 @@
           <div class="bath3-heading"><p class="bath3-kicker">SIENA & GLASS BLOCK</p><h2 id="bath3-title">시에나 유리블록</h2><p>선반 없이 정돈한 벽면과 젠다이, 빛이 통하는 샤워 파티션.</p><div class="bath3-tags"><span>시에나 600×1200 세로</span><span>라보나 600각</span><span>실제 제품 10항목</span></div></div>
           <nav class="bath3-nav" aria-label="상세 정보 선택">${[['board','이미지보드'],['design','욕실 체크리스트'],['products','제품·규격'],['estimate','수정 가견적']].map(([id,t],i)=>`<button type="button" data-bath3-panel="${id}" aria-controls="bath3-${id}" aria-pressed="${i===0}">${t}</button>`).join('')}</nav>
           <section id="bath3-board" class="bath3-panel"><h3>이미지보드</h3>
-            <figure class="bath3-design-board"><a href="img/bathroom-concepts/bathroom-14-design-board-v4.png" target="_blank" rel="noopener" aria-label="컨셉3 디자인 보드 원본 확대"><img src="img/bathroom-concepts/bathroom-14-design-board-v4.png" alt="컨셉3 디자인 보드: 왼쪽 세면대·가운데 변기·오른쪽 샤워, 왼쪽 하단 출입문, 샤워 출입구 전까지 유리블록, 샤워기 아래 일자 유가"></a><figcaption>컨셉3 디자인 보드 · 클릭하면 원본 확대<br>사용자 스케치 기준: 왼쪽 세면대·가운데 변기·오른쪽 샤워. 유리블록은 샤워 출입구 전까지만 설치합니다.<br>AI 설명용 개념도입니다. 문 개폐 방향·출입 폭·유리블록 수량은 실측 후 확정하며, 기존 가견적에는 이번 배치 변경이 재산정되지 않았습니다. 제품 규격은 제품·규격 항목에서 확인하세요.</figcaption></figure>
+            <figure class="bath3-design-board"><a href="img/bathroom-concepts/bathroom-14-design-board-v5.png" target="_blank" rel="noopener" aria-label="컨셉3 이미지보드 원본 확대"><img src="img/bathroom-concepts/bathroom-14-design-board-v5.png" alt="컨셉3 이미지보드: 평면도와 정면 입면, 낮은 타일 젠다이, 일자 유가와 원형 매입등 디테일. AI 개념 이미지이며 유가·등기구 모델은 미정입니다."></a></figure>
           </section>
           <section id="bath3-design" class="bath3-panel" hidden><h3>욕실 체크리스트</h3>
             <p>사용자 제공 PPT 원본에서 관련 내용을 확인하고 이번 유리블록·젠다이 시안에 맞춰 정리했습니다. 이미지는 PPT 발췌이며 실물 시공도면이 아닙니다. 원문의 예시·단정은 아래 검토 메모와 함께 확인하세요.</p>
