@@ -1,7 +1,7 @@
 (() => {
   'use strict';
   if (new URLSearchParams(location.search).get('space') !== 'bathroom') return;
-  // CONCEPT 2 retains review ID 03. Preserve the original alongside the edit.
+  // The glass-block concept retains review ID 03 after moving to CONCEPT 9.
   const card = document.getElementById('bathroom-03');
   const figure = card?.querySelector('.bathroom-shot');
   if (!figure || figure.classList.contains('bath2-slider')) return;
@@ -10,9 +10,10 @@
     {src:'img/bathroom-concepts/bathroom-03-portrait-v2.png', label:'젠다이·반다리 세면대 수정안'}
   ];
   figure.classList.add('bath2-slider');
-  figure.setAttribute('aria-label','컨셉 2 시안 비교, 2초 자동 슬라이드');
+  const conceptLabel = card.querySelector('small').textContent;
+  figure.setAttribute('aria-label',`${conceptLabel} 시안 비교, 2초 자동 슬라이드`);
   figure.setAttribute('aria-roledescription','슬라이드');
-  figure.innerHTML = slides.map((slide,i) => `<img src="${slide.src}" alt="컨셉 2 ${slide.label}" class="bath2-slide${i===1?' is-active':''}" aria-hidden="${i!==1}" width="1024" height="1536" decoding="async">`).join('') +
+  figure.innerHTML = slides.map((slide,i) => `<img src="${slide.src}" alt="${conceptLabel} ${slide.label}" class="bath2-slide${i===1?' is-active':''}" aria-hidden="${i!==1}" width="1024" height="1536" decoding="async">`).join('') +
     '<figcaption class="bath2-controls"><span class="bath2-label"></span><div class="bath2-buttons"><button type="button" data-bath2-select="0">기존</button><button type="button" data-bath2-select="1">수정</button><button type="button" data-bath2-toggle>일시정지</button></div></figcaption>';
   const description = card.querySelector('h2 + p');
   description.textContent = '기존 시안과 수정안을 2초 간격으로 비교합니다. 수정안은 유리블록 하단을 젠다이 높이에 맞춰 타일벽으로 바꾸고, 러그를 제거했습니다. 슬림형 반다리 세면대와 천장 휴젠트형 복합 환기장치를 표현했습니다.';

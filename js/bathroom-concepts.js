@@ -147,6 +147,16 @@
     ...concept, ...latestRevisions[concept.id], reference: false,
     image: `bathroom-${concept.id}-portrait-v${concept.id === 14 ? 8 : 2}.png`
   } : concept);
+  // Swap visible positions only; stable IDs preserve existing links and galleries.
+  concepts = concepts.map(concept => ({
+    ...concept,
+    displayNumber: concept.displayNumber === 2 ? 9 : concept.displayNumber === 9 ? 2 : concept.displayNumber,
+    ...(concept.id === 28 ? {
+      image: 'bathroom-28-portrait-v4.png',
+      description: '올리브 타일과 기존 배치를 유지하고 니치의 소품을 모두 제거했습니다. 휴젠트는 세면대 위가 아닌 변기 위쪽 천장으로 옮겨 일부만 보이도록 표현했습니다. 미러 상부장과 하부 간접조명은 유지했습니다.',
+      note: '휴젠뜨2 제품 사진을 외형 참고로 사용했습니다. 실제 설치는 천장 깊이·덕트·전원·점검 공간과 욕실 조명의 방습 조건을 확인해야 합니다. AI 이미지는 제품 실물이나 시공 가능성을 보증하지 않습니다.'
+    } : {})
+  })).sort((a, b) => a.displayNumber - b.displayNumber);
   document.querySelector('.hero > p').textContent = `ROOM PICK · ${concepts.length} CONCEPTS`;
   document.getElementById('title').textContent = `욕실 인테리어 컨셉 시안 ${concepts.length}가지`;
   document.getElementById('intro').textContent = 'AI 디자인·수정안 9개를 소개합니다. CONCEPT 4는 제외하고 기존 컨셉 번호는 유지했습니다. 이미지는 같은 2:3 세로 프레임이며 실제 시공 사진이 아닙니다. 실제 적용 전 실측과 배수·방수·환기 조건을 확인해야 합니다.';
