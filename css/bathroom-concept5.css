@@ -1,0 +1,26 @@
+/* Same 40:60 shell as Concept 3, with content-specific table sizing. */
+#bath5-modal .bath3-heading { display:block; position:static; width:auto; height:auto; padding:0; border:0; background:none; }
+#bath5-modal .bath3-heading h2 { white-space:normal; }
+#bath5-modal .bath3-design-board { margin:20px 0; }
+#bath5-modal .bath3-design-board img { height:auto; }
+#bath5-modal .bath3-check-photo { display:block; width:100%; padding:0; border:1px solid #dedfd6; background:#fff; }
+#bath5-modal .bath3-check-photo img { width:100%; height:220px; object-fit:contain; display:block; }
+#bath5-modal .bath3-check-photo span { display:block; padding:8px; font-size:11px; }
+#bath5-modal .bath5-price-table { min-width:540px; }
+#bath5-modal .bath5-price-table th { width:auto; }
+#bath5-modal .bath5-price-table th:first-child { width:43%; }
+#bath5-modal .bath5-scope-table { min-width:640px; table-layout:auto; }
+#bath5-modal .bath5-scope-table th { width:24%; }
+#bath5-modal .bath5-scope-table td { text-align:left; width:25%; }
+#bath5-modal .bath3-cost small { display:block; font-size:11px; font-weight:400; margin-top:6px; color:#67716b; }
+#bath5-modal .bath3-total strong { font-size:32px; }
+#bath5-modal .bath5-budget-table { min-width:730px; table-layout:auto; }
+#bath5-modal .bath5-budget-table th { width:44%; }
+#bath5-modal .bath5-budget-table td { white-space:nowrap; }
+#bath5-modal .bath5-budget-table tfoot th { width:auto; }
+#bath5-modal .bath5-sources { padding-left:20px; font-size:13px; line-height:1.9; }
+#bath5-modal .bath5-sources li { margin:10px 0; }
+@media(max-width:480px) {
+  #bath5-modal .bath3-nav button { font-size:12px; }
+  #bath5-modal .bath3-product { grid-template-columns:90px minmax(0,1fr); gap:12px; }
+}
